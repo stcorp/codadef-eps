@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="IASI_SND_02_v4" format="binary" last-modified="2015-01-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="binary">
+    <cd:Field name="MPHR">
+      <cd:NamedType id="MPHR_v2"/>
+    </cd:Field>
+    <cd:Field name="IPR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_ipr]]></cd:Dimension>
+        <cd:NamedType id="IPR"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="GEADR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_geadr]]></cd:Dimension>
+        <cd:NamedType id="GEADR"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$num_geadr > 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="GIADR">
+      <cd:NamedType id="IASI_GIADR_L2_v4"/>
+    </cd:Field>
+    <cd:Field name="VEADR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_veadr]]></cd:Dimension>
+        <cd:NamedType id="VEADR"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$num_veadr > 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="MDR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_mdr]]></cd:Dimension>
+        <cd:NamedType id="IASI_MDR_L2_Union_v4"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_ipr">
+    <cd:Init><![CDATA[$num_ipr = int(/MPHR/TOTAL_IPR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_geadr">
+    <cd:Init><![CDATA[$num_geadr = int(/MPHR/TOTAL_GEADR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_veadr">
+    <cd:Init><![CDATA[$num_veadr = int(/MPHR/TOTAL_VEADR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_mdr">
+    <cd:Init><![CDATA[$num_mdr = int(/MPHR/TOTAL_MDR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NLT">
+    <cd:Init><![CDATA[$NLT = int(/GIADR/NUM_PRESSURE_LEVELS_TEMP)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NLQ">
+    <cd:Init><![CDATA[$NLQ = int(/GIADR/NUM_PRESSURE_LEVELS_HUMIDITY)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NLO">
+    <cd:Init><![CDATA[$NLO = int(/GIADR/NUM_PRESSURE_LEVELS_OZONE)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NEW">
+    <cd:Init><![CDATA[$NEW = int(/GIADR/NUM_SURFACE_EMISSIVITY_WAVELENGTHS)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NL_CO">
+    <cd:Init><![CDATA[$NL_CO = int(/GIADR/FORLI_NUM_LAYERS_CO)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NL_HNO3">
+    <cd:Init><![CDATA[$NL_HNO3 = int(/GIADR/FORLI_NUM_LAYERS_HNO3)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NL_O3">
+    <cd:Init><![CDATA[$NL_O3 = int(/GIADR/FORLI_NUM_LAYERS_O3)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NL_SO2">
+    <cd:Init><![CDATA[$NL_SO2 = int(/GIADR/BRESCIA_NUM_ALTITUDES_SO2)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NPCT">
+    <cd:Init><![CDATA[$NPCT = int(/GIADR/NUM_TEMPERATURE_PCS)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NPCW">
+    <cd:Init><![CDATA[$NPCW = int(/GIADR/NUM_WATER_VAPOUR_PCS)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NPCO">
+    <cd:Init><![CDATA[$NPCO = int(/GIADR/NUM_OZONE_PCS)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NEVA_CO">
+    <cd:Init><![CDATA[$NEVA_CO = ($NL_CO+1)/2]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NEVE_CO">
+    <cd:Init><![CDATA[$NEVE_CO = $NEVA_CO*$NL_CO]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NEVA_HNO3">
+    <cd:Init><![CDATA[$NEVA_HNO3 = ($NL_HNO3+1)/2]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NEVE_HNO3">
+    <cd:Init><![CDATA[$NEVE_HNO3 = $NEVA_HNO3*$NL_HNO3]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NEVA_O3">
+    <cd:Init><![CDATA[$NEVA_O3 = ($NL_O3+1)/2]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NEVE_O3">
+    <cd:Init><![CDATA[$NEVE_O3 = $NEVA_O3*$NL_O3]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NERRT">
+    <cd:Init><![CDATA[$NERRT = $NPCT*($NPCT+1)/2]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NERRW">
+    <cd:Init><![CDATA[$NERRW = $NPCW*($NPCW+1)/2]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="NERRO">
+    <cd:Init><![CDATA[$NERRO = $NPCO*($NPCO+1)/2]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="mdr_bit_size">
+    <cd:Dimension><![CDATA[$num_mdr]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_mdr - 1 do $mdr_bit_size[i] = bitsize(/mdr[i])]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

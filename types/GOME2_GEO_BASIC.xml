@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_GEO_BASIC" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Basic geolocation record</cd:Description>
+  <cd:Field name="UTC_TIME">
+    <cd:Array>
+      <cd:Description>UTC time associated with every second scanner position (0, 2, ..., 62)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Time timeformat="binary_eps_datetime">
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SUB_SATELLITE_POINT">
+    <cd:Array>
+      <cd:Description>Geodetic latitude and geocentric longitude of sub-satellite point (earth-fixed CS)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="latitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="longitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SATELLITE_ALTITUDE">
+    <cd:Array>
+      <cd:Description>Geodetic altitude of satellite (earth-fixed CS)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SOLAR_ZENITH_ANGLE">
+    <cd:Array>
+      <cd:Description>Solar zenith angle (Satellite Relative Actual CS)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SOLAR_AZIMUTH_ANGLE">
+    <cd:Array>
+      <cd:Description>Solar azimuth angle (Satellite Relative Actual CS)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

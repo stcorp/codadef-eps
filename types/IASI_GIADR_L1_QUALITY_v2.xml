@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IASI_GIADR_L1_QUALITY_v2" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 2)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="IDefPsfSondNbLin">
+    <cd:Array>
+      <cd:Description>Number of lines for sounder IPSF</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefPsfSondNbCol">
+    <cd:Array>
+      <cd:Description>Number of columns for sounder IPSF</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefPsfSondOverSampFactor">
+    <cd:VSFInteger>
+      <cd:Description>Oversampling factor for sounder IPSF</cd:Description>
+      <cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>scale factor</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:ScaleFactor>
+      <cd:Integer>
+        <cd:Description>32-bit integer</cd:Description>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:VSFInteger>
+  </cd:Field>
+  <cd:Field name="IDefPsfSondY">
+    <cd:Array>
+      <cd:Description>Y position of sounder IPSF in the cold plane</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>100</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefPsfSondZ">
+    <cd:Array>
+      <cd:Description>Z position of sounder IPSF in the cold plane</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>100</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefPsfSondWgt">
+    <cd:Array>
+      <cd:Description>IPSF weight</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>100</cd:Dimension>
+      <cd:Dimension>100</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefllSSrfNsfirst">
+    <cd:Integer>
+      <cd:Description>Number of first sample in spectral imager filter</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="IDefllSSrfNslast">
+    <cd:Integer>
+      <cd:Description>Number of last sample in spectral imager filter</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="IDefllSSrf">
+    <cd:Array>
+      <cd:Description>Spectral response of spectral imager filter</cd:Description>
+      <cd:Dimension>100</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefllSSrfDWn">
+    <cd:VSFInteger>
+      <cd:Description>Sample width of spectral imager filter</cd:Description>
+      <cd:Unit>1/m</cd:Unit>
+      <cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>scale factor</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:ScaleFactor>
+      <cd:Integer>
+        <cd:Description>32-bit integer</cd:Description>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:VSFInteger>
+  </cd:Field>
+  <cd:Field name="IDefIISNeDT">
+    <cd:Array>
+      <cd:Description>IIS Noise</cd:Description>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:Unit>K</cd:Unit>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefDptIISDeadPix">
+    <cd:Array>
+      <cd:Description>Table of IASI imager dead pixels</cd:Description>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

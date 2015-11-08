@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_POLSS_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Single scattering polarisation parameters (format version 1)</cd:Description>
+  <cd:Field name="F_POL_SS">
+    <cd:Integer>
+      <cd:Description>Stokes fraction q (theoretical value for single scattering)</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="P_POL_SS_WL">
+    <cd:Integer>
+      <cd:Description>Wavelength assigned to the Stokes fraction q</cd:Description>
+      <cd:Unit>1e-6 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="P_POL_SS">
+    <cd:Integer>
+      <cd:Description>Degree of polarisation P (single scattering)</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="COS_2CHI_POL_SS">
+    <cd:Integer>
+      <cd:Description>Cosine of twice the polarisation angle (single scattering)</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000000000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

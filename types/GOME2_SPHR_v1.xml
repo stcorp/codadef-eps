@@ -1,0 +1,1957 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_SPHR_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>GOME-2 Specific Record Header for L1a and L1b products (format version 1)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="N_SCANS_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SCANS                       = </cd:Description>
+      <cd:FixedValue>N_SCANS                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SCANS">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in the product</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_1">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_VALID_WITH_MISS_DP_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_VALID_WITH_MISS_DP          = </cd:Description>
+      <cd:FixedValue>N_VALID_WITH_MISS_DP          = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_VALID_WITH_MISS_DP">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of valid scans with missing data packets</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_2">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_DP_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_DP                     = </cd:Description>
+      <cd:FixedValue>N_MISS_DP                     = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_DP">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of missing data packets in valid scans</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_3">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISSING_SCANS_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISSING_SCANS               = </cd:Description>
+      <cd:FixedValue>N_MISSING_SCANS               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISSING_SCANS">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of missing scans</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_4">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_DETECTOR_TEMP_1_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NN_DETECTOR_TEMP_1          = </cd:Description>
+      <cd:FixedValue>N_NN_DETECTOR_TEMP_1          = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_DETECTOR_TEMP_1">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with non-nominal detector temperature, FPA 1</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_5">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_DETECTOR_TEMP_2_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NN_DETECTOR_TEMP_2          = </cd:Description>
+      <cd:FixedValue>N_NN_DETECTOR_TEMP_2          = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_DETECTOR_TEMP_2">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with non-nominal detector temperature, FPA 2</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_6">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_DETECTOR_TEMP_3_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NN_DETECTOR_TEMP_3          = </cd:Description>
+      <cd:FixedValue>N_NN_DETECTOR_TEMP_3          = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_DETECTOR_TEMP_3">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with non-nominal detector temperature, FPA 3</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_7">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_DETECTOR_TEMP_4_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NN_DETECTOR_TEMP_4          = </cd:Description>
+      <cd:FixedValue>N_NN_DETECTOR_TEMP_4          = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_DETECTOR_TEMP_4">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with non-nominal detector temperature, FPA 4</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_8">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_DETECTOR_TEMP_5_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NN_DETECTOR_TEMP_5          = </cd:Description>
+      <cd:FixedValue>N_NN_DETECTOR_TEMP_5          = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_DETECTOR_TEMP_5">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with non-nominal detector temperature, FPA p</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_9">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_DETECTOR_TEMP_6_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NN_DETECTOR_TEMP_6          = </cd:Description>
+      <cd:FixedValue>N_NN_DETECTOR_TEMP_6          = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_DETECTOR_TEMP_6">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with non-nominal detector temperature, FPA s</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_10">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_PDP_TEMP_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NN_PDP_TEMP                 = </cd:Description>
+      <cd:FixedValue>N_NN_PDP_TEMP                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_PDP_TEMP">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with non-nominal pre-dispenser temperature</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_11">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_RAD_TEMP_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NN_RAD_TEMP                 = </cd:Description>
+      <cd:FixedValue>N_NN_RAD_TEMP                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_RAD_TEMP">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with non-nominal radiator temperature</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_12">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_WLS_U_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NN_WLS_U                    = </cd:Description>
+      <cd:FixedValue>N_NN_WLS_U                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_WLS_U">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with non-nominal WLS lamp voltage</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_13">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_WLS_I_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NN_WLS_I                    = </cd:Description>
+      <cd:FixedValue>N_NN_WLS_I                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_WLS_I">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with non-nominal WLS lamp current</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_14">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_SLS_U_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NN_SLS_U                    = </cd:Description>
+      <cd:FixedValue>N_NN_SLS_U                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_SLS_U">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with non-nominal SLS lamp voltage</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_15">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_SLS_I_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NN_SLS_I                    = </cd:Description>
+      <cd:FixedValue>N_NN_SLS_I                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NN_SLS_I">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with non-nominal SLS lamp current</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_16">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_UTC_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_UTC                     = </cd:Description>
+      <cd:FixedValue>N_INV_UTC                     = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_UTC">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid UTC</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_17">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NADIR_SCAN_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NADIR_SCAN                  = </cd:Description>
+      <cd:FixedValue>N_NADIR_SCAN                  = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NADIR_SCAN">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in Nadir scanning observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_18">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NTH_POLE_SCAN_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NTH_POLE_SCAN               = </cd:Description>
+      <cd:FixedValue>N_NTH_POLE_SCAN               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NTH_POLE_SCAN">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in North pole scanning observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_19">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_STH_POLE_SCAN_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_STH_POLE_SCAN               = </cd:Description>
+      <cd:FixedValue>N_STH_POLE_SCAN               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_STH_POLE_SCAN">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in South pole scanning observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_20">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_OTHER_SCAN_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_OTHER_SCAN                  = </cd:Description>
+      <cd:FixedValue>N_OTHER_SCAN                  = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_OTHER_SCAN">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in Other scanning observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_21">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NADIR_STATIC_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NADIR_STATIC                = </cd:Description>
+      <cd:FixedValue>N_NADIR_STATIC                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NADIR_STATIC">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in Nadir static observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_22">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_OTHER_STATIC_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_OTHER_STATIC                = </cd:Description>
+      <cd:FixedValue>N_OTHER_STATIC                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_OTHER_STATIC">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in Other static observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_23">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_DARK_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_DARK                        = </cd:Description>
+      <cd:FixedValue>N_DARK                        = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_DARK">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in Dark observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_24">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_LED_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_LED                         = </cd:Description>
+      <cd:FixedValue>N_LED                         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_LED">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in LED observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_25">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_WLS_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_WLS                         = </cd:Description>
+      <cd:FixedValue>N_WLS                         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_WLS">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in WLS observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_26">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SLS_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SLS                         = </cd:Description>
+      <cd:FixedValue>N_SLS                         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SLS">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in SLS observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_27">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SLS_DIFF_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SLS_DIFF                    = </cd:Description>
+      <cd:FixedValue>N_SLS_DIFF                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SLS_DIFF">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in SLS over diffuser observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_28">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SUN_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SUN                         = </cd:Description>
+      <cd:FixedValue>N_SUN                         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SUN">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in SUN observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_29">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MOON_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MOON                        = </cd:Description>
+      <cd:FixedValue>N_MOON                        = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MOON">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in Moon observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_30">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_IDLE_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_IDLE                        = </cd:Description>
+      <cd:FixedValue>N_IDLE                        = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_IDLE">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in Idle observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_31">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_TEST_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_TEST                        = </cd:Description>
+      <cd:FixedValue>N_TEST                        = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_TEST">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in Test observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_32">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_DUMP_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_DUMP                        = </cd:Description>
+      <cd:FixedValue>N_DUMP                        = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_DUMP">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in Dump observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_33">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INVALID_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INVALID                     = </cd:Description>
+      <cd:FixedValue>N_INVALID                     = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INVALID">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans assigned Invalid observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_34">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_1_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MIN_INTENSITY_1             = </cd:Description>
+      <cd:FixedValue>N_MIN_INTENSITY_1             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_1">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans where the minimum mean uncalibrated radiance is below a specified threshold, band FPA 1a</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_35">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_2_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MIN_INTENSITY_2             = </cd:Description>
+      <cd:FixedValue>N_MIN_INTENSITY_2             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_2">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans where the minimum mean uncalibrated radiance is below a specified threshold, band FPA 1b</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_36">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_3_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MIN_INTENSITY_3             = </cd:Description>
+      <cd:FixedValue>N_MIN_INTENSITY_3             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_3">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans where the minimum mean uncalibrated radiance is below a specified threshold, band FPA 2a</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_37">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_4_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MIN_INTENSITY_4             = </cd:Description>
+      <cd:FixedValue>N_MIN_INTENSITY_4             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_4">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans where the minimum mean uncalibrated radiance is below a specified threshold, band FPA 2b</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_38">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_5_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MIN_INTENSITY_5             = </cd:Description>
+      <cd:FixedValue>N_MIN_INTENSITY_5             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_5">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans where the minimum mean uncalibrated radiance is below a specified threshold, band FPA 3</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_39">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_6_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MIN_INTENSITY_6             = </cd:Description>
+      <cd:FixedValue>N_MIN_INTENSITY_6             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_6">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans where the minimum mean uncalibrated radiance is below a specified threshold, band FPA 4</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_40">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_7_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MIN_INTENSITY_7             = </cd:Description>
+      <cd:FixedValue>N_MIN_INTENSITY_7             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_7">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans where the minimum mean uncalibrated radiance is below a specified threshold, band PMD p</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_41">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_8_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MIN_INTENSITY_8             = </cd:Description>
+      <cd:FixedValue>N_MIN_INTENSITY_8             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_8">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans where the minimum mean uncalibrated radiance is below a specified threshold, band PMD s</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_42">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_1_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SATURATED_1                 = </cd:Description>
+      <cd:FixedValue>N_SATURATED_1                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_1">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with saturated pixels, band FPA 1a</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_43">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_2_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SATURATED_2                 = </cd:Description>
+      <cd:FixedValue>N_SATURATED_2                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_2">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with saturated pixels, band FPA 1b</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_44">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_3_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SATURATED_3                 = </cd:Description>
+      <cd:FixedValue>N_SATURATED_3                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_3">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with saturated pixels, band FPA 2a</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_45">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_4_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SATURATED_4                 = </cd:Description>
+      <cd:FixedValue>N_SATURATED_4                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_4">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with saturated pixels, band FPA 2b</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_46">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_5_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SATURATED_5                 = </cd:Description>
+      <cd:FixedValue>N_SATURATED_5                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_5">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with saturated pixels, band FPA 3</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_47">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_6_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SATURATED_6                 = </cd:Description>
+      <cd:FixedValue>N_SATURATED_6                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_6">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with saturated pixels, band FPA 4</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_48">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_7_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SATURATED_7                 = </cd:Description>
+      <cd:FixedValue>N_SATURATED_7                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_7">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with saturated pixels, band FMD p</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_49">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_8_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SATURATED_8                 = </cd:Description>
+      <cd:FixedValue>N_SATURATED_8                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_8">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with saturated pixels, band PMD s</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_50">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_1_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_HOT_1                       = </cd:Description>
+      <cd:FixedValue>N_HOT_1                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_1">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with hot pixels, band FPA 1a</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_51">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_2_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_HOT_2                       = </cd:Description>
+      <cd:FixedValue>N_HOT_2                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_2">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with hot pixels, band FPA 1b</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_52">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_3_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_HOT_3                       = </cd:Description>
+      <cd:FixedValue>N_HOT_3                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_3">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with hot pixels, band FPA 2a</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_53">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_4_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_HOT_4                       = </cd:Description>
+      <cd:FixedValue>N_HOT_4                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_4">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with hot pixels, band FPA 2b</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_54">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_5_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_HOT_5                       = </cd:Description>
+      <cd:FixedValue>N_HOT_5                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_5">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with hot pixels, band FPA 3</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_55">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_6_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_HOT_6                       = </cd:Description>
+      <cd:FixedValue>N_HOT_6                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_6">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with hot pixels, band FPA 4</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_56">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_7_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_HOT_7                       = </cd:Description>
+      <cd:FixedValue>N_HOT_7                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_7">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with hot pixels, band PMD p</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_57">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_8_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_HOT_8                       = </cd:Description>
+      <cd:FixedValue>N_HOT_8                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_8">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with hot pixels, band PMD s</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_58">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SAA_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SAA                         = </cd:Description>
+      <cd:FixedValue>N_SAA                         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SAA">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in the SAA</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_59">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SUNGLINT_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SUNGLINT                    = </cd:Description>
+      <cd:FixedValue>N_SUNGLINT                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SUNGLINT">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with sunglint danger</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_60">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RAINBOW_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RAINBOW                     = </cd:Description>
+      <cd:FixedValue>N_RAINBOW                     = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RAINBOW">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with rainbow danger</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_61">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MODE_GEOLOCATION_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MODE_GEOLOCATION            = </cd:Description>
+      <cd:FixedValue>N_MODE_GEOLOCATION            = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MODE_GEOLOCATION">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with possible mismatch between observation mode and geolocation</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_62">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_1_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_1                = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_1                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_1">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 1</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_63">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_2_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_2                = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_2                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_2">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 2</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_64">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_3_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_3                = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_3                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_3">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 3</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_65">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_4_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_4                = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_4                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_4">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 4</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_66">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_5_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_5                = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_5                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_5">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 5</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_67">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_6_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_6                = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_6                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_6">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 6</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_68">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_7_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_7                = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_7                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_7">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 7</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_69">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_8_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_8                = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_8                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_8">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 8</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_70">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_9_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_9                = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_9                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_9">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 9</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_71">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_10_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_10               = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_10               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_10">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 10</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_72">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_11_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_11               = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_11               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_11">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 11</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_73">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_12_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_12               = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_12               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_12">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 12</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_74">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_13_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_13               = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_13               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_13">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 13</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_75">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_14_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_14               = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_14               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_14">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 14</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_76">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_15_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_INV_STOKES_15               = </cd:Description>
+      <cd:FixedValue>N_INV_STOKES_15               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_INV_STOKES_15">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with invalid Stokes fractions, PMD band 15</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_77">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_CLOUD_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_CLOUD                       = </cd:Description>
+      <cd:FixedValue>N_CLOUD                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_CLOUD">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with fractional cloud above a specified treshold</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_78">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_PCD_DARK" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Product Confidence Data record for Dark Signal Correction</cd:Description>
+  <cd:Field name="AV_DARK">
+    <cd:Integer>
+      <cd:Description>Dark signal correction averaged per band</cd:Description>
+      <cd:Unit>1e-3 BU</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>BU</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="AV_DARK_NOISE">
+    <cd:Integer>
+      <cd:Description>Dark signal correction readout noise averaged per band</cd:Description>
+      <cd:Unit>1e-6 BU</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>BU</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_AV_DARK">
+    <cd:Integer>
+      <cd:Description>Flag indicating that AV_DARK exceeds a specified treshold</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_AV_DARK_NOISE">
+    <cd:Integer>
+      <cd:Description>Flag indicating that AV_DARK_NOISE exceeds a specified treshold (0 = no missing pixels, 1 = missing pixels filled by interpolation, 2 = complete channel/band missing)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_DARK_MISS">
+    <cd:Integer>
+      <cd:Description>Flag indicating that missing mean dark calibration mode measurements have been filled by interpolation or that complete band is missing</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

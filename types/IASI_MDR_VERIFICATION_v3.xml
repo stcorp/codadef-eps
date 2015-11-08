@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IASI_MDR_VERIFICATION_v3" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 3)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="SIZE_OF_VERIFICATION_DATA">
+    <cd:Integer>
+      <cd:Description>Size of the verification data and auxiliary data to follow</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="VERIFICATION_DATA">
+    <cd:Raw>
+      <cd:Description>Verification and auxiliary data (i.e. contenated IASI ISPs in the following order: AP-VPA-VPB-VPC-VPD-VPE). These are pure ISPs without the header added in the Level 0 MDR.</cd:Description>
+      <cd:BitSize><![CDATA[int(:/../SIZE_OF_VERIFICATION_DATA) * 8]]></cd:BitSize>
+    </cd:Raw>
+  </cd:Field>
+</cd:Record>

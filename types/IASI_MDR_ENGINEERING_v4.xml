@@ -1,0 +1,927 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IASI_MDR_ENGINEERING_v4" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 4)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="BIMSBBT">
+    <cd:Float>
+      <cd:Description>Black Body temperature</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="GFtbFilteredBBT">
+    <cd:Float>
+      <cd:Description>Filtered Black Body temperature</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="GEPSIdConf_Line">
+    <cd:NamedType id="IASI_L1_GEPSIdConf"/>
+  </cd:Field>
+  <cd:Field name="GEPSIasiMode">
+    <cd:NamedType id="IASI_GEPSIasiMode"/>
+  </cd:Field>
+  <cd:Field name="GCcsConfAvhrrChannel">
+    <cd:Array>
+      <cd:Description>Avhrr channel configuration</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Avhrr channel configuration</cd:Description>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Unused</cd:Description>
+            <cd:BitSize>30</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="Availability">
+          <cd:Integer>
+            <cd:Description>Availability (00 = AVHRR channels not available, 10 = AVHRR channels available, 01 = AVHRR channels transition between available and not available channels)</cd:Description>
+            <cd:BitSize>2</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEPSGranulNumber">
+    <cd:Integer>
+      <cd:Description>Granule Number</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GEPSDatlasi">
+    <cd:Array>
+      <cd:Description>Date of IASI measure (corrected UTC)</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Time timeformat="binary_eps_datetime">
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEPSOPSProcessingMode">
+    <cd:NamedType id="IASI_L1_GEPSOPSProcessingMode"/>
+  </cd:Field>
+  <cd:Field name="GEPS_SP">
+    <cd:Array>
+      <cd:Description>Scan position for all observational targets</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEPS_CCD">
+    <cd:Array>
+      <cd:Description>Corner cube direction for all observational targets</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GGeoSubSatellitePosition">
+    <cd:Array>
+      <cd:Description>Geodetic position of the centre of IIS at image number 15 (approximation of subsatellite position)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEPSOPSFlagNan">
+    <cd:Integer>
+      <cd:Description>This flag is raised when a Nan error has occured during the processing</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GEPSEndEclipseTime">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Date of the end of the previous satellite eclipse</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="GSmeTScan">
+    <cd:Float>
+      <cd:Description>Estimated temperature of the scanning miror</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="GSmeFlagDateNOK">
+    <cd:Integer>
+      <cd:Description>Flag for inconsistency between current date and ascending node</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GFtbBBTRes">
+    <cd:Float>
+      <cd:Description>Quality index for the filtering of the black-body temperature</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="GFtbFlagBBTNonQual">
+    <cd:Integer>
+      <cd:Description>Quality flag of the black-body temperature</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GEPS_LN">
+    <cd:Integer>
+      <cd:Description>Number of the IASI line since the beginning of the dump</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GDocFlagUnderOverFlow">
+    <cd:Array>
+      <cd:Description>Indicates that there is an under or an over-flow</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GDocNbUnderFlow">
+    <cd:Array>
+      <cd:Description>Number of underflow occurred during spectra decoding</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GDocNbOverFlow">
+    <cd:Array>
+      <cd:Description>Number of overflow occurred during spectra decoding</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GDocPosUnderFlow">
+    <cd:Array>
+      <cd:Description>Buffer of 3 positions of underflow occurred during spectra decoding</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GDocPosOverFlow">
+    <cd:Array>
+      <cd:Description>Buffer of 3 positions of overflow occurred during spectre decoding</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="BCodSpecVerlf">
+    <cd:Array>
+      <cd:Description>Full bit stream of IASI coded level 0 data (i.e. full spectra) data corresponding to VDS (verification data selection)</cd:Description>
+      <cd:Dimension>4320</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>W/(m2.sr.1/m)</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GlacOffsetIISAvhrr">
+    <cd:Array>
+      <cd:Description>IASI imager AVHRR imager coregistration offset</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GlacCorrelQual">
+    <cd:Array>
+      <cd:Description>Correlation quality index</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GlacPosMaxQual">
+    <cd:Array>
+      <cd:Description>Quality index of maximum correlation position</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GlacFlagCoregNonValid">
+    <cd:Array>
+      <cd:Description>Flag for imagers IASI/AVHRR non coregistration</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GlacFlagCoregNonQual">
+    <cd:Array>
+      <cd:Description>Flag for imagers IASI/AVHRR non coregistration</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GIacVarImagIIS">
+    <cd:Array>
+      <cd:Description>Variance of IIS image</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>W/(m2.sr.1/m)</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsOffsetSondAvhrr">
+    <cd:Array>
+      <cd:Description>IASI sounder/AVHRR coregistration offset</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsOffsetSondIIS">
+    <cd:Array>
+      <cd:Description>IASI sounder/imager coregistration offset</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GQisCcsQualIndex">
+    <cd:Array>
+      <cd:Description>FOV sounder radiances analysis quality index</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsFlagDateNOK">
+    <cd:Integer>
+      <cd:Description>Flag for inconsistency between current date and ascending node</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GCcsRadAnalNbClass">
+    <cd:Array>
+      <cd:Description>Number of clases in the sounder FOV</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsFlagPostProcessing">
+    <cd:Array>
+      <cd:Description>Post-processing flag</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsNonClassifRate">
+    <cd:Array>
+      <cd:Description>Rate of unclassified points</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsVarianceRate">
+    <cd:Array>
+      <cd:Description>Standard deviation (1s) of the classified image</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GSsdWnShift">
+    <cd:Array>
+      <cd:Description>Spectral shift calculated for the spectral window</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/m</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GSsdWnShiftQual">
+    <cd:Array>
+      <cd:Description>Quality index of calculated spectral shift</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GSsdFlagSpectralShiftNonQual">
+    <cd:Array>
+      <cd:Description>Quality flag of spectral shift determination</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GSssWnShiftMean">
+    <cd:Array>
+      <cd:Description>Mean spectral shift for 1 pixel during 1 IASI line</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/m</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GSssWnShiftMeanQual">
+    <cd:Array>
+      <cd:Description>Quality index of mean spectral shift for each PN and CCD</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GSssFlagNonSelPix">
+    <cd:Array>
+      <cd:Description>Flag for pixel not selected</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GSssFlagDateNOK">
+    <cd:Integer>
+      <cd:Description>Flag for inconsistency between current date and ascending node</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GlaxAxeY">
+    <cd:Array>
+      <cd:Description>Y coordinates of interferometric axis</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GlaxAxeZ">
+    <cd:Array>
+      <cd:Description>Z coordinates of interferometric axis</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GlaxFlagAxeNonQual">
+    <cd:Array>
+      <cd:Description>Interferometric axis determination quality flag</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GlaxAxeQual">
+    <cd:Array>
+      <cd:Description>Interferometric axis position quality flag</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GlaxAxeRes">
+    <cd:Array>
+      <cd:Description>Verisimilitude index of the measure/model shift</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GFaxAxeY">
+    <cd:Array>
+      <cd:Description>Y filtered coordinates of interferometric axis</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GFaxAxeZ">
+    <cd:Array>
+      <cd:Description>Z filtered coordinates of interferometric axis</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GFaxFlagAxeNonQual">
+    <cd:Array>
+      <cd:Description>Interferometric axis filtered position quality flag</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GFaxAxeRes">
+    <cd:Array>
+      <cd:Description>Filtering quality index</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GIsfFlagPdsNonValid">
+    <cd:Array>
+      <cd:Description>Interpolation weight validity flag</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GIccRadCalOffsetImag">
+    <cd:Array>
+      <cd:Description>Offset coefficient of image radiometric calibration</cd:Description>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GlccRadCalSlopeImag">
+    <cd:Array>
+      <cd:Description>Slope coefficient of image radiometric calibration</cd:Description>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-14 W/(m2.sr.1/m)</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100000000000000.000000">
+          <cd:Unit>W/(m2.sr.1/m)</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GlccFlagInit">
+    <cd:Integer>
+      <cd:Description>Indicator of the initiaisation of the radiometric calibration</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GQisFlagQual">
+    <cd:Array>
+      <cd:Description>Quality flag for the system</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GQisQualIndex">
+    <cd:Array>
+      <cd:Description>Quality index for the sounder products</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GQisQualIndexIIS">
+    <cd:Array>
+      <cd:Description>Quality index for the IIS imager products</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GQisQualIndexLoc">
+    <cd:Array>
+      <cd:Description>Geometric Quality index for the sounder products</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GQisQualIndexRad">
+    <cd:Array>
+      <cd:Description>Radiometric Quality index for the sounder products</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GQisQualIndexSpect">
+    <cd:Array>
+      <cd:Description>Spectral Quality index for the sounder products</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MMcxNoiseCalRad">
+    <cd:Array>
+      <cd:Description>Noise of complex radiometric calibration</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>28</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>K</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MMcxBiasCalRad">
+    <cd:Array>
+      <cd:Description>Bias of complex radiometric calibration</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>28</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>K</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MMcxFlagNoiseCalRad">
+    <cd:Array>
+      <cd:Description>Flag for radiometric calibration noise threshold crossing</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MMcxFlagBlasCalRad">
+    <cd:Array>
+      <cd:Description>Flag for radiometric calibration bias threshold crossing</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MMcxCoeffCalRad">
+    <cd:Array>
+      <cd:Description>Error coefficient for radiometric calibration</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MDptVarImagMax">
+    <cd:Float>
+      <cd:Description>Maximum value of the pseudo-variance in the IIS image</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="MDptVarImagMean">
+    <cd:Float>
+      <cd:Description>Mean value of the pseudo-variance in the IIS image</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="MDptPixQual">
+    <cd:Float>
+      <cd:Description>Quality index for the imager</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="GHecFlagDateNOK">
+    <cd:Integer>
+      <cd:Description>Flag for inconsistency between current date and ascending node</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Data_PX">
+    <cd:Array>
+      <cd:Description>Words 4 to 31 and words 150 to 151 of PC packet</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Data_IP">
+    <cd:Array>
+      <cd:Description>Words 4 to 22 and 32 bits for the equailization counter</cd:Description>
+      <cd:Dimension>21</cd:Dimension>
+      <cd:Dimension>34</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GOPSFlaPixMiss">
+    <cd:Array>
+      <cd:Description>Flag for degraded mode: sounder-pixel is temporarily missing</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GOPSFlaDataGap">
+    <cd:Integer>
+      <cd:Description>Flag for degraded mode: spectral gap</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFltIsrfemOff">
+    <cd:Array>
+      <cd:Description>Flag for degraded mode: ISRFEM chain not activated for this SN number</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GOPSDatIsrfemOff">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Apparation date of ISrfemOff degraded case</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="GOPSFItBandMiss">
+    <cd:Array>
+      <cd:Description>Flag for degraded mode: spectral band is temporarily missing</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GOPSDatBandMiss">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Apparation date of BandMiss degraded case</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="GOPSFltBBTMiss">
+    <cd:Integer>
+      <cd:Description>Flag for degraded mode: black body temperature is temporarily missing</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSDatBBTMiss">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Apparation date of BBTMiss degraded case</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="GOPSFltImgEWMiss">
+    <cd:Array>
+      <cd:Description>Flag for degraded mode: one operational image is temporarily missing</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GOPSDatImgEWMiss">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Apparation date of ImgEWMiss degraded case</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="GOPSFltImgBBMiss">
+    <cd:Integer>
+      <cd:Description>Flag for degraded mode: one black body image is temporarily missing</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSDatImgBBMiss">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Apparation date of ImgBBMiss degraded case</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="GOPSFltImgCSMiss">
+    <cd:Integer>
+      <cd:Description>Flag for degraded mode: one cold space image is temporarily missing</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSDatImgCSMiss">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Apparation date of ImgCSMiss degraded case</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="GOPSFlaIISCalibMiss">
+    <cd:Array>
+      <cd:Description>Flags of availability of the 4 calibration images (32, 33, 35 and 36)</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GOPSFltRadAvhrrMiss">
+    <cd:Array>
+      <cd:Description>Flag for degraded mode: AVHRR radiances are temporarily missing</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GOPSDatRadAvhrrMiss">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Apparation date of RadAvhrrMiss degraded case</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="GOPSFlagPacketVPMiss">
+    <cd:Array>
+      <cd:Description>Flag for degraded mode: one VP instrument packet is missing</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GOPSFlagPacketAPMiss">
+    <cd:Integer>
+      <cd:Description>Flag for degraded mode: one AP instrument packet is missing</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFlagPacketPXMiss">
+    <cd:Array>
+      <cd:Description>Flag for degraded mode: one PX instrument packet is missing</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GOPSFlagPacketIPMiss">
+    <cd:Array>
+      <cd:Description>Flag for degraded mode: one IP instrument packet is missing</cd:Description>
+      <cd:Dimension>34</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GOPSFlaGeoAvhrrMiss">
+    <cd:Array>
+      <cd:Description>Flag for degraded case of AVHRR geolocalisation data</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

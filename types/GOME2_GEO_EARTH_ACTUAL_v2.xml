@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_GEO_EARTH_ACTUAL_v2" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Additional geolocation record for the actual integration time of the earthshine measurements (format version 2)</cd:Description>
+  <cd:Field name="N_UNIQUE_INT">
+    <cd:Integer>
+      <cd:Description>Number of unique integration times in scan</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="UNIQUE_INT">
+    <cd:Array>
+      <cd:Description>Unique integration times in scan</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 s</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>s</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="INT_INDEX">
+    <cd:Array>
+      <cd:Description>Index to unique integration times for each main channel band</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SCANNER_ANGLE_ACTUAL">
+    <cd:Array>
+      <cd:Description>Scanner viewing angle corresponding to actual integration time</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CORNER_ACTUAL">
+    <cd:Array>
+      <cd:Description>Geodetic latitude and geocentric longitude at ground corresponding to actual integration time, points ABCD (earth-fixed CS)</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="latitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="longitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CENTRE_ACTUAL">
+    <cd:Array>
+      <cd:Description>Geodetic latitude and geocentric longitude at ground corresponding to actual integration time, points F (earth-fixed CS)</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="latitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="longitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SOLAR_ZENITH_ACTUAL">
+    <cd:Array>
+      <cd:Description>Solar zenith angle corresponding to actual integration time at height h0, points EFG (topocentric CS)</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SOLAR_AZIMUTH_ACTUAL">
+    <cd:Array>
+      <cd:Description>Solar azimuth angle corresponding to actual integration time at height h0, points EFG (topocentric CS)</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SAT_ZENITH_ACTUAL">
+    <cd:Array>
+      <cd:Description>Satellite zenith angle corresponding to actual integration time at height h0, points EFG (topocentric CS)</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SAT_AZIMUTH_ACTUAL">
+    <cd:Array>
+      <cd:Description>Satellite azimuth angle corresponding to actual integration time at height h0, points EFG (topocentric CS)</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

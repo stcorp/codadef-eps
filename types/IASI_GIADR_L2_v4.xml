@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IASI_GIADR_L2_v4" last-modified="2014-10-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="NUM_PRESSURE_LEVELS_TEMP">
+    <cd:Integer>
+      <cd:Description>Number of pressure levels for temperature profile retrieval (NLT)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PRESSURE_LEVELS_TEMP">
+    <cd:Array>
+      <cd:Description>Pressure levels on which retrieved temperature profiles are given</cd:Description>
+      <cd:Dimension><![CDATA[int(../NUM_PRESSURE_LEVELS_TEMP)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 Pa</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>Pa</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="NUM_PRESSURE_LEVELS_HUMIDITY">
+    <cd:Integer>
+      <cd:Description>Number of pressure levels for humidity profile retrieval (NLQ)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PRESSURE_LEVELS_HUMIDITY">
+    <cd:Array>
+      <cd:Description>Pressure levels on which retrieved humidity profiles are given</cd:Description>
+      <cd:Dimension><![CDATA[int(../NUM_PRESSURE_LEVELS_HUMIDITY)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 Pa</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>Pa</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="NUM_PRESSURE_LEVELS_OZONE">
+    <cd:Integer>
+      <cd:Description>Number of pressure levels for ozone profile retrieval (NLO)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PRESSURE_LEVELS_OZONE">
+    <cd:Array>
+      <cd:Description>Pressure layers on which retrieved ozone profiles are given</cd:Description>
+      <cd:Dimension><![CDATA[int(../NUM_PRESSURE_LEVELS_OZONE)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 Pa</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>Pa</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="NUM_SURFACE_EMISSIVITY_WAVELENGTHS">
+    <cd:Integer>
+      <cd:Description>Number of wavelengths for surface emissivity retrieval (NEW)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SURFACE_EMISSIVITY_WAVELENGTHS">
+    <cd:Array>
+      <cd:Description>Wavelengths for surface emissivity</cd:Description>
+      <cd:Dimension><![CDATA[int(../NUM_SURFACE_EMISSIVITY_WAVELENGTHS)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="NUM_TEMPERATURE_PCS">
+    <cd:Integer>
+      <cd:Description>Number of principal components for temperature in the ERROR_DATA (NPCT)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="NUM_WATER_VAPOUR_PCS">
+    <cd:Integer>
+      <cd:Description>Number of principal components for water-vapour in the ERROR_DATA (NPCW)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="NUM_OZONE_PCS">
+    <cd:Integer>
+      <cd:Description>Number of principal components for ozone in the ERROR_DATA (NPCO)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="FORLI_NUM_LAYERS_CO">
+    <cd:Integer>
+      <cd:Description>Number of partial layers for CO (NL_CO)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="FORLI_LAYER_HEIGHTS_CO">
+    <cd:Array>
+      <cd:Description>CO partial layer heights</cd:Description>
+      <cd:Dimension><![CDATA[int(../FORLI_NUM_LAYERS_CO)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FORLI_NUM_LAYERS_HNO3">
+    <cd:Integer>
+      <cd:Description>Number of partial layers for HNNO3 (NL_HNO3)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="FORLI_LAYER_HEIGHTS_HNO3">
+    <cd:Array>
+      <cd:Description>HNO3 partial layer heights</cd:Description>
+      <cd:Dimension><![CDATA[int(../FORLI_NUM_LAYERS_HNO3)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FORLI_NUM_LAYERS_O3">
+    <cd:Integer>
+      <cd:Description>Number of partial layers for O3 (NL_O3)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="FORLI_LAYER_HEIGHTS_O3">
+    <cd:Array>
+      <cd:Description>O3 partial layer heights</cd:Description>
+      <cd:Dimension><![CDATA[int(../FORLI_NUM_LAYERS_O3)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="BRESCIA_NUM_ALTITUDES_SO2">
+    <cd:Integer>
+      <cd:Description>Number of estimated SO2 plume heights (NL_SO2)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="BRESCIA_ALTITUDES_SO2">
+    <cd:Array>
+      <cd:Description>Estimated SO2 plume heights</cd:Description>
+      <cd:Dimension><![CDATA[int(../BRESCIA_NUM_ALTITUDES_SO2)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

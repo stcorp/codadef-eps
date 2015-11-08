@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+<cd:ProductClass name="EPS" last-modified="2014-10-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>EUMETSAT Polar System atmospheric products (GOME-2 and IASI)</cd:Description>
+  <cd:ProductType name="GOME_xxx_1A">
+    <cd:Description>GOME2 Level 1a.</cd:Description>
+    <cd:ProductDefinition id="GOME_xxx_1A_v4" format="binary" version="4">
+      <cd:Description>This definition is based on version 6.4 (V2L baseline) of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and version 6.4 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="661">1A</cd:MatchData>
+        <cd:MatchData offset="3305">F</cd:MatchData>
+        <cd:MatchData offset="1037">    4</cd:MatchData>
+        <cd:MatchData offset="1075">    5</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOME_xxx_1A_v5" format="binary" version="5">
+      <cd:Description>This definition is based on version 7.0 of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and versions 6.4/6.5 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="661">1A</cd:MatchData>
+        <cd:MatchData offset="3305">F</cd:MatchData>
+        <cd:MatchData offset="1037">    5</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="661">1A</cd:MatchData>
+        <cd:MatchData offset="3305">F</cd:MatchData>
+        <cd:MatchData offset="1037">    6</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOME_xxx_1A_v10" format="binary" version="10">
+      <cd:Description>This definition is based on version 7.1 of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and version 6.6 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="661">1A</cd:MatchData>
+        <cd:MatchData offset="3305">F</cd:MatchData>
+        <cd:MatchData offset="1037">   10</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOME_xxx_1A_v11" format="binary" version="11">
+      <cd:Description>This definition is based on version 7.3 of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and version 6.6 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="661">1A</cd:MatchData>
+        <cd:MatchData offset="3305">F</cd:MatchData>
+        <cd:MatchData offset="1037">   11</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOME_xxx_1A_v12" format="binary" version="12">
+      <cd:Description>This definition is based on version 9 of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="661">1A</cd:MatchData>
+        <cd:MatchData offset="3305">F</cd:MatchData>
+        <cd:MatchData offset="1037">   12</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOME_xxx_1B">
+    <cd:Description>GOME2 Level 1b.</cd:Description>
+    <cd:ProductDefinition id="GOME_xxx_1B_v4" format="binary" version="4">
+      <cd:Description>This definition is based on version 6.4 (V2L baseline) of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and version 6.4 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="661">1B</cd:MatchData>
+        <cd:MatchData offset="3305">F</cd:MatchData>
+        <cd:MatchData offset="1037">    4</cd:MatchData>
+        <cd:MatchData offset="1075">    5</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOME_xxx_1B_v5" format="binary" version="5">
+      <cd:Description>This definition is based on version 7.0 of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and versions 6.4/6.5 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="661">1B</cd:MatchData>
+        <cd:MatchData offset="3305">F</cd:MatchData>
+        <cd:MatchData offset="1037">    5</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="661">1B</cd:MatchData>
+        <cd:MatchData offset="3305">F</cd:MatchData>
+        <cd:MatchData offset="1037">    6</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOME_xxx_1B_v10" format="binary" version="10">
+      <cd:Description>This definition is based on version 7.1 of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and version 6.6 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="661">1B</cd:MatchData>
+        <cd:MatchData offset="3305">F</cd:MatchData>
+        <cd:MatchData offset="1037">   10</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOME_xxx_1B_v11" format="binary" version="11">
+      <cd:Description>This definition is based on version 7.3 of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and version 6.6 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="661">1B</cd:MatchData>
+        <cd:MatchData offset="3305">F</cd:MatchData>
+        <cd:MatchData offset="1037">   11</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOME_xxx_1B_v12" format="binary" version="12">
+      <cd:Description>This definition is based on version 9 of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="661">1B</cd:MatchData>
+        <cd:MatchData offset="3305">F</cd:MatchData>
+        <cd:MatchData offset="1037">   12</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOME_PMA_02">
+    <cd:Description>GOME-2 Level 2 Polar Multi-Sensor Aerosol</cd:Description>
+    <cd:ProductDefinition id="GOME_PMA_02_v1" format="binary" version="1">
+      <cd:Description>This definition is based on version 1B of the Polar Multi-Sensor Aerosol Product Product Format Specification (PFS) document (EUM/TSS/SPE/14/740198).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">GOME</cd:MatchData>
+        <cd:MatchData offset="625">PMA</cd:MatchData>
+        <cd:MatchData offset="661">02</cd:MatchData>
+        <cd:MatchData offset="1037">   10</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="IASI_xxx_1A">
+    <cd:Description>IASI Level 1a (Geolocated Calibrated Radiance Spectra).</cd:Description>
+    <cd:ProductDefinition id="IASI_xxx_1A_v2" format="binary" version="2">
+      <cd:Description>This definition is based on version 6.5 of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and version 6.4 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1A</cd:MatchData>
+        <cd:MatchData offset="1037">    2</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="IASI_xxx_1A_v3" format="binary" version="3">
+      <cd:Description>This definition is based on version 6.6 of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and versions 6.4/6.5/6.6 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1A</cd:MatchData>
+        <cd:MatchData offset="1037">    3</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1A</cd:MatchData>
+        <cd:MatchData offset="1037">    4</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1A</cd:MatchData>
+        <cd:MatchData offset="1037">   10</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="IASI_xxx_1A_v11" format="binary" version="11">
+      <cd:Description>This definition is based on version 9A of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1A</cd:MatchData>
+        <cd:MatchData offset="1037">   11</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="IASI_xxx_1B">
+    <cd:Description>IASI Level 1b (Geolocated Calibrated and Resampled Radiance Spectra).</cd:Description>
+    <cd:ProductDefinition id="IASI_xxx_1B_v2" format="binary" version="2">
+      <cd:Description>This definition is based on version 6.5 of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and version 6.4 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1B</cd:MatchData>
+        <cd:MatchData offset="1037">    2</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="IASI_xxx_1B_v3" format="binary" version="3">
+      <cd:Description>This definition is based on version 6.6 of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and versions 6.4/6.5/6.6 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1B</cd:MatchData>
+        <cd:MatchData offset="1037">    3</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1B</cd:MatchData>
+        <cd:MatchData offset="1037">    4</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1B</cd:MatchData>
+        <cd:MatchData offset="1037">   10</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="IASI_xxx_1B_v11" format="binary" version="11">
+      <cd:Description>This definition is based on version 9A of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1B</cd:MatchData>
+        <cd:MatchData offset="1037">   11</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="IASI_xxx_1C">
+    <cd:Description>IASI Level 1c (Geolocated, Calibrated, Resampled, and Apodised Radiance Spectra).</cd:Description>
+    <cd:ProductDefinition id="IASI_xxx_1C_v2" format="binary" version="2">
+      <cd:Description>This definition is based on version 6.5 of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and version 6.4 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1C</cd:MatchData>
+        <cd:MatchData offset="1037">    2</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="IASI_xxx_1C_v3" format="binary" version="3">
+      <cd:Description>This definition is based on version 6.6 of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and versions 6.4/6.5/6.6 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1C</cd:MatchData>
+        <cd:MatchData offset="1037">    3</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1C</cd:MatchData>
+        <cd:MatchData offset="1037">    4</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1C</cd:MatchData>
+        <cd:MatchData offset="1037">   10</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="IASI_xxx_1C_v11" format="binary" version="11">
+      <cd:Description>This definition is based on version 9A of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">1C</cd:MatchData>
+        <cd:MatchData offset="1037">   11</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="IASI_ENG_01">
+    <cd:Description>IASI Level 1 Engineering.</cd:Description>
+    <cd:ProductDefinition id="IASI_ENG_01_v2" format="binary" version="2">
+      <cd:Description>This definition is based on version 6.5 of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and version 6.4 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="625">ENG</cd:MatchData>
+        <cd:MatchData offset="1037">    2</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="IASI_ENG_01_v3" format="binary" version="3">
+      <cd:Description>This definition is based on version 6.6 of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and versions 6.4/6.5/6.6 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="625">ENG</cd:MatchData>
+        <cd:MatchData offset="1037">    3</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="625">ENG</cd:MatchData>
+        <cd:MatchData offset="1037">    4</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="625">ENG</cd:MatchData>
+        <cd:MatchData offset="1037">   10</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="IASI_ENG_01_v11" format="binary" version="11">
+      <cd:Description>This definition is based on version 9A of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="625">ENG</cd:MatchData>
+        <cd:MatchData offset="1037">   11</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="IASI_VER_01">
+    <cd:Description>IASI Level 1 Verification.</cd:Description>
+    <cd:ProductDefinition id="IASI_VER_01_v2" format="binary" version="2">
+      <cd:Description>This definition is based on versions 6.5 - 9A of the IASI Level 1 Product Format Specification (PFS) document (EUM-EPS-SYS-SPE-990003) and versions 6.4 - 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="625">VER</cd:MatchData>
+        <cd:MatchData offset="1037">    2</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="625">VER</cd:MatchData>
+        <cd:MatchData offset="1037">    3</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="625">VER</cd:MatchData>
+        <cd:MatchData offset="1037">    4</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="625">VER</cd:MatchData>
+        <cd:MatchData offset="1037">   10</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="625">VER</cd:MatchData>
+        <cd:MatchData offset="1037">   11</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="IASI_SND_02">
+    <cd:Description>IASI Level 2.</cd:Description>
+    <cd:ProductDefinition id="IASI_SND_02_v2" format="binary" version="2">
+      <cd:Description>This definition is based on version 6.1 of the IASI Level 2 Product Format Specification (PFS) document (EUM-MIS-SPE-980760) and version 6.4 of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">02</cd:MatchData>
+        <cd:MatchData offset="1037">    2</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="IASI_SND_02_v3" format="binary" version="3">
+      <cd:Description>This definition is based on versions 6.2 - 8 of the IASI Level 2 Product Format Specification (PFS) document (EUM-MIS-SPE-980760) and versions 6.4 - 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">02</cd:MatchData>
+        <cd:MatchData offset="1037">    3</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">02</cd:MatchData>
+        <cd:MatchData offset="1037">    4</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">02</cd:MatchData>
+        <cd:MatchData offset="1037">   10</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="IASI_SND_02_v4" format="binary" version="4">
+      <cd:Description>This definition is based on version 9 of the IASI Level 2 Product Format Specification (PFS) document (EUM-MIS-SPE-980760) and version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
+        <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
+        <cd:MatchData offset="552">IASI</cd:MatchData>
+        <cd:MatchData offset="661">02</cd:MatchData>
+        <cd:MatchData offset="1037">   11</cd:MatchData>
+        <cd:MatchData offset="1075">    0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GENERIC">
+    <cd:Description>Generic EPS product format</cd:Description>
+    <cd:ProductDefinition id="GENERIC" format="binary" version="0">
+      <cd:Description>This definition is based on version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+</cd:ProductClass>

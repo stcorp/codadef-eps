@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="DMDR_v2" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Dummy MDR (format version 2)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="SPARE_FLAG">
+    <cd:Integer>
+      <cd:Description>Not currently used</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

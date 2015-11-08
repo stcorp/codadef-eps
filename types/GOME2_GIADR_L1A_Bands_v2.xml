@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_GIADR_L1A_Bands_v2" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 2)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="CHANNEL_NUMBER">
+    <cd:Array>
+      <cd:Description>Channel number (1 = main FPA channel 1, 2 = main FPA channel 2, 3 = main FPA channel 3, 4 = main FPA channel 4, 5 = PMD channel p, 6 = PMD channel s)</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="BAND_NUMBER">
+    <cd:Array>
+      <cd:Description>Band number (1 = main FPA band 1a, 2 = main FPA band 1b, 3 = main FPA band 2a, 4 = main FPA band 2b, 5 = main FPA band 3, 6 = main FPA band 4, 7 = PMD p blocks CDE, 8 = PMD s blocks CDE, 9 = PMD p block B, 10 = PMD s block B)</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="START_PIXEL">
+    <cd:Array>
+      <cd:Description>Start pixel of the band in the specified channel</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="NUMBER_OF_PIXELS">
+    <cd:Array>
+      <cd:Description>Number of pixels in the specified band</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

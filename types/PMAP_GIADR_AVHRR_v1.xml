@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="PMAP_GIADR_AVHRR_v1" last-modified="2014-05-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 2)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="CH4_CENTRAL_WAVENUMBER">
+    <cd:Integer>
+      <cd:Description>AVHRR ch.4 central wavenumber (Gamma) for radiance to brightness temperature conversion</cd:Description>
+      <cd:Unit>1e-3 cm-1</cd:Unit>
+      <cd:Conversion numerator="1" denominator="1e3">
+        <cd:Unit>cm-1</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CH4_CONSTANT1">
+    <cd:Integer>
+      <cd:Description>AVHRR ch.4 offset correction coefficient 1 (A) for brightness temperature linear correction</cd:Description>
+      <cd:Unit>1e-5 K</cd:Unit>
+      <cd:Conversion numerator="1" denominator="1e5">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CH4_CONSTANT2_SLOPE">
+    <cd:Integer>
+      <cd:Description>AVHRR ch.4 slope correction coefficient 2 (B) for brightness temperature linear correction</cd:Description>
+      <cd:Unit>1e-6 K/K</cd:Unit>
+      <cd:Conversion numerator="1" denominator="1e6">
+        <cd:Unit>K/K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CH5_CENTRAL_WAVENUMBER">
+    <cd:Integer>
+      <cd:Description>AVHRR ch.5 central wavenumber (Gamma) for radiance to brightness temperature conversion</cd:Description>
+      <cd:Unit>1e-3 cm-1</cd:Unit>
+      <cd:Conversion numerator="1" denominator="1e3">
+        <cd:Unit>cm-1</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CH5_CONSTANT1">
+    <cd:Integer>
+      <cd:Description>AVHRR ch.5 offset correction coefficient 1 (A) for brightness temperature linear correction</cd:Description>
+      <cd:Unit>1e-5 K</cd:Unit>
+      <cd:Conversion numerator="1" denominator="1e5">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CH5_CONSTANT2_SLOPE">
+    <cd:Integer>
+      <cd:Description>AVHRR ch.5 slope correction coefficient 2 (B) for brightness temperature linear correction</cd:Description>
+      <cd:Unit>1e-6 K/K</cd:Unit>
+      <cd:Conversion numerator="1" denominator="1e6">
+        <cd:Unit>K/K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CONSTANT_C1">
+    <cd:Integer>
+      <cd:Description>Constant C1 for radiance to brightness temperature conversion (C1=2hc^2, h: Plank's constant, c: speed of light)</cd:Description>
+      <cd:Unit>1e-11 mW/(m2 sr cm-4)</cd:Unit>
+      <cd:Conversion numerator="1" denominator="1e11">
+        <cd:Unit>mW/(m2 sr cm-4)</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CONSTANT_C2">
+    <cd:Integer>
+      <cd:Description>Constant C2 for radiance to brightness temperature conversion (C2=hc/k, h: Plank's constant, k: Boltzmann's constant)</cd:Description>
+      <cd:Unit>1e-6 K/cm-1</cd:Unit>
+      <cd:Conversion numerator="1" denominator="1e6">
+        <cd:Unit>K/cm-1</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

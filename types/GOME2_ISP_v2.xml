@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_ISP_v2" last-modified="2010-07-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Complete Instrument Science Packet (defined by GOME-2 Science Data Packet Description) (format version 2)</cd:Description>
+  <cd:Field name="MDR0_START_TIME">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Start time from MDR L0 GRH</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="MDR0_STOP_TIME">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Stop time from MDR L0 GRH</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="PRI_HEAD">
+    <cd:Array>
+      <cd:Description>Packet Primary Header</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SEC_HEAD">
+    <cd:Array>
+      <cd:Description>Packet secondary header (UTC)</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ANC">
+    <cd:Array>
+      <cd:Description>Ancillary data</cd:Description>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="HK_375">
+    <cd:Array>
+      <cd:Description>Housekeeping data at 375 ms</cd:Description>
+      <cd:Dimension>199</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="HK_1_5">
+    <cd:Array>
+      <cd:Description>Housekeeping data at 1.5 s</cd:Description>
+      <cd:Dimension>268</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="PMD">
+    <cd:Array>
+      <cd:Description>Detector data of the two PMD channels</cd:Description>
+      <cd:Dimension>680</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FPA">
+    <cd:Array>
+      <cd:Description>Detector data of the four main channels</cd:Description>
+      <cd:Dimension>8200</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CRC">
+    <cd:Integer>
+      <cd:Description>Packet error control (CRC)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

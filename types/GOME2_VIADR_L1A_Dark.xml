@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_VIADR_L1A_Dark" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="START_UTC_DARK">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Start UTC date/time of Dark calibration mode measurement</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="END_UTC_DARK">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>End UTC date/time of Dark calibration mode measurement</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="PCD_DARK">
+    <cd:NamedType id="GOME2_PCD_DARK"/>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PMD_TRANSFER">
+    <cd:Integer>
+      <cd:Description>PMD transfer mode (1 = band + raw, 2 = band + mixed, 3 = raw transfer, 4 = various (PMD transfer mode changes within a scan))</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PMD_READOUT">
+    <cd:Integer>
+      <cd:Description>PMD readout mode (0 = nominal, 1 = solar, 2 = calibration, 3 = various (PMD readout mode changes within a scan))</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CHANNEL_NUMBER">
+    <cd:Integer>
+      <cd:Description>Channel number (1 = main FPA channel 1, 2 = main FPA channel 2, 3 = main FPA channel 3, 4 = main FPA channel 4, 5 = PMD channel p, 6 = PMD channel s)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="BAND_NUMBER">
+    <cd:Integer>
+      <cd:Description>Band number (1 = main FPA band 1a, 2 = main FPA band 1b, 3 = main FPA band 2a, 4 = main FPA band 2b, 5 = main FPA band 3, 6 = main FPA band 4, 7 = PMD p blocks CDE, 8 = PMD s blocks CDE, 9 = PMD p block B, 10 = PMD s block B)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="START_PIXEL">
+    <cd:Integer>
+      <cd:Description>Start pixel of the band in the specified channel</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="NUMBER_OF_PIXELS">
+    <cd:Integer>
+      <cd:Description>Number of pixels in the specified channel</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="INTEGRATION_TIME">
+    <cd:Integer>
+      <cd:Description>Integration time for the band</cd:Description>
+      <cd:Unit>1e-6 s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="FPA_TEMP">
+    <cd:Integer>
+      <cd:Description>FPA temperature</cd:Description>
+      <cd:Unit>1e-3 K</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DARK_SIGNAL">
+    <cd:Array>
+      <cd:Description>Dark signal correction</cd:Description>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 BU</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>BU</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="DARK_READOUT_NOISE">
+    <cd:Array>
+      <cd:Description>Dark signal correction readout noise</cd:Description>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 BU</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>BU</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

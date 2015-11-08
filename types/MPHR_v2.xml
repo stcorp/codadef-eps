@@ -1,0 +1,1874 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MPHR_v2" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Main Record Header (format version 2)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="PRODUCT_NAME_label">
+    <cd:Text format="ascii">
+      <cd:Description>PRODUCT_NAME                  = </cd:Description>
+      <cd:FixedValue>PRODUCT_NAME                  = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PRODUCT_NAME">
+    <cd:Text format="ascii">
+      <cd:Description>Complete name of the product</cd:Description>
+      <cd:ByteSize>67</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_1">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PARENT_PRODUCT_NAME_1_label">
+    <cd:Text format="ascii">
+      <cd:Description>PARENT_PRODUCT_NAME_1         = </cd:Description>
+      <cd:FixedValue>PARENT_PRODUCT_NAME_1         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PARENT_PRODUCT_NAME_1">
+    <cd:Text format="ascii">
+      <cd:Description>Name of the parent product from which this product has been produced. For Level 0 products, this field is filled with lower case x's</cd:Description>
+      <cd:ByteSize>67</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_2">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PARENT_PRODUCT_NAME_2_label">
+    <cd:Text format="ascii">
+      <cd:Description>PARENT_PRODUCT_NAME_2         = </cd:Description>
+      <cd:FixedValue>PARENT_PRODUCT_NAME_2         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PARENT_PRODUCT_NAME_2">
+    <cd:Text format="ascii">
+      <cd:Description>Name of the parent product from which this product has been produced. For Level 0 products or products for which this is not appropriate, this field is filled with lower case x's</cd:Description>
+      <cd:ByteSize>67</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_3">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PARENT_PRODUCT_NAME_3_label">
+    <cd:Text format="ascii">
+      <cd:Description>PARENT_PRODUCT_NAME_3         = </cd:Description>
+      <cd:FixedValue>PARENT_PRODUCT_NAME_3         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PARENT_PRODUCT_NAME_3">
+    <cd:Text format="ascii">
+      <cd:Description>Name of the parent product from which this product has been produced. For Level 0 products or products for which this is not appropriate, this field is filled with lower case x's</cd:Description>
+      <cd:ByteSize>67</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_4">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PARENT_PRODUCT_NAME_4_label">
+    <cd:Text format="ascii">
+      <cd:Description>PARENT_PRODUCT_NAME_4         = </cd:Description>
+      <cd:FixedValue>PARENT_PRODUCT_NAME_4         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PARENT_PRODUCT_NAME_4">
+    <cd:Text format="ascii">
+      <cd:Description>Name of the parent product from which this product has been produced. For Level 0 products or products for which this is not appropriate, this field is filled with lower case x's</cd:Description>
+      <cd:ByteSize>67</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_5">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="INSTRUMENT_ID_label">
+    <cd:Text format="ascii">
+      <cd:Description>INSTRUMENT_ID                 = </cd:Description>
+      <cd:FixedValue>INSTRUMENT_ID                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="INSTRUMENT_ID">
+    <cd:Text format="ascii">
+      <cd:Description>Instrument identification</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_6">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="INSTRUMENT_MODEL_label">
+    <cd:Text format="ascii">
+      <cd:Description>INSTRUMENT_MODEL              = </cd:Description>
+      <cd:FixedValue>INSTRUMENT_MODEL              = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="INSTRUMENT_MODEL">
+    <cd:Text format="ascii">
+      <cd:Description>Instrument Model identification: 0 = Engineering Model, 1 = Proto-Flight Model / Flight Model 1 (of a series), 2 = Flight model 2 (of a series), ...., n = Flight model n (of a series)</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_7">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PRODUCT_TYPE_label">
+    <cd:Text format="ascii">
+      <cd:Description>PRODUCT_TYPE                  = </cd:Description>
+      <cd:FixedValue>PRODUCT_TYPE                  = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PRODUCT_TYPE">
+    <cd:Text format="ascii">
+      <cd:Description>Product Type</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_8">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSING_LEVEL_label">
+    <cd:Text format="ascii">
+      <cd:Description>PROCESSING_LEVEL              = </cd:Description>
+      <cd:FixedValue>PROCESSING_LEVEL              = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSING_LEVEL">
+    <cd:Text format="ascii">
+      <cd:Description>Processing Level identification</cd:Description>
+      <cd:ByteSize>2</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_9">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SPACECRAFT_ID_label">
+    <cd:Text format="ascii">
+      <cd:Description>SPACECRAFT_ID                 = </cd:Description>
+      <cd:FixedValue>SPACECRAFT_ID                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SPACECRAFT_ID">
+    <cd:Text format="ascii">
+      <cd:Description>Spacecraft identification</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_10">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SENSING_START_label">
+    <cd:Text format="ascii">
+      <cd:Description>SENSING_START                 = </cd:Description>
+      <cd:FixedValue>SENSING_START                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SENSING_START">
+    <cd:Time format="ascii" timeformat="ascii_eps_datetime">
+      <cd:Description>UTC Time of start of sensing data in this object (PDU, ROI or Full Product)</cd:Description>
+      <cd:Mapping string="xxxxxxxxxxxxxxZ" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="newline_11">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SENSING_END_label">
+    <cd:Text format="ascii">
+      <cd:Description>SENSING_END                   = </cd:Description>
+      <cd:FixedValue>SENSING_END                   = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SENSING_END">
+    <cd:Time format="ascii" timeformat="ascii_eps_datetime">
+      <cd:Description>UTC Time of end of sensing data in this object (PDU, ROI or Full Product)</cd:Description>
+      <cd:Mapping string="xxxxxxxxxxxxxxZ" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="newline_12">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SENSING_START_THEORETICAL_label">
+    <cd:Text format="ascii">
+      <cd:Description>SENSING_START_THEORETICAL     = </cd:Description>
+      <cd:FixedValue>SENSING_START_THEORETICAL     = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SENSING_START_THEORETICAL">
+    <cd:Time format="ascii" timeformat="ascii_eps_datetime">
+      <cd:Description>Theoretical UTC Time of start of sensing data in the dump from which this object is derived. This data is the predicted start time at the MPF level</cd:Description>
+      <cd:Mapping string="xxxxxxxxxxxxxxZ" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="newline_13">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SENSING_END_THEORETICAL_label">
+    <cd:Text format="ascii">
+      <cd:Description>SENSING_END_THEORETICAL       = </cd:Description>
+      <cd:FixedValue>SENSING_END_THEORETICAL       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SENSING_END_THEORETICAL">
+    <cd:Time format="ascii" timeformat="ascii_eps_datetime">
+      <cd:Description>Theoretical UTC Time of end of sensing data in the dump from which this object is derived. This data is the predicted start time at the MPF level</cd:Description>
+      <cd:Mapping string="xxxxxxxxxxxxxxZ" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="newline_14">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSING_CENTRE_label">
+    <cd:Text format="ascii">
+      <cd:Description>PROCESSING_CENTRE             = </cd:Description>
+      <cd:FixedValue>PROCESSING_CENTRE             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSING_CENTRE">
+    <cd:Text format="ascii">
+      <cd:Description>Processing Centre identification</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_15">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSOR_MAJOR_VERSION_label">
+    <cd:Text format="ascii">
+      <cd:Description>PROCESSOR_MAJOR_VERSION       = </cd:Description>
+      <cd:FixedValue>PROCESSOR_MAJOR_VERSION       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSOR_MAJOR_VERSION">
+    <cd:Integer format="ascii">
+      <cd:Description>Processing chain major version number</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_16">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSOR_MINOR_VERSION_label">
+    <cd:Text format="ascii">
+      <cd:Description>PROCESSOR_MINOR_VERSION       = </cd:Description>
+      <cd:FixedValue>PROCESSOR_MINOR_VERSION       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSOR_MINOR_VERSION">
+    <cd:Integer format="ascii">
+      <cd:Description>Processing chain minor version number</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_17">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="FORMAT_MAJOR_VERSION_label">
+    <cd:Text format="ascii">
+      <cd:Description>FORMAT_MAJOR_VERSION          = </cd:Description>
+      <cd:FixedValue>FORMAT_MAJOR_VERSION          = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="FORMAT_MAJOR_VERSION">
+    <cd:Integer format="ascii">
+      <cd:Description>Dataset Format Major Version number</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_18">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="FORMAT_MINOR_VERSION_label">
+    <cd:Text format="ascii">
+      <cd:Description>FORMAT_MINOR_VERSION          = </cd:Description>
+      <cd:FixedValue>FORMAT_MINOR_VERSION          = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="FORMAT_MINOR_VERSION">
+    <cd:Integer format="ascii">
+      <cd:Description>Dataset Format Major Version number</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_19">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSING_TIME_START_label">
+    <cd:Text format="ascii">
+      <cd:Description>PROCESSING_TIME_START         = </cd:Description>
+      <cd:FixedValue>PROCESSING_TIME_START         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSING_TIME_START">
+    <cd:Time format="ascii" timeformat="ascii_eps_datetime">
+      <cd:Description>UTC time of the processing at start of processing for the product</cd:Description>
+      <cd:Mapping string="xxxxxxxxxxxxxxZ" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="newline_20">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSING_TIME_END_label">
+    <cd:Text format="ascii">
+      <cd:Description>PROCESSING_TIME_END           = </cd:Description>
+      <cd:FixedValue>PROCESSING_TIME_END           = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSING_TIME_END">
+    <cd:Time format="ascii" timeformat="ascii_eps_datetime">
+      <cd:Description>UTC time of the processing at end of processing for the product</cd:Description>
+      <cd:Mapping string="xxxxxxxxxxxxxxZ" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="newline_21">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSING_MODE_label">
+    <cd:Text format="ascii">
+      <cd:Description>PROCESSING_MODE               = </cd:Description>
+      <cd:FixedValue>PROCESSING_MODE               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PROCESSING_MODE">
+    <cd:Text format="ascii">
+      <cd:Description>Identification of the mode of processing</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_22">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="DISPOSITION_MODE_label">
+    <cd:Text format="ascii">
+      <cd:Description>DISPOSITION_MODE              = </cd:Description>
+      <cd:FixedValue>DISPOSITION_MODE              = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="DISPOSITION_MODE">
+    <cd:Text format="ascii">
+      <cd:Description>Identification of the disposition mode</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_23">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="RECEIVING_GROUND_STATION_label">
+    <cd:Text format="ascii">
+      <cd:Description>RECEIVING_GROUND_STATION      = </cd:Description>
+      <cd:FixedValue>RECEIVING_GROUND_STATION      = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="RECEIVING_GROUND_STATION">
+    <cd:Text format="ascii">
+      <cd:Description>Aquisition Station identification</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_24">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="RECEIVE_TIME_START_label">
+    <cd:Text format="ascii">
+      <cd:Description>RECEIVE_TIME_START            = </cd:Description>
+      <cd:FixedValue>RECEIVE_TIME_START            = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="RECEIVE_TIME_START">
+    <cd:Time format="ascii" timeformat="ascii_eps_datetime">
+      <cd:Description>UTC time of the reception at CDA for first Data Item</cd:Description>
+      <cd:Mapping string="xxxxxxxxxxxxxxZ" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="newline_25">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="RECEIVE_TIME_END_label">
+    <cd:Text format="ascii">
+      <cd:Description>RECEIVE_TIME_END              = </cd:Description>
+      <cd:FixedValue>RECEIVE_TIME_END              = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="RECEIVE_TIME_END">
+    <cd:Time format="ascii" timeformat="ascii_eps_datetime">
+      <cd:Description>UTC time of the reception at CDA for last Data Item</cd:Description>
+      <cd:Mapping string="xxxxxxxxxxxxxxZ" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="newline_26">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ORBIT_START_label">
+    <cd:Text format="ascii">
+      <cd:Description>ORBIT_START                   = </cd:Description>
+      <cd:FixedValue>ORBIT_START                   = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ORBIT_START">
+    <cd:Integer format="ascii">
+      <cd:Description>Start Orbit Number, counted incrementally since launch</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_27">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ORBIT_END_label">
+    <cd:Text format="ascii">
+      <cd:Description>ORBIT_END                     = </cd:Description>
+      <cd:FixedValue>ORBIT_END                     = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ORBIT_END">
+    <cd:Integer format="ascii">
+      <cd:Description>Stop Orbit Number</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_28">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ACTUAL_PRODUCT_SIZE_label">
+    <cd:Text format="ascii">
+      <cd:Description>ACTUAL_PRODUCT_SIZE           = </cd:Description>
+      <cd:FixedValue>ACTUAL_PRODUCT_SIZE           = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ACTUAL_PRODUCT_SIZE">
+    <cd:Integer format="ascii">
+      <cd:Description>Size of the complete product</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_29">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="STATE_VECTOR_TIME_label">
+    <cd:Text format="ascii">
+      <cd:Description>STATE_VECTOR_TIME             = </cd:Description>
+      <cd:FixedValue>STATE_VECTOR_TIME             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="STATE_VECTOR_TIME">
+    <cd:Time format="ascii" timeformat="ascii_eps_datetime_long">
+      <cd:Description>Epoch time (in UTC) of the orbital elements and the orbit state vector. This corresponds to the time of crossing the ascending node for ORBIT_START</cd:Description>
+      <cd:Mapping string="xxxxxxxxxxxxxxxxxZ" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="newline_30">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SEMI_MAJOR_AXIS_label">
+    <cd:Text format="ascii">
+      <cd:Description>SEMI_MAJOR_AXIS               = </cd:Description>
+      <cd:FixedValue>SEMI_MAJOR_AXIS               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SEMI_MAJOR_AXIS">
+    <cd:Integer format="ascii">
+      <cd:Description>Semi major axis of orbit at time of the ascending node crossing</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_31">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ECCENTRICITY_label">
+    <cd:Text format="ascii">
+      <cd:Description>ECCENTRICITY                  = </cd:Description>
+      <cd:FixedValue>ECCENTRICITY                  = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ECCENTRICITY">
+    <cd:Integer format="ascii">
+      <cd:Description>Orbit eccentricity at time of the ascending node crossing</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_32">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="INCLINATION_label">
+    <cd:Text format="ascii">
+      <cd:Description>INCLINATION                   = </cd:Description>
+      <cd:FixedValue>INCLINATION                   = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="INCLINATION">
+    <cd:Integer format="ascii">
+      <cd:Description>Orbit inclination at time of the ascending node crossing</cd:Description>
+      <cd:Unit>1e-3 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_33">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PERIGEE_ARGUMENT_label">
+    <cd:Text format="ascii">
+      <cd:Description>PERIGEE_ARGUMENT              = </cd:Description>
+      <cd:FixedValue>PERIGEE_ARGUMENT              = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PERIGEE_ARGUMENT">
+    <cd:Integer format="ascii">
+      <cd:Description>Argument of perigee at time of the ascending node crossing</cd:Description>
+      <cd:Unit>1e-3 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_34">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="RIGHT_ASCENSION_label">
+    <cd:Text format="ascii">
+      <cd:Description>RIGHT_ASCENSION               = </cd:Description>
+      <cd:FixedValue>RIGHT_ASCENSION               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="RIGHT_ASCENSION">
+    <cd:Integer format="ascii">
+      <cd:Description>Right ascension at time of the ascending node crossing</cd:Description>
+      <cd:Unit>1e-3 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_35">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="MEAN_ANOMALY_label">
+    <cd:Text format="ascii">
+      <cd:Description>MEAN_ANOMALY                  = </cd:Description>
+      <cd:FixedValue>MEAN_ANOMALY                  = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="MEAN_ANOMALY">
+    <cd:Integer format="ascii">
+      <cd:Description>Mean anomaly at time of the ascending node crossing</cd:Description>
+      <cd:Unit>1e-3 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_36">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="X_POSITION_label">
+    <cd:Text format="ascii">
+      <cd:Description>X_POSITION                    = </cd:Description>
+      <cd:FixedValue>X_POSITION                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="X_POSITION">
+    <cd:Integer format="ascii">
+      <cd:Description>X position of the orbit state vector in the orbit frame at ascending node</cd:Description>
+      <cd:Unit>1e-3 m</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_37">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Y_POSITION_label">
+    <cd:Text format="ascii">
+      <cd:Description>Y_POSITION                    = </cd:Description>
+      <cd:FixedValue>Y_POSITION                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Y_POSITION">
+    <cd:Integer format="ascii">
+      <cd:Description>Y position of the orbit state vector in the orbit frame at ascending node</cd:Description>
+      <cd:Unit>1e-3 m</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_38">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Z_POSITION_label">
+    <cd:Text format="ascii">
+      <cd:Description>Z_POSITION                    = </cd:Description>
+      <cd:FixedValue>Z_POSITION                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Z_POSITION">
+    <cd:Integer format="ascii">
+      <cd:Description>Z position of the orbit state vector in the orbit frame at ascending node</cd:Description>
+      <cd:Unit>1e-3 m</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_39">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="X_VELOCTIY_label">
+    <cd:Text format="ascii">
+      <cd:Description>X_VELOCITY                    = </cd:Description>
+      <cd:FixedValue>X_VELOCITY                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="X_VELOCTIY">
+    <cd:Integer format="ascii">
+      <cd:Description>X velocity of the orbit state vector in the orbit frame at ascending node</cd:Description>
+      <cd:Unit>1e-3 m/s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>m/s</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_40">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Y_VELOCTIY_label">
+    <cd:Text format="ascii">
+      <cd:Description>Y_VELOCITY                    = </cd:Description>
+      <cd:FixedValue>Y_VELOCITY                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Y_VELOCTIY">
+    <cd:Integer format="ascii">
+      <cd:Description>Y velocity of the orbit state vector in the orbit frame at ascending node</cd:Description>
+      <cd:Unit>1e-3 m/s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>m/s</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_41">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Z_VELOCTIY_label">
+    <cd:Text format="ascii">
+      <cd:Description>Z_VELOCITY                    = </cd:Description>
+      <cd:FixedValue>Z_VELOCITY                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Z_VELOCTIY">
+    <cd:Integer format="ascii">
+      <cd:Description>Z velocity of the orbit state vector in the orbit frame at ascending node</cd:Description>
+      <cd:Unit>1e-3 m/s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>m/s</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_42">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="EARTH_SUN_DISTANCE_RATIO_label">
+    <cd:Text format="ascii">
+      <cd:Description>EARTH_SUN_DISTANCE_RATIO      = </cd:Description>
+      <cd:FixedValue>EARTH_SUN_DISTANCE_RATIO      = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="EARTH_SUN_DISTANCE_RATIO">
+    <cd:Integer format="ascii">
+      <cd:Description>Earth-Sun distance ration - ratio of current Earth-Sun distance to Mean Earth-Sun distance</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_43">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="LOCATION_TOLERANCE_RADIAL_label">
+    <cd:Text format="ascii">
+      <cd:Description>LOCATION_TOLERANCE_RADIAL     = </cd:Description>
+      <cd:FixedValue>LOCATION_TOLERANCE_RADIAL     = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="LOCATION_TOLERANCE_RADIAL">
+    <cd:Integer format="ascii">
+      <cd:Description>Nadir Earth location tolerance radial</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_44">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="LOCATION_TOLERANCE_CROSSTRACK_label">
+    <cd:Text format="ascii">
+      <cd:Description>LOCATION_TOLERANCE_CROSSTRACK = </cd:Description>
+      <cd:FixedValue>LOCATION_TOLERANCE_CROSSTRACK = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="LOCATION_TOLERANCE_CROSSTRACK">
+    <cd:Integer format="ascii">
+      <cd:Description>Nadir Earth location tolerance cross-track</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_45">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="LOCATION_TOLERANCE_ALONGTRACK_label">
+    <cd:Text format="ascii">
+      <cd:Description>LOCATION_TOLERANCE_ALONGTRACK = </cd:Description>
+      <cd:FixedValue>LOCATION_TOLERANCE_ALONGTRACK = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="LOCATION_TOLERANCE_ALONGTRACK">
+    <cd:Integer format="ascii">
+      <cd:Description>Nadir Earth location tolerance along-track</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_46">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="YAW_ERROR_label">
+    <cd:Text format="ascii">
+      <cd:Description>YAW_ERROR                     = </cd:Description>
+      <cd:FixedValue>YAW_ERROR                     = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="YAW_ERROR">
+    <cd:Integer format="ascii">
+      <cd:Description>Constant Yaw attitude error</cd:Description>
+      <cd:Unit>1e-3 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_47">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ROLL_ERROR_label">
+    <cd:Text format="ascii">
+      <cd:Description>ROLL_ERROR                    = </cd:Description>
+      <cd:FixedValue>ROLL_ERROR                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ROLL_ERROR">
+    <cd:Integer format="ascii">
+      <cd:Description>Constant Roll attitude error</cd:Description>
+      <cd:Unit>1e-3 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_48">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PITCH_ERROR_label">
+    <cd:Text format="ascii">
+      <cd:Description>PITCH_ERROR                   = </cd:Description>
+      <cd:FixedValue>PITCH_ERROR                   = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="PITCH_ERROR">
+    <cd:Integer format="ascii">
+      <cd:Description>Constant Pitch attitude error</cd:Description>
+      <cd:Unit>1e-3 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_49">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SUBSAT_LATITUDE_START_label">
+    <cd:Text format="ascii">
+      <cd:Description>SUBSAT_LATITUDE_START         = </cd:Description>
+      <cd:FixedValue>SUBSAT_LATITUDE_START         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SUBSAT_LATITUDE_START">
+    <cd:Integer format="ascii">
+      <cd:Description>Latitude of sub-satellite point at start of the data set</cd:Description>
+      <cd:Unit>1e-3 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_50">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SUBSAT_LONGITUDE_START_label">
+    <cd:Text format="ascii">
+      <cd:Description>SUBSAT_LONGITUDE_START        = </cd:Description>
+      <cd:FixedValue>SUBSAT_LONGITUDE_START        = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SUBSAT_LONGITUDE_START">
+    <cd:Integer format="ascii">
+      <cd:Description>Longitude of sub-satellite point at start of the data set</cd:Description>
+      <cd:Unit>1e-3 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_51">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SUBSAT_LATITUDE_END_label">
+    <cd:Text format="ascii">
+      <cd:Description>SUBSAT_LATITUDE_END           = </cd:Description>
+      <cd:FixedValue>SUBSAT_LATITUDE_END           = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SUBSAT_LATITUDE_END">
+    <cd:Integer format="ascii">
+      <cd:Description>Latitude of sub-satellite point at end of the data set</cd:Description>
+      <cd:Unit>1e-3 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_52">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SUBSAT_LONGITUDE_END_label">
+    <cd:Text format="ascii">
+      <cd:Description>SUBSAT_LONGITUDE_END          = </cd:Description>
+      <cd:FixedValue>SUBSAT_LONGITUDE_END          = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SUBSAT_LONGITUDE_END">
+    <cd:Integer format="ascii">
+      <cd:Description>Longitude of sub-satellite point at end of the data set</cd:Description>
+      <cd:Unit>1e-3 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_53">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="LEAP_SECOND_label">
+    <cd:Text format="ascii">
+      <cd:Description>LEAP_SECOND                   = </cd:Description>
+      <cd:FixedValue>LEAP_SECOND                   = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="LEAP_SECOND">
+    <cd:Integer format="ascii">
+      <cd:Description>Occurence of Leap second within the product. Field is set to -1, 0, or +1 dependent upon the occurrence of leap second and direction</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:ByteSize>2</cd:ByteSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_54">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="LEAP_SECOND_UTC_label">
+    <cd:Text format="ascii">
+      <cd:Description>LEAP_SECOND_UTC               = </cd:Description>
+      <cd:FixedValue>LEAP_SECOND_UTC               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="LEAP_SECOND_UTC">
+    <cd:Time format="ascii" timeformat="ascii_eps_datetime">
+      <cd:Description>UTC time of occurence of the Leap Second (if no leap second in the product, value is null)</cd:Description>
+      <cd:Mapping string="xxxxxxxxxxxxxxZ" value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="newline_55">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_RECORDS_label">
+    <cd:Text format="ascii">
+      <cd:Description>TOTAL_RECORDS                 = </cd:Description>
+      <cd:FixedValue>TOTAL_RECORDS                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_RECORDS">
+    <cd:Integer format="ascii">
+      <cd:Description>Total count of all records in the product</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_56">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_MPHR_label">
+    <cd:Text format="ascii">
+      <cd:Description>TOTAL_MPHR                    = </cd:Description>
+      <cd:FixedValue>TOTAL_MPHR                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_MPHR">
+    <cd:Integer format="ascii">
+      <cd:Description>Total count of all MPHRs in the product (should always be 1!)</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_57">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_SPHR_label">
+    <cd:Text format="ascii">
+      <cd:Description>TOTAL_SPHR                    = </cd:Description>
+      <cd:FixedValue>TOTAL_SPHR                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_SPHR">
+    <cd:Integer format="ascii">
+      <cd:Description>Total count of all SPHRs in the product (should be 0 or 1 only)</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_58">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_IPR_label">
+    <cd:Text format="ascii">
+      <cd:Description>TOTAL_IPR                     = </cd:Description>
+      <cd:FixedValue>TOTAL_IPR                     = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_IPR">
+    <cd:Integer format="ascii">
+      <cd:Description>Total count of all IPRs in the product</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_59">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_GEADR_label">
+    <cd:Text format="ascii">
+      <cd:Description>TOTAL_GEADR                   = </cd:Description>
+      <cd:FixedValue>TOTAL_GEADR                   = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_GEADR">
+    <cd:Integer format="ascii">
+      <cd:Description>Total count of all GEADRs in the product</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_60">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_GIADR_label">
+    <cd:Text format="ascii">
+      <cd:Description>TOTAL_GIADR                   = </cd:Description>
+      <cd:FixedValue>TOTAL_GIADR                   = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_GIADR">
+    <cd:Integer format="ascii">
+      <cd:Description>Total count of all GIADRs in the product</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_61">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_VEADR_label">
+    <cd:Text format="ascii">
+      <cd:Description>TOTAL_VEADR                   = </cd:Description>
+      <cd:FixedValue>TOTAL_VEADR                   = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_VEADR">
+    <cd:Integer format="ascii">
+      <cd:Description>Total count of all VEADRs in the product</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_62">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_VIADR_label">
+    <cd:Text format="ascii">
+      <cd:Description>TOTAL_VIADR                   = </cd:Description>
+      <cd:FixedValue>TOTAL_VIADR                   = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_VIADR">
+    <cd:Integer format="ascii">
+      <cd:Description>Total count of all VIADRs in the product</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_63">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_MDR_label">
+    <cd:Text format="ascii">
+      <cd:Description>TOTAL_MDR                     = </cd:Description>
+      <cd:FixedValue>TOTAL_MDR                     = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TOTAL_MDR">
+    <cd:Integer format="ascii">
+      <cd:Description>Total count of all MDRs in the product</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_64">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="COUNT_DEGRADED_INST_MDR_label">
+    <cd:Text format="ascii">
+      <cd:Description>COUNT_DEGRADED_INST_MDR       = </cd:Description>
+      <cd:FixedValue>COUNT_DEGRADED_INST_MDR       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="COUNT_DEGRADED_INST_MDR">
+    <cd:Integer format="ascii">
+      <cd:Description>Count of MDRs with degradation due to instrument problems</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_65">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="COUNT_DEGRADED_PROC_MDR_label">
+    <cd:Text format="ascii">
+      <cd:Description>COUNT_DEGRADED_PROC_MDR       = </cd:Description>
+      <cd:FixedValue>COUNT_DEGRADED_PROC_MDR       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="COUNT_DEGRADED_PROC_MDR">
+    <cd:Integer format="ascii">
+      <cd:Description>Count of MDRs with degradation due to processing problems</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_66">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="COUNT_DEGRADED_INST_MDR_BLOCKS_label">
+    <cd:Text format="ascii">
+      <cd:Description>COUNT_DEGRADED_INST_MDR_BLOCKS= </cd:Description>
+      <cd:FixedValue>COUNT_DEGRADED_INST_MDR_BLOCKS= </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="COUNT_DEGRADED_INST_MDR_BLOCKS">
+    <cd:Integer format="ascii">
+      <cd:Description>Count of the number of blocks of MDRs degraded due to degraded instrument</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_67">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="COUNT_DEGRADED_PROC_MDR_BLOCKS_label">
+    <cd:Text format="ascii">
+      <cd:Description>COUNT_DEGRADED_PROC_MDR_BLOCKS= </cd:Description>
+      <cd:FixedValue>COUNT_DEGRADED_PROC_MDR_BLOCKS= </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="COUNT_DEGRADED_PROC_MDR_BLOCKS">
+    <cd:Integer format="ascii">
+      <cd:Description>Count of the number of blocks of MDRs degraded due to degraded processing</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_68">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="DURATION_OF_PRODUCT_label">
+    <cd:Text format="ascii">
+      <cd:Description>DURATION_OF_PRODUCT           = </cd:Description>
+      <cd:FixedValue>DURATION_OF_PRODUCT           = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="DURATION_OF_PRODUCT">
+    <cd:Integer format="ascii">
+      <cd:Description>The duration of the product in milliseconds</cd:Description>
+      <cd:Unit>ms</cd:Unit>
+      <cd:ByteSize>8</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_69">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="MILLISECONDS_OF_DATA_PRESENT_label">
+    <cd:Text format="ascii">
+      <cd:Description>MILLISECONDS_OF_DATA_PRESENT  = </cd:Description>
+      <cd:FixedValue>MILLISECONDS_OF_DATA_PRESENT  = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="MILLISECONDS_OF_DATA_PRESENT">
+    <cd:Integer format="ascii">
+      <cd:Description>The total amount of data present in the product</cd:Description>
+      <cd:Unit>ms</cd:Unit>
+      <cd:ByteSize>8</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_70">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="MILLISECONDS_OF_DATA_MISSING_label">
+    <cd:Text format="ascii">
+      <cd:Description>MILLISECONDS_OF_DATA_MISSING  = </cd:Description>
+      <cd:FixedValue>MILLISECONDS_OF_DATA_MISSING  = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="MILLISECONDS_OF_DATA_MISSING">
+    <cd:Integer format="ascii">
+      <cd:Description>The total amount of data missing from the product</cd:Description>
+      <cd:Unit>ms</cd:Unit>
+      <cd:ByteSize>8</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_71">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SUBSETTED_PRODUCT_label">
+    <cd:Text format="ascii">
+      <cd:Description>SUBSETTED_PRODUCT             = </cd:Description>
+      <cd:FixedValue>SUBSETTED_PRODUCT             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="SUBSETTED_PRODUCT">
+    <cd:Text format="ascii">
+      <cd:Description>Set when product has been subsetted (e.g. greographically subsetted using a region of interest filter). Implies the pressence of one or more UMARF GIARDs in GAD section for product retrieved from UMARF</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="newline_72">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

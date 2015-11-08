@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_BAND_P_v2" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Level 1b band data record for the PMD channels (format version 2)</cd:Description>
+  <cd:Field name="RAD">
+    <cd:VSFInteger>
+      <cd:Description>Radiance or reflectivity</cd:Description>
+      <cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>scale factor</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:ScaleFactor>
+      <cd:Integer>
+        <cd:Description>32-bit integer</cd:Description>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:VSFInteger>
+  </cd:Field>
+  <cd:Field name="ERR_RAD">
+    <cd:VSFInteger>
+      <cd:Description>Absolute error on radiance or reflectivity</cd:Description>
+      <cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>scale factor</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:ScaleFactor>
+      <cd:Integer>
+        <cd:Description>16-bit integer</cd:Description>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:VSFInteger>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<cd:Union format="binary" name="IASI_MDR_L1B_Union_v3" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Union of possible IASI L1b MDRs (format version 3). A definition for each of the record subclass values that are used in the field expression for this union can be found in the IASI Level 1 PFS (EUM-EPS-SYS-SPE-990003).</cd:Description>
+  <cd:FieldExpression><![CDATA[if(int(:/RECORD_HEADER/INSTRUMENT_GROUP) == 8, if(int(:/RECORD_HEADER/RECORD_SUBCLASS) == 1, 0, 2), if(int(:/RECORD_HEADER/INSTRUMENT_GROUP) == 13 && int(:/RECORD_HEADER/RECORD_SUBCLASS) == 1, 1, 2))]]></cd:FieldExpression>
+  <cd:BitSize><![CDATA[$mdr_bit_size[index(.)]]]></cd:BitSize>
+  <cd:Field name="MDR">
+    <cd:NamedType id="IASI_MDR_L1B_v3"/>
+  </cd:Field>
+  <cd:Field name="Dummy">
+    <cd:NamedType id="DMDR_v2"/>
+  </cd:Field>
+  <cd:Field name="Unknown">
+    <cd:NamedType id="GENERIC_RECORD"/>
+  </cd:Field>
+</cd:Union>

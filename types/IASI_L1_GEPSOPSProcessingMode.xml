@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IASI_L1_GEPSOPSProcessingMode" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Processing mode</cd:Description>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>not used</cd:Description>
+      <cd:BitSize>26</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="TargetType">
+    <cd:Integer>
+      <cd:Description>Target type during external calibration mode; 0 = Earth, 1 = not Earth</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="IntMode">
+    <cd:Integer>
+      <cd:Description>Interface mode; 0 = granule per granule, 1 = dump per dump</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DebugMode">
+    <cd:Integer>
+      <cd:Description>Debug mode; 0 = debug mode off, 1 = debug mode on</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CalMode">
+    <cd:Integer>
+      <cd:Description>0 = normal/auxiliary instrument mode, 1 = external calibration mode</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Level">
+    <cd:Integer>
+      <cd:Description>00 = Level 0, 01 = Level 1, 11 = Level 2</cd:Description>
+      <cd:BitSize>2</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

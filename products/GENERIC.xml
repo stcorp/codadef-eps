@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="GENERIC" format="binary" last-modified="2015-03-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Array>
+    <cd:Dimension><![CDATA[$num_records]]></cd:Dimension>
+    <cd:Union>
+      <cd:FieldExpression><![CDATA[if(int(:/RECORD_HEADER/RECORD_CLASS) == 1, if(int(:/RECORD_HEADER/RECORD_SUBCLASS_VERSION) == 2, 1, 0), if(int(:/RECORD_HEADER/RECORD_CLASS) == 3, 2, 0))]]></cd:FieldExpression>
+      <cd:Field name="Generic">
+        <cd:NamedType id="GENERIC_RECORD"/>
+      </cd:Field>
+      <cd:Field name="MPHR2">
+        <cd:NamedType id="MPHR_v2"/>
+      </cd:Field>
+      <cd:Field name="IPR">
+        <cd:NamedType id="IPR"/>
+      </cd:Field>
+    </cd:Union>
+  </cd:Array>
+  <cd:ProductVariable name="num_records">
+    <cd:Init><![CDATA[$num_records = unboundindex(/, byteoffset(.) >= filesize())]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

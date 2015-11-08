@@ -1,0 +1,698 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IASI_MDR_L1C_v3" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 3)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="DEGRADED_INST_MDR">
+    <cd:Integer>
+      <cd:Description>Quality of MDR has been degraded from nominal due to an instrument degradation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEGRADED_PROC_MDR">
+    <cd:Integer>
+      <cd:Description>Quality of MDR has been degraded from nominal due to a processing degradation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GEPSIasiMode">
+    <cd:NamedType id="IASI_GEPSIasiMode"/>
+  </cd:Field>
+  <cd:Field name="GEPSOPSProcessingMode">
+    <cd:NamedType id="IASI_L1_GEPSOPSProcessingMode"/>
+  </cd:Field>
+  <cd:Field name="GEPSIdConf">
+    <cd:NamedType id="IASI_L1_GEPSIdConf"/>
+  </cd:Field>
+  <cd:Field name="GEPSLocIasiAvhrr_IASI">
+    <cd:Array>
+      <cd:Description>Measure positioning relatively to AVHRR: position of 4 IASI sounder pixels in AVHRR raster</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEPSLocIasiAvhrr_IIS">
+    <cd:Array>
+      <cd:Description>Measure positioning relatively to AVHRR: position of IIS pixels for a subgrid 5*5 of IIS</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>25</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="OBT">
+    <cd:Array>
+      <cd:Description>On Board Time (Coarse time + Fine time)</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Raw>
+        <cd:Description>On Board time counter (coarse time + fine time)</cd:Description>
+        <cd:BitSize>48</cd:BitSize>
+      </cd:Raw>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="OnboardUTC">
+    <cd:Array>
+      <cd:Description>Date of IASI measure (on board UTC)</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Time timeformat="binary_eps_datetime">
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEPSDatIasi">
+    <cd:Array>
+      <cd:Description>Date of IASI measure (Corrected UTC)</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Time timeformat="binary_eps_datetime">
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GIsfLinOrigin">
+    <cd:Array>
+      <cd:Description>Zero point in line in the interpolation grid of the spectral database</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GIsfColOrigin">
+    <cd:Array>
+      <cd:Description>Zero point in column in the interpolation grid of the spectral database</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GIsfPds1">
+    <cd:Array>
+      <cd:Description>Weight of interpolation point 1</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GIsfPds2">
+    <cd:Array>
+      <cd:Description>Weight of interpolation point 2</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GIsfPds3">
+    <cd:Array>
+      <cd:Description>Weight of interpolation point 3</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GIsfPds4">
+    <cd:Array>
+      <cd:Description>Weight of interpolation point 4</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEPS_CCD">
+    <cd:Array>
+      <cd:Description>Corner Cube Direction for all observational targets</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEPS_SP">
+    <cd:Array>
+      <cd:Description>Scan position for all observational targets</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GIrcImage">
+    <cd:Array>
+      <cd:Description>Calibrated IASI images</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>W/(m2.sr.1/m)</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GQisFlagQual">
+    <cd:Integer>
+      <cd:Description>Quality flag for the system</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GQisQualIndex">
+    <cd:VSFInteger>
+      <cd:Description>System-IASI general quality index</cd:Description>
+      <cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>scale factor</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:ScaleFactor>
+      <cd:Integer>
+        <cd:Description>32-bit integer</cd:Description>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:VSFInteger>
+  </cd:Field>
+  <cd:Field name="GQisQualIndexIIS">
+    <cd:VSFInteger>
+      <cd:Description>IIS imager quality index inside 1c [product</cd:Description>
+      <cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>scale factor</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:ScaleFactor>
+      <cd:Integer>
+        <cd:Description>32-bit integer</cd:Description>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:VSFInteger>
+  </cd:Field>
+  <cd:Field name="GQisQualIndexLoc">
+    <cd:VSFInteger>
+      <cd:Description>Geometric quality index for sounder product</cd:Description>
+      <cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>scale factor</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:ScaleFactor>
+      <cd:Integer>
+        <cd:Description>32-bit integer</cd:Description>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:VSFInteger>
+  </cd:Field>
+  <cd:Field name="GQisQualIndexRad">
+    <cd:VSFInteger>
+      <cd:Description>Radiometric quality index for sounder product</cd:Description>
+      <cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>scale factor</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:ScaleFactor>
+      <cd:Integer>
+        <cd:Description>32-bit integer</cd:Description>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:VSFInteger>
+  </cd:Field>
+  <cd:Field name="GQisQualIndexSpect">
+    <cd:VSFInteger>
+      <cd:Description>Spectral quality index for sounder product</cd:Description>
+      <cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>scale factor</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:ScaleFactor>
+      <cd:Integer>
+        <cd:Description>32-bit integer</cd:Description>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:VSFInteger>
+  </cd:Field>
+  <cd:Field name="GQisSysTecIISQual">
+    <cd:Integer>
+      <cd:Description>System -TEC quality index for IIS</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GQisSysTecSondQual">
+    <cd:Integer>
+      <cd:Description>System -TEC quality index for sounder</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GGeoSondLoc">
+    <cd:Array>
+      <cd:Description>Location of pixel centre in geodetic coordinates (long, lat) for each sounder pixel</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GGeoSondAnglesMETOP">
+    <cd:Array>
+      <cd:Description>Measurement angles for each sounder pixel (zenith, azimuth)</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GGeoIISAnglesMETOP">
+    <cd:Array>
+      <cd:Description>Measurement angles for a subgrid of IASI imager (zenith, azimuth)</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>25</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GGeoSondAnglesSUN">
+    <cd:Array>
+      <cd:Description>Solar angles at the surface for each sounder pixel (zenith, azimuth)</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GGeoIISAnglesSUN">
+    <cd:Array>
+      <cd:Description>Solar angles at the surface for a subgrid (5x5) of IASI imager (zenith, azimuth)</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>25</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GGeoIISLoc">
+    <cd:Array>
+      <cd:Description>Location of pixel centre in geodetic coordinates for a sub grid (5x5) of the imager pixels</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>25</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="EARTH_SATELLITE_DISTANCE">
+    <cd:Integer>
+      <cd:Description>Distance of satellite from Earth centre</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="IDefSpectDWn1b">
+    <cd:VSFInteger>
+      <cd:Description>Sample width of IASI 1C spectra (same as 1B)</cd:Description>
+      <cd:Unit>1/m</cd:Unit>
+      <cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>scale factor</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:ScaleFactor>
+      <cd:Integer>
+        <cd:Description>32-bit integer</cd:Description>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:VSFInteger>
+  </cd:Field>
+  <cd:Field name="IDefNsfirst1b">
+    <cd:Integer>
+      <cd:Description>Number of the first sample of IASI 1C spectra (same as 1B)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="IDefNslast1b">
+    <cd:Integer>
+      <cd:Description>Number of the last sample of IASI 1C spectra (same as 1B)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GS1cSpect">
+    <cd:Array>
+      <cd:Description>Level 1C spectra</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>8700</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>W/(m2.sr.1/m)</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefCovarMatEigenVal1c">
+    <cd:Array>
+      <cd:Description>Level 1c noise variance-covariance matrix index</cd:Description>
+      <cd:Dimension>100</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefCcsChannelId">
+    <cd:Array>
+      <cd:Description>Radiance Analysis: Identification of the AVHRR channel or pseudo-channels used for Radiance Analysis</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsRadAnalNbClass">
+    <cd:Array>
+      <cd:Description>Radiance Analysis: Number of identified classes in the sounder FOV</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsRadAnalWgt">
+    <cd:Array>
+      <cd:Description>Radiance Analysis: sounder FOV Radiance Analysis (% covered by each class)</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsRadAnalY">
+    <cd:Array>
+      <cd:Description>Radiance Analysis: Y Angular position of the centre of gravity</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsRadAnalZ">
+    <cd:Array>
+      <cd:Description>Radiance Analysis: Z Angular position of the centre of gravity</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsRadAnalMean">
+    <cd:Array>
+      <cd:Description>Radiance Analysis: Mean AVHRR radiances (all channels) of the sounder FOV classes</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:Unit>W/(m2.sr.1/m)</cd:Unit>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsRadAnalStd">
+    <cd:Array>
+      <cd:Description>Radiance Analysis: Standard deviation AVHRR radiances (all channels) of the sounder FOV classes</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:Unit>W/(m2.sr.1/m)</cd:Unit>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsImageClassified">
+    <cd:Array>
+      <cd:Description>Radiance Analysis: Image AVHRR or IIS classified</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>100</cd:Dimension>
+      <cd:Dimension>100</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>int8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefCcsMode">
+    <cd:Record>
+      <cd:Description>Radiance Analysis: Image used is from AVHRR or IIS imager (degraded cases)</cd:Description>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>not used</cd:Description>
+          <cd:BitSize>31</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="ImgRadAnal">
+        <cd:Integer>
+          <cd:Description>Image used for radiance analysis; 0 = AVHRR, 1 = IIS</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="GCcsImageClassifiedNbLin">
+    <cd:Array>
+      <cd:Description>Radiance Analysis: Number of usefull lines</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsImageClassifiedNbCol">
+    <cd:Array>
+      <cd:Description>Radiance Analysis: Number of usefull columns</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsImageClassifiedFirstLin">
+    <cd:Array>
+      <cd:Description>First line of the classified image (number in the Avhrr raster)</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsImageClassifiedFirstCol">
+    <cd:Array>
+      <cd:Description>First column of the classified image (number in the Avhrr raster)</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GCcsRadAnalType">
+    <cd:Array>
+      <cd:Description>Radiance Analysis: boolean reporting if classes are of extreme type</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_VIADR_L1A_Spec_v2" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 2)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="START_UTC_SLS">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Start UTC date/time of SLS calibration mode measurement</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="END_UTC_SLS">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>End UTC date/time of SLS calibration mode measurement</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="PCD_SPEC">
+    <cd:NamedType id="GOME2_PCD_SPEC_v1"/>
+  </cd:Field>
+  <cd:Field name="PDP_TEMP">
+    <cd:Integer>
+      <cd:Description>Pre-disperser prism temperature</cd:Description>
+      <cd:Unit>1e-3 K</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="POLY_COEFF_FPA">
+    <cd:Array>
+      <cd:Description>Main FPA spectral calibration polynomial coefficients (8 coefficients + 2 spare per channel maximum), channel 1 first</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="POLY_COEFF_PMD">
+    <cd:Array>
+      <cd:Description>PMD spectral calibration polynomial coefficients (8 coefficients + 2 spare per channel maximum), PMD p first</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

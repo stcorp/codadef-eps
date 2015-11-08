@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_GEO_MOON" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Additional geolocation record for Moon measurements</cd:Description>
+  <cd:Field name="LUNAR_AZIMUTH">
+    <cd:Array>
+      <cd:Description>Lunar azimuth angle, points HJKLM (Satellite Relative Actual Reference CS)</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="LUNAR_ELEVATION">
+    <cd:Array>
+      <cd:Description>Lunar elevation angle, points HJKLM (Satellite Relative Actual Reference CS)</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="DISTANCE_SUN_MOON">
+    <cd:Integer>
+      <cd:Description>Sun-Moon distance</cd:Description>
+      <cd:Unit>1e3 m</cd:Unit>
+      <cd:Conversion numerator="1000.000000" denominator="1.000000">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DISTANCE_SAT_MOON">
+    <cd:Integer>
+      <cd:Description>Satellite-Moon distance</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="LUNAR_PHASE">
+    <cd:Integer>
+      <cd:Description>Lunar phase angle (geometrical)</cd:Description>
+      <cd:Unit>1e-6 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="LUNAR_FRACTION">
+    <cd:Integer>
+      <cd:Description>Illuminated fraction of lunar disc</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

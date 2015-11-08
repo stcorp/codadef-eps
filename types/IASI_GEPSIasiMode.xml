@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IASI_GEPSIasiMode" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Instrument mode</cd:Description>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>not used</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ScanPos">
+    <cd:Integer>
+      <cd:Description>During external calibration mode, scan position SP (see word 12 of instrument packet); 0 if not during external calibration mode</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="InstrMode">
+    <cd:Integer>
+      <cd:Description>Instrument mode: word 19 of instrument packet</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

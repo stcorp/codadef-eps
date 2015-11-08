@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_PCD_BASIC_v2" last-modified="2010-07-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Product Confidence Data record common to all measurement modes (format version 2)</cd:Description>
+  <cd:Field name="F_NN_DT">
+    <cd:Array>
+      <cd:Description>Flag indicating non-nominal detector temperature, per channel</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_NN_PDP">
+    <cd:Integer>
+      <cd:Description>Flag indicating non-nominal pre-disperser temperature</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_NN_RAD">
+    <cd:Integer>
+      <cd:Description>Flag indicating non-nominal radiator temperature</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_NN_WLS_U">
+    <cd:Integer>
+      <cd:Description>Flag indicating non-nominal WLS voltage</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_NN_WLS_I">
+    <cd:Integer>
+      <cd:Description>Flag indicating non-nominal WLS current</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_NN_SLS_U">
+    <cd:Integer>
+      <cd:Description>Flag indicating non-nominal SLS voltage</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_NN_SLS_I">
+    <cd:Integer>
+      <cd:Description>Flag indicating non-nominal SLS current</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_INV_UTC">
+    <cd:Integer>
+      <cd:Description>Flag indicating invalid UTC</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_MISS">
+    <cd:Integer>
+      <cd:Description>Flag indicating missing data packets</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_SAT">
+    <cd:Array>
+      <cd:Description>Flag indicating saturated pixels, per band and read-out</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_HOT">
+    <cd:Array>
+      <cd:Description>Flag indicating hot pixels, per band and read-out</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_SAA">
+    <cd:Array>
+      <cd:Description>Flag indicating whether read-out is in the SAA</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_SUNGLINT_RISK">
+    <cd:Array>
+      <cd:Description>Flag indicating danger of sun-glint per read-out</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_SUNGLINT_HIGH_RISK">
+    <cd:Array>
+      <cd:Description>Flag indicating high danger of sun-glint per read-out</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_RAINBOW">
+    <cd:Array>
+      <cd:Description>Flag indicating danger of rainbow per read-out</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_MODE_GEOLOCATION">
+    <cd:Integer>
+      <cd:Description>Flag indicating possible mismatch between observation mode and geolocation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_MIN">
+    <cd:Array>
+      <cd:Description>Flag indicating that mean raw signal is below a specified threshold, per band and read-out</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MEAN_UC">
+    <cd:Array>
+      <cd:Description>Mean raw signal per band</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_OLD_CAL_DATA">
+    <cd:Array>
+      <cd:Description>Flag to indicate that old in-flight auxiliary calibration data is in use (0 = no in-flight auxiliary calibration data is old, 1 = dark signal correction old, 2 = PPG correction old, 4 = spectral calibration parameters old, 8 = etalon correction old, 16 = SMR old)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

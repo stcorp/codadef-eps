@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_POLSS_v2" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Single scattering polarisation parameters (format version 2)</cd:Description>
+  <cd:Field name="WL_POL_SS">
+    <cd:Integer>
+      <cd:Description>Wavelength assigned to the single scattering Stokes fractions</cd:Description>
+      <cd:Unit>1e-6 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="P_POL_SS">
+    <cd:Integer>
+      <cd:Description>Degree of polarisation P (single scattering)</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CHI_POL_SS">
+    <cd:Integer>
+      <cd:Description>Polarisation angle (single scattering)</cd:Description>
+      <cd:Unit>1e-6 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Q_POL_SS">
+    <cd:Integer>
+      <cd:Description>Stokes fraction q (theoretical value for single scattering)</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="U_POL_SS">
+    <cd:Integer>
+      <cd:Description>Stokes fraction u (theoretical value for single scattering)</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

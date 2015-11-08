@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IASI_GIADR_ENGINEERING_v3" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 3)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="GEPSDatProcessing">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Date of ground processing</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="GEPSUtcLeapSecond">
+    <cd:Array>
+      <cd:Description>Parameter of OBT to UTC conversion; 3 integers (day, ms, us) = CCSDS format, day:ms:us</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEPSCcuObtCorrel">
+    <cd:Integer>
+      <cd:Description>Parameter of OBT to UTC conversion; an integer number of 1/256th of second</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GEPSUtcCorrel">
+    <cd:Array>
+      <cd:Description>Parameter of OBT to UTC conversion; 3 integers (day, ms, us) = CCSDS format, day:ms:us</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEPSAStepCorrel">
+    <cd:Float>
+      <cd:Description>Parameter of OBT to UTC conversion; duration of 1 OBT tick</cd:Description>
+      <cd:Unit>1e-6 s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="GEPSBStepCorrel">
+    <cd:Float>
+      <cd:Description>Parameter of OBT to UTC conversion</cd:Description>
+      <cd:Unit>1e-6 s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>

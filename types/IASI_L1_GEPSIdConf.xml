@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IASI_L1_GEPSIdConf" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>System configuration at line level</cd:Description>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>not used</cd:Description>
+      <cd:BitSize>174</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="GOPSFlaGeoAvhrrMiss">
+    <cd:Integer>
+      <cd:Description>GOPSFlaGeoAvhrrMiss (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFlagPacketIPMiss">
+    <cd:Integer>
+      <cd:Description>GOPSFlagPacketIPMiss (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFlagPacketPXMiss">
+    <cd:Integer>
+      <cd:Description>GOPSFlagPacketPXMiss (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFlagPacketAPMiss">
+    <cd:Integer>
+      <cd:Description>GOPSFlagPacketAPMiss (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFlagPacketVPMiss">
+    <cd:Integer>
+      <cd:Description>GOPSFlagPacketVPMiss (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFltImgCSMiss">
+    <cd:Integer>
+      <cd:Description>GOPSFltImgCSMiss (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFltImgBBMiss">
+    <cd:Integer>
+      <cd:Description>GOPSFltImgBBMiss (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFltImgEWMiss">
+    <cd:Integer>
+      <cd:Description>GOPSFltImgEWMiss (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFltBBTMiss">
+    <cd:Integer>
+      <cd:Description>GOPSFltBBTMiss (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFltBandMiss">
+    <cd:Integer>
+      <cd:Description>GOPSFltBandMiss (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFltIsrfemOff">
+    <cd:Integer>
+      <cd:Description>GOPSFltIsrfemOff (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFlaDataGap">
+    <cd:Integer>
+      <cd:Description>GOPSFlaDataGap (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOPSFlaPixMiss">
+    <cd:Integer>
+      <cd:Description>GOPSFlaPixMiss (degraded case at line level)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="InPlaneSatManoeuvre">
+    <cd:Integer>
+      <cd:Description>In-plane satellite manoeuvre ( 0 = no manoeuvre, 1 = manoeuvre)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ParVal">
+    <cd:Integer>
+      <cd:Description>Parallel validation ( 0 = off, 1 = on)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ReproMode">
+    <cd:Integer>
+      <cd:Description>Re-processing mode ( 0 = off, 1 = on)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="BacklogMode">
+    <cd:Integer>
+      <cd:Description>Backlog processing mode ( 0 = off, 1 = on)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="NormalMode">
+    <cd:Integer>
+      <cd:Description>Normal processing mode ( 0 = off, 1 = on)</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="IdefIDConf">
+    <cd:Integer>
+      <cd:Description>IDefIDConf: ID of the algorithm configuration</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PTSI">
+    <cd:Integer>
+      <cd:Description>PTSI (word 16 and 17 of the instrument packet)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

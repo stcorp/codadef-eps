@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="PMAP_VIADR_ECMWF_v1" last-modified="2014-05-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 2)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="ECMWF_PARAMETERS">
+    <cd:Array>
+      <cd:Description>ECMWF parameters used for the processing (165, 166) [ref.: ECMWF GRIB API Parameters, http://www.ecmwf.int/publications/manuals/d/gribapi/param]</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SPATIAL_RESOLUTION">
+    <cd:Array>
+      <cd:Description>Spatial resolution of forecast model (number of elements in longitude - and latitude) (720, 361)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GENERATING_PROCESS_ID">
+    <cd:Array>
+      <cd:Description>GRIB Generating process identification number of the two ATIA files used for the processing [ref.: ECMWF Atmospheric model identification numbers, http://www.ecmwf.int/products/data/technical/model_id/]</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="START_TIME">
+    <cd:Array>
+      <cd:Description>Start time (from the product file name) of the two ATIA files used for the processing</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Time timeformat="binary_eps_datetime">
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FCT_BASE_TIME">
+    <cd:Array>
+      <cd:Description>Forecast base time of the two ATIA files used for the processing</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Time timeformat="binary_eps_datetime">
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FCT_START_TIME">
+    <cd:Array>
+      <cd:Description>Forecast start time of the two ATIA files used for the processing</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Time timeformat="binary_eps_datetime">
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="STOP_TIME">
+    <cd:Array>
+      <cd:Description>Stop time (from the product file name) of the two ATIA files used for the processing</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Time timeformat="binary_eps_datetime">
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

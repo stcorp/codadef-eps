@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_ISP_HEAD_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Header of the ISP + HK data + CRC (subset of the ISP without PMD and FPA detector data) (format version 1)</cd:Description>
+  <cd:Field name="PRI_HEAD">
+    <cd:Array>
+      <cd:Description>Packet Primary Header</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SEC_HEAD">
+    <cd:Array>
+      <cd:Description>Packet secondary header (UTC)</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ANC">
+    <cd:Array>
+      <cd:Description>Ancillary data</cd:Description>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="HK_375">
+    <cd:Array>
+      <cd:Description>Housekeeping data at 375 ms</cd:Description>
+      <cd:Dimension>199</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="HK_1_5">
+    <cd:Array>
+      <cd:Description>Housekeeping data at 1.5 s</cd:Description>
+      <cd:Dimension>268</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CRC">
+    <cd:Integer>
+      <cd:Description>Packet error control (CRC)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

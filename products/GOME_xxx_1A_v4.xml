@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="GOME_xxx_1A_v4" format="binary" last-modified="2010-07-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="binary">
+    <cd:Field name="MPHR">
+      <cd:NamedType id="MPHR_v2"/>
+    </cd:Field>
+    <cd:Field name="SPHR">
+      <cd:NamedType id="GOME2_SPHR_v1"/>
+    </cd:Field>
+    <cd:Field name="IPR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_ipr]]></cd:Dimension>
+        <cd:NamedType id="IPR"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="GEADR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_geadr]]></cd:Dimension>
+        <cd:NamedType id="GEADR"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$num_geadr > 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="GIADR_Bands">
+      <cd:NamedType id="GOME2_GIADR_L1A_Bands_v2"/>
+    </cd:Field>
+    <cd:Field name="GIADR_Steps">
+      <cd:NamedType id="GOME2_GIADR_L1A_Steps"/>
+    </cd:Field>
+    <cd:Field name="GIADR_MME">
+      <cd:NamedType id="GOME2_GIADR_L1A_MME_v1"/>
+    </cd:Field>
+    <cd:Field name="GIADR_Channels">
+      <cd:NamedType id="GOME2_GIADR_L1_Channels_v2"/>
+    </cd:Field>
+    <cd:Field name="VEADR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_veadr]]></cd:Dimension>
+        <cd:NamedType id="VEADR"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$num_veadr > 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="VIADR_Dark">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_viadr_dark]]></cd:Dimension>
+        <cd:NamedType id="GOME2_VIADR_L1A_Dark"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$num_viadr_dark > 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="VIADR_PPG">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_viadr_ppg]]></cd:Dimension>
+        <cd:NamedType id="GOME2_VIADR_L1A_PPG"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$num_viadr_ppg > 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="VIADR_Etalon">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_viadr_etalon]]></cd:Dimension>
+        <cd:NamedType id="GOME2_VIADR_L1A_Etalon"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$num_viadr_etalon > 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="VIADR_Spec">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_viadr_spec]]></cd:Dimension>
+        <cd:NamedType id="GOME2_VIADR_L1A_Spec_v2"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$num_viadr_spec > 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="VIADR_SMR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_viadr_smr]]></cd:Dimension>
+        <cd:NamedType id="GOME2_VIADR_L1_SMR"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$num_viadr_smr > 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="MDR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_mdr]]></cd:Dimension>
+        <cd:NamedType id="GOME2_MDR_L1A_v1"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_ipr">
+    <cd:Init><![CDATA[$num_ipr = int(/MPHR/TOTAL_IPR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_geadr">
+    <cd:Init><![CDATA[$num_geadr = int(/MPHR/TOTAL_GEADR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_veadr">
+    <cd:Init><![CDATA[$num_veadr = int(/MPHR/TOTAL_VEADR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_viadr_dark">
+    <cd:Init><![CDATA[$num_viadr_dark = 1; $num_viadr_dark = unboundindex(/VIADR_Dark, int(./RECORD_HEADER/RECORD_CLASS) != 7 || int(./RECORD_HEADER/RECORD_SUBCLASS) != 1)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_viadr_ppg">
+    <cd:Init><![CDATA[$num_viadr_ppg = 1; $num_viadr_ppg = unboundindex(/VIADR_PPG, int(./RECORD_HEADER/RECORD_CLASS) != 7 || int(./RECORD_HEADER/RECORD_SUBCLASS) != 2)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_viadr_etalon">
+    <cd:Init><![CDATA[$num_viadr_etalon = 1; $num_viadr_etalon = unboundindex(/VIADR_Etalon, int(./RECORD_HEADER/RECORD_CLASS) != 7 || int(./RECORD_HEADER/RECORD_SUBCLASS) != 3)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_viadr_spec">
+    <cd:Init><![CDATA[$num_viadr_spec = 1; $num_viadr_spec = unboundindex(/VIADR_Spec, int(./RECORD_HEADER/RECORD_CLASS) != 7 || int(./RECORD_HEADER/RECORD_SUBCLASS) != 4)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_viadr_smr">
+    <cd:Init><![CDATA[$num_viadr_smr = 1; $num_viadr_smr = unboundindex(/VIADR_SMR, int(./RECORD_HEADER/RECORD_CLASS) != 7 || int(./RECORD_HEADER/RECORD_SUBCLASS) != 5)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_mdr">
+    <cd:Init><![CDATA[$num_mdr = int(/MPHR/TOTAL_MDR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="rec_length">
+    <cd:Dimension><![CDATA[10]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to 9 do $rec_length[i] = int(/GIADR_Bands/NUMBER_OF_PIXELS[i])]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="mdr_bit_size">
+    <cd:Dimension><![CDATA[$num_mdr]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_mdr - 1 do $mdr_bit_size[i] = bitsize(/mdr[i])]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

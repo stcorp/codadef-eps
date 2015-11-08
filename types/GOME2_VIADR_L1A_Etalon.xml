@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_VIADR_L1A_Etalon" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="START_UTC_WLS">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Start UTC date/time of WLS calibration mode measurement</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="END_UTC_WLS">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>End UTC date/time of WLS calibration mode measurement</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="PCD_ETALON">
+    <cd:NamedType id="GOME2_PCD_ETALON"/>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="LAMBDA_ETALON">
+    <cd:Array>
+      <cd:Description>Wavelength grid for Etalon correction</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ETALON">
+    <cd:Array>
+      <cd:Description>Etalon correction</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GENERIC_EPS_PRODUCT" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="MPHR">
+    <cd:NamedType id="MPHR_v2"/>
+  </cd:Field>
+  <cd:Field name="SPHR">
+    <cd:NamedType id="GENERIC_RECORD"/>
+  </cd:Field>
+  <cd:Field name="IPR">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/MPHR/TOTAL_IPR)]]></cd:Dimension>
+      <cd:NamedType id="IPR"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEADR">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/MPHR/TOTAL_GEADR)]]></cd:Dimension>
+      <cd:NamedType id="GEADR"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GIADR">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/MPHR/TOTAL_GIADR)]]></cd:Dimension>
+      <cd:NamedType id="GENERIC_RECORD"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="VEADR">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/MPHR/TOTAL_VEADR)]]></cd:Dimension>
+      <cd:NamedType id="VEADR"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="VIADR">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/MPHR/TOTAL_VIADR)]]></cd:Dimension>
+      <cd:NamedType id="GENERIC_RECORD"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MDR">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/MPHR/TOTAL_MDR)]]></cd:Dimension>
+      <cd:NamedType id="GENERIC_RECORD"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

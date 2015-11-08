@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IASI_VIADR_ENGINEERING_v2" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 2)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="MExsSmin">
+    <cd:Array>
+      <cd:Description>Minimum of Earth view spectra</cd:Description>
+      <cd:Dimension>550</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>K</cd:Unit>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>int8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MESsSmax">
+    <cd:Array>
+      <cd:Description>Maximum of Earth view Spectra</cd:Description>
+      <cd:Dimension>550</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>K</cd:Unit>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>int8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MDptIISBadHealthPix">
+    <cd:Array>
+      <cd:Description>Bad health image pixels table</cd:Description>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MDptIISinHomPix">
+    <cd:Array>
+      <cd:Description>Table of inhomogeneity counter per pixel</cd:Description>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>int8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

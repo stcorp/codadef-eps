@@ -1,0 +1,481 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="PMAP_MDR_2_AOP_v1" last-modified="2014-05-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 2)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="DEGRADED_INST_MDR">
+    <cd:Integer>
+       <cd:Description>Quality of MDR has been degraded from nominal (flag is true) due to an instrument degradation (flag is taken from input GOME L1B product)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEGRADED_PROC_MDR">
+    <cd:Integer>
+       <cd:Description>Quality of MDR has been degraded from nominal due to a processing degradation (flag depends both from input GOME L1B product and L2
+processing)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SCANNER_ANGLE">
+    <cd:Array>
+      <cd:Description>GOME-2 scanner viewing angle corresponding to PMD pixel</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 deg</cd:Unit>
+        <cd:Conversion numerator="1" denominator="1e6">
+          <cd:Unit>deg</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SOLAR_ZENITH">
+    <cd:Array>
+      <cd:Description>Solar zenith angle at height h0 corresponding to PMD pixel centre, point F (topocentric CS)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 deg</cd:Unit>
+        <cd:Conversion numerator="1" denominator="1e6">
+          <cd:Unit>deg</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SOLAR_AZIMUTH">
+    <cd:Array>
+      <cd:Description>Solar azimuth angle at height h0 corresponding to PMD pixel centre, point F (topocentric CS)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 deg</cd:Unit>
+        <cd:Conversion numerator="1" denominator="1e6">
+          <cd:Unit>deg</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SAT_ZENITH">
+    <cd:Array>
+      <cd:Description>Satellite zenith angle at height h0 corresponding to PMD pixel centre, point F (topocentric CS)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 deg</cd:Unit>
+        <cd:Conversion numerator="1" denominator="1e6">
+          <cd:Unit>deg</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SAT_AZIMUTH">
+    <cd:Array>
+      <cd:Description>Satellite azimuth angle at height h0 corresponding to PMD pixel centre, point F (topocentric CS)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 deg</cd:Unit>
+        <cd:Conversion numerator="1" denominator="1e6">
+          <cd:Unit>deg</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="REL_AZIMUTH">
+    <cd:Array>
+      <cd:Description>Relative azimuth angle corresponding to PMD pixel centre, point F</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 deg</cd:Unit>
+        <cd:Conversion numerator="1" denominator="1e6">
+          <cd:Unit>deg</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SCATT_ANGLE">
+    <cd:Array>
+      <cd:Description>Scattering angle corresponding to PMD pixel centre, point F</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 deg</cd:Unit>
+        <cd:Conversion numerator="1" denominator="1e6">
+          <cd:Unit>deg</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="INPUT_INSTR">
+    <cd:Array>
+      <cd:Description>Input instruments flag (bit 0: for GOME-2, bit 1: for AVHRR, bit 2: for IASI)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CORNER_AOP">
+    <cd:Array>
+      <cd:Description>Geodetic latitude and geocentric longitude at ground of PMD pixel, points ABCD (earth-fixed CS), corrected according to the time shift of the reference PMD band used for aerosol properties retrieval</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="LATITUDE">
+          <cd:Integer>
+            <cd:Description>Geodetic latitude (-90 to 90, -90 is the south pole, 90 the north pole, 0 the equator) (Earth-fixed CS)</cd:Description>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1" denominator="1e6">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="LONGITUDE">
+          <cd:Integer>
+            <cd:Description>Geocentric longitude (-180 to 180, meridian is 0 and minus is going west) (Earth-fixed CS)</cd:Description>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1" denominator="1e6">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CENTRE_AOP">
+    <cd:Array>
+      <cd:Description>Geodetic latitude and geocentric longitude at ground of PMD pixel centre, point F (earth-fixed CS), corrected according to the time shift of the reference PMD band used for aerosol properties retrieval</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="LATITUDE">
+          <cd:Integer>
+            <cd:Description>Geodetic latitude (-90 to 90, -90 is the south pole, 90 the north pole, 0 the equator) (Earth-fixed CS)</cd:Description>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1" denominator="1e6">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="LONGITUDE">
+          <cd:Integer>
+            <cd:Description>Geocentric longitude (-180 to 180, meridian is 0 and minus is going west) (Earth-fixed CS)</cd:Description>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1" denominator="1e6">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="READOUT_STARTTIME_AOP">
+    <cd:Array>
+      <cd:Description>UTC time associated with the read-out of the detector pixel of the reference PMD band used for aerosol properties retrieval</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Time timeformat="binary_eps_datetime">
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="RETRIEVAL_ALGORITHM">
+    <cd:Array>
+      <cd:Description>Flag indicating the retrieval algorithm used (specifies also whether the retrieval is on Land or Sea)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="AOD">
+    <cd:Array>
+      <cd:Description>Aerosol Optical Depth (AOD)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1" denominator="1e6">
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ERR_AOD">
+    <cd:Array>
+      <cd:Description>Error on Aerosol Optical Depth (TBD)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1" denominator="1e6">
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="AEROSOL_CLASS">
+    <cd:Array>
+      <cd:Description>Flag indicating aerosol classification/type</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="AVHRR_CLOUDFRAC_AOP">
+    <cd:Array>
+      <cd:Description>AVHRR cloud fraction co-located with PMD pixel (corners corrected according to the time shift of the reference PMD band used for aerosol properties retrieval)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1" denominator="1e6">
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="AVHRR_AVT4T5DIFF">
+    <cd:Array>
+      <cd:Description>AVHRR T4-T5 averaged difference co-located with PMD pixel (corners corrected according to the time shift of the reference PMD band used for aerosol properties retrieval)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 K</cd:Unit>
+        <cd:Conversion numerator="1" denominator="1e6">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CHLOROPHYLL_LOAD">
+    <cd:Array>
+      <cd:Description>Chlorophyll load</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 mg/m3</cd:Unit>
+        <cd:Conversion numerator="1" denominator="1e6">
+          <cd:Unit>mg/m3</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="WIND_SPEED">
+    <cd:Array>
+      <cd:Description>10 meter wind speed, taken from ECMWF forecast databases</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 m/s</cd:Unit>
+        <cd:Conversion numerator="1" denominator="1e6">
+          <cd:Unit>m/s</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ASH_TEMP">
+    <cd:Array>
+      <cd:Description>Temperature of ash plumes</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 K</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="LAND_FRACT_AOP">
+    <cd:Array>
+      <cd:Description>Land fraction co-located with PMD pixel (corners corrected according to the 6 time shift of the reference PMD band used for aerosol properties retrieval)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1" denominator="1e6">
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="RAD_INHOMOGENEITY_AOP">
+    <cd:Array>
+      <cd:Description>Radiance inhomogeneity (land processing) (corners corrected according to the time shift of the reference PMD band used for aerosol properties retrieval)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1" denominator="1e6">
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="QUALITY_FLAGS_AOP">
+    <cd:Array>
+      <cd:Description>Product quality flags related to aerosol optical properties retrieval</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CORNER_COP">
+    <cd:Array>
+      <cd:Description>Geodetic latitude and geocentric longitude at ground of PMD pixel, points ABCD (earth-fixed CS), corrected according to the time shift of the reference
+PMD band used for cloud properties retrieval</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="LATITUDE">
+          <cd:Integer>
+            <cd:Description>Geodetic latitude (-90 to 90, -90 is the south pole, 90 the north pole, 0 the equator) (Earth-fixed CS)</cd:Description>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1" denominator="1e6">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="LONGITUDE">
+          <cd:Integer>
+            <cd:Description>Geocentric longitude (-180 to 180, meridian is 0 and minus is going west) (Earth-fixed CS)</cd:Description>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1" denominator="1e6">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CENTRE_COP">
+    <cd:Array>
+      <cd:Description>Geodetic latitude and geocentric longitude at ground of PMD pixel centre, NA point F (earth-fixed CS), corrected according to the time shift of the reference PMD band used for cloud properties retrieval</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="LATITUDE">
+          <cd:Integer>
+            <cd:Description>Geodetic latitude (-90 to 90, -90 is the south pole, 90 the north pole, 0 the equator) (Earth-fixed CS)</cd:Description>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1" denominator="1e6">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="LONGITUDE">
+          <cd:Integer>
+            <cd:Description>Geocentric longitude (-180 to 180, meridian is 0 and minus is going west) (Earth-fixed CS)</cd:Description>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1" denominator="1e6">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="READOUT_STARTTIME_COP">
+    <cd:Array>
+      <cd:Description>UTC time associated with the read-out of the detector pixel of the reference NA PMD band used for cloud properties retrieval</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Time timeformat="binary_eps_datetime">
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CLOUD_OD">
+    <cd:Array>
+      <cd:Description>Cloud optical depth</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1" denominator="1e6">
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="AVHRR_CLOUDFRAC_COP">
+    <cd:Array>
+      <cd:Description>AVHRR cloud fraction collocated on PMD pixel (corners corrected according to the time shift of the reference PMD band used for cloud properties retrieval)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1" denominator="1e6">
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CLOUD_TOP_TEMP">
+    <cd:Array>
+      <cd:Description>Cloud top temperature</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 K</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="LAND_FRACT_COP">
+    <cd:Array>
+      <cd:Description>Land fraction co-located with PMD pixel (corners corrected according to the time shift of the reference PMD band used for cloud properties retrieval)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1" denominator="1e6">
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="RAD_INHOMOGENEITY_COP">
+    <cd:Array>
+      <cd:Description>Radiance inhomogeneity (land processing) (corners corrected according to the time shift of the reference PMD band used for cloud properties retrieval)</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1" denominator="1e6">
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="QUALITY_FLAGS_COP">
+    <cd:Array>
+      <cd:Description>Product quality flags related to cloud optical properties retrieval</cd:Description>
+      <cd:Dimension>192</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

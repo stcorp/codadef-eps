@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IPR" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Internal Pointer Record</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="POINTER">
+    <cd:NamedType id="POINTER"/>
+  </cd:Field>
+</cd:Record>

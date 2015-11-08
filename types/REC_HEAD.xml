@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="REC_HEAD" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Generic Record Header</cd:Description>
+  <cd:Field name="RECORD_CLASS">
+    <cd:Integer>
+      <cd:Description>Class of this record (0 = Reserved, 1 = Main Product Header Record (MPHR), 2 = Secondary Product Header Record (SPHR), 3 = Internal Pointer Record (IPR), 4 = Global External Auxilliary Data Record (GEADR), 5 = Global Internal Auxilliary Data Record (GIADR), 6 = Variable External Auxilliary Data Record (VEADR), 7 = Variable Internal Auxilliary Data Record (VIADR), 8 = Measurement Data Record (MDR))</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="INSTRUMENT_GROUP">
+    <cd:Integer>
+      <cd:Description>Group defining the record subclasses (0 = GENERIC (no specific instrument), 1 = AMSU-A, 2 = ASCAT, 3 = ATOVS instruments (AVHRR/3, HIRS/4, AMSU-A, MHS), 4 = AVHRR/3, 5 = GOME, 6 = GRAS, 7 = HIRS/4, 8 = IASI (except IASI L2 products), 9 = MHS, 10 = SEM, 11 = ADCS, 12 = SBUV, 13 = DUMMY, 14 = ARCHIVE (Note: Only used in GIADRs. A GIADR with INSTRUMENT_GROUP of archive contains only descriptive information and is not processed), 15 = IASI_L2 (used for IASI L2 products only))</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RECORD_SUBCLASS">
+    <cd:Integer>
+      <cd:Description>Subclass of this record class. This is determined by the Instrument Group and shall vary from instrument to instrument and also, if necessary, from processing level to processing level</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RECORD_SUBCLASS_VERSION">
+    <cd:Integer>
+      <cd:Description>Format version of this record subclass</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RECORD_SIZE">
+    <cd:Integer>
+      <cd:Description>Total size of the record in bytes (including GRH)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RECORD_START_TIME">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Start Time for this record - context will depend on record class</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="RECORD_STOP_TIME">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Stop Time for this record - context will depend on record class</cd:Description>
+    </cd:Time>
+  </cd:Field>
+</cd:Record>

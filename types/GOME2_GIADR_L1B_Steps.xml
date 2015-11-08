@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_GIADR_L1B_Steps" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="APPLIED_CAL_STEPS">
+    <cd:Array>
+      <cd:Description>Calibration steps applied in level 0 to 1b processing for every observation mode (first dimension mode, second dimension calibration steps, see product specification)</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

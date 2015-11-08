@@ -1,0 +1,1890 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IASI_MDR_L2_v2" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="DEGRADED_INST_MDR">
+    <cd:Integer>
+      <cd:Description>Quality of MDR has been degraded from nominal due to an instrument degradation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEGRADED_PROC_MDR">
+    <cd:Integer>
+      <cd:Description>Quality of MDR has been degraded from nominal due to a processing degradation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ATMOSPHERIC_TEMPERATURE">
+    <cd:Array>
+      <cd:Description>Temperature (for 120 IFOV with up to 90 vertical levels)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Dimension><![CDATA[$NLT]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ATMOSPHERIC_WATER_VAPOUR">
+    <cd:Array>
+      <cd:Description>Water vapour (for 120 IFOV with up to 90 vertical levels)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Dimension><![CDATA[$NLQ]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 kg/kg</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>kg/kg</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ATMOSPHERIC_OZONE">
+    <cd:Array>
+      <cd:Description>Ozone (for 120 IFOV with up to 10 vertical layers)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Dimension><![CDATA[$NLO]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-7 kg/m2</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+          <cd:Unit>kg/m2</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="INTEGRATED_OZONE">
+    <cd:Array>
+      <cd:Description>Integrated ozone (for 120 IFOV)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-7 kg/m2</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+          <cd:Unit>kg/m2</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="NUMBER_SURFACE_TEMPS">
+    <cd:Array>
+      <cd:Description>Number of surface temperatures in IFOV</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SURFACE_TEMPERATURE">
+    <cd:Array>
+      <cd:Description>Surface temperature (for 120 IFOV and up to 2 temperatures)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="INTEGRATED_N2O">
+    <cd:Array>
+      <cd:Description>Integrated N2O (for 120 IFOV)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-7 kg/m2</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+          <cd:Unit>kg/m2</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="INTEGRATED_CO">
+    <cd:Array>
+      <cd:Description>Integrated CO (for 120 IFOV)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-7 kg/m2</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+          <cd:Unit>kg/m2</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="INTEGRATED_CH4">
+    <cd:Array>
+      <cd:Description>Integrated CH4 (for 120 IFOV)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-5 kg/m2</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100000.000000">
+          <cd:Unit>kg/m2</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="INTEGRATED_CO2">
+    <cd:Array>
+      <cd:Description>Integrated CO2 ( for 120 IFOV)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 kg/m2</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>kg/m2</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SURFACE_EMISSIVITY">
+    <cd:Array>
+      <cd:Description>Surface emissivity (for 120 IFOV with up to 20 wavelengths)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Dimension><![CDATA[$NEW]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="100.000000"/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="NUMBER_CLOUD_FORMATIONS">
+    <cd:Array>
+      <cd:Description>Number of cloud formations in IFOV</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FRACTIONAL_CLOUD_COVER">
+    <cd:Array>
+      <cd:Description>Fractional cloud cover (for 120 IFOV with up to 3 cloud formations)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 %</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>%</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CLOUD_TOP_TEMPERATURE">
+    <cd:Array>
+      <cd:Description>Cloud top temperature (for 120 IFOV with up to 3 cloud formations)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CLOUD_TOP_PRESSURE">
+    <cd:Array>
+      <cd:Description>Cloud top pressure (for 120 IFOV with up to 3 cloud formations)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>Pa</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CLOUD_PHASE">
+    <cd:Array>
+      <cd:Description>Cloud Phase (for 120 IFOV with up to 3 cloud formations) (0 = no cloud, 1 = liquid, 2 = ice, 3 = mixed)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="INSTRUMENT_MODE">
+    <cd:Integer>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="TIME_ATTITUDE">
+    <cd:Integer>
+      <cd:Description>Time Associated with Attitude Angles</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ATITUDE_ANGLES">
+    <cd:Array>
+      <cd:Description>Attitude Angles: Roll, Pitch, Yaw</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="NAVIGATION_STATUS">
+    <cd:Record>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Not used</cd:Description>
+          <cd:BitSize>15</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="EARTH_LOC_CORR">
+        <cd:Integer>
+          <cd:Description>Earth location corrected for Euler angles</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="EARTH_LOC_IND">
+        <cd:Integer>
+          <cd:Description>Earth location indicator (0 = earth location available, 1 = user ephemeris files older than 24 hours, 2 = no earth location available)</cd:Description>
+          <cd:BitSize>4</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="SPACECRAFT_ATT_CONTROL">
+        <cd:Integer>
+          <cd:Description>Spacecraft attitude control (0 = operating in YGC or nominal mode, 1 = operating in another mode, 2 = attitude exceeds nominal tolerance, 3 = both 1 and 2)</cd:Description>
+          <cd:BitSize>4</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ATT_SMODE">
+        <cd:Integer>
+          <cd:Description>Attitude SMODE (0 = nominal mode, 1 = rate nulling mode, 2 = YGC mode, 3 = search mode, 4 = coast mode)</cd:Description>
+          <cd:BitSize>4</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ATT_MODE">
+        <cd:Integer>
+          <cd:Description>Attitude mode (0 = nominal mode/no test, 1 = yaw axis test in progress, 2 = roll axis test in progress, 3 = pitch axis test in progress)</cd:Description>
+          <cd:BitSize>4</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="SPACECRAFT_ALTITUDE">
+    <cd:Integer>
+      <cd:Description>Spacecraft Altitude Above Reference Geoid (MSL)</cd:Description>
+      <cd:Unit>1e-1 km</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10.000000">
+        <cd:Unit>km</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ANGULAR_RELATION">
+    <cd:Array>
+      <cd:Description>Angular relationships: solar zenith angle, satellite zenith angle, solar azimuth angle, satellite azimuth angle for 120 IFOV</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="EARTH_LOCATION">
+    <cd:Array>
+      <cd:Description>Earth Location: latitude, longitude of surface footprint (for 120 IFOV)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-4 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_ATOVCLR">
+    <cd:Array>
+      <cd:Description>Cloud flags for ATOVS products</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>5</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="CLOUD_INFO_INCOMPL">
+          <cd:Integer>
+            <cd:Description>ATOVS L2 cloud information is incomplete</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="FULL_CLOUD">
+          <cd:Integer>
+            <cd:Description>ATOVS L2 is completely cloudy</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="PART_CLOUD">
+          <cd:Integer>
+            <cd:Description>ATOVS L2 is partly cloudy</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_ATOVINS">
+    <cd:Array>
+      <cd:Description>Instruments used to produce ATOVS L2 product</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>4</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="HIRS_MISSING">
+          <cd:Integer>
+            <cd:Description>HIRS was missing in the retrieval</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="MHS_MISSING">
+          <cd:Integer>
+            <cd:Description>MHS was missing in the retrieval</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A2_MISSING">
+          <cd:Integer>
+            <cd:Description>AMSU-A2 was missing in the retrieval</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A1_MISSING">
+          <cd:Integer>
+            <cd:Description>AMSU-A1 was missing in the retrieval</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_ATOVCMP">
+    <cd:Array>
+      <cd:Description>Completeness of ATOVS products</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>4</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="ATOVS_L2_INCOMPL">
+          <cd:Integer>
+            <cd:Description>ATOVS level 2 is incomplete</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="MHS_L1_INCOMPL">
+          <cd:Integer>
+            <cd:Description>MHS level 1 is incomplete</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A2_L1_INCOMPL">
+          <cd:Integer>
+            <cd:Description>AMSU-A2 level 1 is incomplete</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A1_L1_INCOMPL">
+          <cd:Integer>
+            <cd:Description>AMSU-A1 level 1 is incomplete</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_ATOVINT">
+    <cd:Array>
+      <cd:Description>Interpolation of ATOVS to IASI</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>6</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="MHS_1_NOT_CLOSE">
+          <cd:Integer>
+            <cd:Description>MHS Level 1 data from a single sounding, not very close to the IASI IFOV have been selected to match the IASI IFOV since no other soundings are available for an interpolation</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="MHS_2">
+          <cd:Integer>
+            <cd:Description>MHS Level 1 data from two soundings have been averaged to the IASI IFOV</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="MHS_3_PLUS">
+          <cd:Integer>
+            <cd:Description>MHS Level 1 data from three or more soundings have been interpolated to the IASI IFOV</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="MHS_1_CLOSE">
+          <cd:Integer>
+            <cd:Description>MHS Level 1 data from a single sounding are very close to the IASI IFOV and have been selected to match it</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="MHS_DATA_INCOMPL">
+          <cd:Integer>
+            <cd:Description>MHS Level 1 data are not available or incomplete for retrieval</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A_1_NOT_CLOSE">
+          <cd:Integer>
+            <cd:Description>AMSU-A Level 1 data from a single sounding, not very close to the IASI IFOV have been selected to match the IASI IFOV since no other soundings are available for an interpolation</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A_2">
+          <cd:Integer>
+            <cd:Description>AMSU-A Level 1 data from two soundings have been averaged to the IASI IFOV</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A_3_PLUS">
+          <cd:Integer>
+            <cd:Description>AMSU-A Level 1 data from three or more soundings have been interpolated to the IASI IFOV</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A_1_CLOSE">
+          <cd:Integer>
+            <cd:Description>AMSU-A Level 1 data from a single sounding are very close to the IASI IFOV and have been selected to match it</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A_RETR_INCOMPL">
+          <cd:Integer>
+            <cd:Description>AMSU-A data incomplete for retrieval</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A_CLOUD_INCOMPL">
+          <cd:Integer>
+            <cd:Description>AMSU-A data incomplete for cloud detection</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A_DATA_NOT_AVAIL">
+          <cd:Integer>
+            <cd:Description>AMSU-A data not available</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ATOVS_1_NOT_CLOSE">
+          <cd:Integer>
+            <cd:Description>ATOVS Level 2 data from a single sounding, not very close to the IASI IFOV have been selected to match the IASI IFOV since no other soundings are available for an interpolation</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ATOVS_2">
+          <cd:Integer>
+            <cd:Description>ATOVS Level 2 data from two soundings have been averaged to the IASI IFOV</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ATOVS_3_PLUS">
+          <cd:Integer>
+            <cd:Description>ATOVS Level 2 data from three or more soundings have been interpolated to the IASI IFOV</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ATOVS_1_CLOSE">
+          <cd:Integer>
+            <cd:Description>ATOVS Level 2 data from a single sounding are very close to the IASI IFOV and have been selected to match it</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ATOVS_DATA_INCOMPL">
+          <cd:Integer>
+            <cd:Description>ATOVS L2 data incomplete</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ATOVS_DATA_NOT_AVAIL">
+          <cd:Integer>
+            <cd:Description>ATOVS L2 data not available</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_AVHAVL">
+    <cd:Array>
+      <cd:Description>Completness flag for AVHRR products (0 = AVHRR mask has been created and data are available, 1 = AVHRR mask could not be created (missing side information), 2 = AVHRR data are only partly, but sufficiently available to fill the mask, 3 = AVHRR data are not or not sufficiently available to fill the mask)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_AVHBAD">
+    <cd:Array>
+      <cd:Description>Validation flag for AVHRR products</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>3</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="OOB_VALUES">
+          <cd:Integer>
+            <cd:Description>AVHRR products assume out of bounds values (not indicated by level 1 flags)</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="DEGR_QUAL">
+          <cd:Integer>
+            <cd:Description>AVHRR products are of degraded quality (not indicated by level 1 flags)</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="SIDE_INFO_MISS">
+          <cd:Integer>
+            <cd:Description>AVHRR side information is missing or corrupted (not indicated by level 1 flags)</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="MISSING">
+          <cd:Integer>
+            <cd:Description>AVHRR products are missing or corrupted (not indicated by level 1 flags)</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="DATA_DEGR_L1">
+          <cd:Integer>
+            <cd:Description>AVHRR data are degraded according to level 1 flags</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_CHNSEL">
+    <cd:Array>
+      <cd:Description>Channel selection (0 = No selection made or selection invalid, 1 = Selection of all IASI channels as per user-configuration, 2 = Selection of a subset of IASI channels due to lacking data, 3 = Selection of super channels as per user configuration, 4 = Selection of subset of super channels due to lacking data)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_CLDAVH">
+    <cd:Array>
+      <cd:Description>Number of cloud formations anaylsed in AVHRR (0 = No cloud formation has been identified, 1 = One cloud formation has been identified, 2 = Two cloud formations have been identified, 3 = Three cloud formations have been identified)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_CLDFRM">
+    <cd:Array>
+      <cd:Description>Number of cloud formations and origin of height assignment</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>3</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="HT_CLOUD_3_AMB">
+          <cd:Integer>
+            <cd:Description>Height assignment of third cloud formation is ambiguous</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="HT_CLOUD_2_AMB">
+          <cd:Integer>
+            <cd:Description>Height assignement of second cloud formation is ambiguous</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="HT_CLOUD_1_AMB">
+          <cd:Integer>
+            <cd:Description>Height assignment of first cloud formation is ambiguous</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CLOUD_3_CLIM_HT">
+          <cd:Integer>
+            <cd:Description>Three cloud formations with climatological height assignment</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CLOUD_2_CLM_HT">
+          <cd:Integer>
+            <cd:Description>Two cloud formations with climatological height assignment</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CLOUD_1_CLM_HT">
+          <cd:Integer>
+            <cd:Description>One cloud formation with climatological height assignment</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CLOUD_3_NWP_HT">
+          <cd:Integer>
+            <cd:Description>Three cloud formations with NWP forecast assignment</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CLOUD_2_NWP_HT">
+          <cd:Integer>
+            <cd:Description>Two cloud formations with NWP forecast height assignment</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CLOUD_1_NWP_HT">
+          <cd:Integer>
+            <cd:Description>One cloud formation with NWP forecast height assignment</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CLOUD_3_ATOVS_HT">
+          <cd:Integer>
+            <cd:Description>Three cloud formations with ATOVS height assignment</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CLOUD_2_ATOVS_HT">
+          <cd:Integer>
+            <cd:Description>Two cloud formations with ATOVS height assignment</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CLOUD_1_ATOVS_HT">
+          <cd:Integer>
+            <cd:Description>One cloud formation with ATOVS height assignment</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CLOUD_NO_HT">
+          <cd:Integer>
+            <cd:Description>Cloudy but no height assignment possible</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_CLDPHA">
+    <cd:Array>
+      <cd:Description>Cloud Phase (0 = The IASI IFOV is cloudfree, 1 = Phase of one cloud formation could be determined, 2 = Phases of two cloud formations could be determined, 3 = Phases of three cloud formations could be determined, 4 = The cloud phases could not be determined)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_CLDSUM">
+    <cd:Array>
+      <cd:Description>Summary indicating which instruments see clouds</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>7</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="IASI_ATOVS_CLOUD">
+          <cd:Integer>
+            <cd:Description>IASI/ATOVS indicate cloudy</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="IASI_ATOVS_PART_CLOUD">
+          <cd:Integer>
+            <cd:Description>IASI/ATOVS indicate partly cloudy</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="IASI_CLOUD">
+          <cd:Integer>
+            <cd:Description>IASI indicates cloudy</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="IASI_PART_CLOUD">
+          <cd:Integer>
+            <cd:Description>IASI indicates partly cloudy</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AVHRR_CLOUD">
+          <cd:Integer>
+            <cd:Description>AVHRR indicates cloudy</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AVHRR_PART_CLOUD">
+          <cd:Integer>
+            <cd:Description>AVHRR indicates partly cloudy</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="IASI_ATOVS_EXAM">
+          <cd:Integer>
+            <cd:Description>IASI/ATOVS have been examined for clouds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="IASI_EXAM">
+          <cd:Integer>
+            <cd:Description>IASI has been examined for clouds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AVHRR_EXAM">
+          <cd:Integer>
+            <cd:Description>AVHRR has been examined for clouds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_CLDTST">
+    <cd:Array>
+      <cd:Description>Cloud tests that are executed</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="EXEC_H">
+          <cd:Integer>
+            <cd:Description>Test H has been executed</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EXEC_G">
+          <cd:Integer>
+            <cd:Description>Test G has been executed</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EXEC_F">
+          <cd:Integer>
+            <cd:Description>Test F has been executed</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EXEC_E">
+          <cd:Integer>
+            <cd:Description>Test E has been executed</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EXEC_D">
+          <cd:Integer>
+            <cd:Description>Test D has been executed</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EXEC_C">
+          <cd:Integer>
+            <cd:Description>Test C has been executed</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EXEC_B">
+          <cd:Integer>
+            <cd:Description>Test B has been executed</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EXEC_A">
+          <cd:Integer>
+            <cd:Description>Test A has been executed</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_DAYNIT">
+    <cd:Array>
+      <cd:Description>Discrimination between day and night (0 = Day, 1 = Night, 2 = Twilight)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_FGCHECK">
+    <cd:Array>
+      <cd:Description>Check whether first guess retrievals passed to iterative retrieval</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>7</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="CO2_OOB">
+          <cd:Integer>
+            <cd:Description>CO2 column is out of valid bounds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CH4_OOB">
+          <cd:Integer>
+            <cd:Description>CH4 column is out of valid bounds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="N2O_OOB">
+          <cd:Integer>
+            <cd:Description>N2O column is out of valid bounds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CO_OOB">
+          <cd:Integer>
+            <cd:Description>CO column is out of bounds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="SURF_EMISS_OOB">
+          <cd:Integer>
+            <cd:Description>Surface emissivity is out of valid bounds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="SURF_TEMP_OOB">
+          <cd:Integer>
+            <cd:Description>Surface temperature is out of valid bounds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="O3_PROF_OOB">
+          <cd:Integer>
+            <cd:Description>Ozone profile is out of valid bounds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="H2O_VAP_PROF_OOB">
+          <cd:Integer>
+            <cd:Description>Water vapour profile is out of valid bounds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="TEMP_PROF_OOB">
+          <cd:Integer>
+            <cd:Description>Temperature profile is out of valid bounds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_FINCHC">
+    <cd:Array>
+      <cd:Description>Final choice of retrieval</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>5</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="RETR_ABOVE_CLOUD">
+          <cd:Integer>
+            <cd:Description>Retrieval above cloud top</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="FULL_CLOUD_RETR_CLEAN">
+          <cd:Integer>
+            <cd:Description>Full cloudy retrieval with variational cloud clearing</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="FULL_CLOUD_RETR">
+          <cd:Integer>
+            <cd:Description>Full cloudy retrieval without cloud clearing</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="CLEAR_SKY_RETR">
+          <cd:Integer>
+            <cd:Description>Full clear sky retrieval</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ITT_RETR_CO2">
+          <cd:Integer>
+            <cd:Description>Iterative retrieval for carbon dioxide</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ITT_RETR_N2O">
+          <cd:Integer>
+            <cd:Description>Iterative retrieval for nitrous oxide</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ITT_RETR_CH4">
+          <cd:Integer>
+            <cd:Description>Iterative retrieval for methane</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ITT_RETR_CO">
+          <cd:Integer>
+            <cd:Description>Iterative retrieval for carbon monoxide</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ITT_RETR_SURF_EMISS">
+          <cd:Integer>
+            <cd:Description>Iterative retrieval for surface emissivity</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ITT_RETR_SURF_TEMP">
+          <cd:Integer>
+            <cd:Description>Iterative retrieval for surface temperature</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ITT_RETR_O3_PROF">
+          <cd:Integer>
+            <cd:Description>Iterative retrieval for ozone profile</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ITT_RETR_H2O_VAP_PROF">
+          <cd:Integer>
+            <cd:Description>Iterative retrieval for water vapour profile</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ITT_RETR_TEMP_PROF">
+          <cd:Integer>
+            <cd:Description>Iterative retrieval for temperature profile</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ANN_RETR_SURF_EMISS">
+          <cd:Integer>
+            <cd:Description>ANN retrieval for surface emissivity</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ANN_RETR_SURF_TEMP">
+          <cd:Integer>
+            <cd:Description>ANN retrieval for surface temperature</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ANN_RETR_CO2">
+          <cd:Integer>
+            <cd:Description>ANN retrieval for carbon dioxide</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ANN_RETR_N2O">
+          <cd:Integer>
+            <cd:Description>ANN retrieval for nitrous oxide</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ANN_RETR_CH4">
+          <cd:Integer>
+            <cd:Description>ANN retrieval for methane</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ANN_RETR_CO">
+          <cd:Integer>
+            <cd:Description>ANN retrieval for carbon monoxide</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ANN_RETR_O3">
+          <cd:Integer>
+            <cd:Description>ANN retrieval for ozone retrieval</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ANN_RETR_H2O_VAP_PROF">
+          <cd:Integer>
+            <cd:Description>ANN retrieval for water vapour profile</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ANN_RETR_TEMP_PROF">
+          <cd:Integer>
+            <cd:Description>ANN retrieval for temperature profile</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EOF_REGR_SURF_EMISS">
+          <cd:Integer>
+            <cd:Description>EOF regression for surface emissivity</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EOF_REGR_SURF_TEMP">
+          <cd:Integer>
+            <cd:Description>EOF regression for surface temperature</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EOF_REGR_O3_PROF">
+          <cd:Integer>
+            <cd:Description>EOF regression for ozone profile</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EOF_REGR_H2O_VAP_PROF">
+          <cd:Integer>
+            <cd:Description>EOF regression for water vapour profile</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EOF_REGR_TEMP_PROF">
+          <cd:Integer>
+            <cd:Description>EOF regression for temperature profile</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_FRCSEL">
+    <cd:Array>
+      <cd:Description>Selection of fractional cloud cover from IASI/ATOVS or AVHRR</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>4</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="AVHRR_TOP_HT_HIGH">
+          <cd:Integer>
+            <cd:Description>AVHRR derived cloud top height is higher</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="IASI_ATOVS_TOP_HT_HIGH">
+          <cd:Integer>
+            <cd:Description>IASI/ATOVS derived cloud top height is higher</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AVHRR_FRAC_COV_HIGH">
+          <cd:Integer>
+            <cd:Description>AVHRR derived fractional cloud cover is higher</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="IASI_ATOVS_FRAC_COV_HIGH">
+          <cd:Integer>
+            <cd:Description>IASI/ATOVS derived fractional cloud cover is higher</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_IASIBAD">
+    <cd:Array>
+      <cd:Description>Validation flag for IASI Level 1 product</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>2</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="MAJ_DEGR">
+          <cd:Integer>
+            <cd:Description>Major degradation no product retrieval possible</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ITT_RETR_USE_SUBSET">
+          <cd:Integer>
+            <cd:Description>Degradation, iterative retrieval is only possible with subset of super-channels</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ANN_NO_TRACE_GAS">
+          <cd:Integer>
+            <cd:Description>Degradation, ANN trace gas retrieval is not possible</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ANN_NO_TEMP_H2O_VAP">
+          <cd:Integer>
+            <cd:Description>Degradation, ANN temperature and water-vapour retrieval is not possible</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EOF_NO_REGR">
+          <cd:Integer>
+            <cd:Description>Degradation, EOF regression retrieval is not possible</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="EOF_REGR_USE_BAND_1_AND_2">
+          <cd:Integer>
+            <cd:Description>Degradation, EOF regression retrieval is only possible using bands 1 and 2</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="IASI_NO_CLOUD_PROC">
+          <cd:Integer>
+            <cd:Description>Degradation, cloud processing is not or only partly possible with IASI</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="MIN_DEGR_DATA_MOD">
+          <cd:Integer>
+            <cd:Description>Minor degradation, product retrieval is possible with data replacement/modification as foreseen</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="MIN_DEGR_NO_DATA_MOD">
+          <cd:Integer>
+            <cd:Description>Minor degradation, product retrieval is possible without data modification</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AVHRR_RAD_OOB">
+          <cd:Integer>
+            <cd:Description>Out of bounds AVHRR radiance analysis</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="RAD_OOB">
+          <cd:Integer>
+            <cd:Description>Out of bounds radiance (not indicated by level 1 flags)</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="MISS_SIDE_INFO">
+          <cd:Integer>
+            <cd:Description>Missing or corrupted side information (not indicated by level 1 flags)</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="MISS_L1_DATA">
+          <cd:Integer>
+            <cd:Description>Missing or corrupted level 1 data (not indicated by level 1 flags)</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="DATA_DEGR_L1">
+          <cd:Integer>
+            <cd:Description>IASI data are degraded according to IASI level 1 flags</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_IASICLD">
+    <cd:Array>
+      <cd:Description>Results of cloud test</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="TEST_H_CLOUD">
+          <cd:Integer>
+            <cd:Description>Test H has detected clouds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="TEST_G_CLOUD">
+          <cd:Integer>
+            <cd:Description>Test G has detected clouds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="TEST_F_CLOUD">
+          <cd:Integer>
+            <cd:Description>Test F has detected clouds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="TEST_E_CLOUD">
+          <cd:Integer>
+            <cd:Description>Test E has detected clouds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="TEST_D_CLOUD">
+          <cd:Integer>
+            <cd:Description>Test D has detected clouds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="TEST_C_CLOUD">
+          <cd:Integer>
+            <cd:Description>Test C has detected clouds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="TEST_B_CLOUD">
+          <cd:Integer>
+            <cd:Description>Test B has detected clouds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="TEST_A_CLOUD">
+          <cd:Integer>
+            <cd:Description>Test A has detected clouds</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_IASICLR">
+    <cd:Array>
+      <cd:Description>IASI IFOV clear, partly cloudy or cloudy (0 = clear, 1 = partly cloudy, 2 = completely cloudy)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_INITIA">
+    <cd:Array>
+      <cd:Description>Retrieval initialisation</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="CLIM_INCL">
+          <cd:Integer>
+            <cd:Description>Climatology included</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="NWP_INCL">
+          <cd:Integer>
+            <cd:Description>NWP included</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ATOVS_L2_INCL">
+          <cd:Integer>
+            <cd:Description>ATOVS Level 2 included</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="MHS_L1_INCL">
+          <cd:Integer>
+            <cd:Description>MHS Level 1 included</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A_L1_INCL">
+          <cd:Integer>
+            <cd:Description>AMSU-A Level 1 included</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AVHRR_INCL">
+          <cd:Integer>
+            <cd:Description>AVHRR included</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="IASI_FIRST_RETR_INCL">
+          <cd:Integer>
+            <cd:Description>IASI first retrieval included</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_ITCONV">
+    <cd:Array>
+      <cd:Description>Convergence of the iterative retrieval (0 = The iteration did not converge, sounding rejected, 1 = Iteration did not converge, sounding accepted, 2 = Iteration converged, sounding accepted)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_ITRBOU">
+    <cd:Array>
+      <cd:Description>Validation of iterated state vector (0 = Iteration did not exceed valid bounds, 1 = Iterated state vector exceeds valid bounds)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_LANSEA">
+    <cd:Array>
+      <cd:Description>Specifies surface type (0 = water, 1 = land low, 2 = land high, 3 = land water low, 4 = land water high)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_NUMIT">
+    <cd:Array>
+      <cd:Description>Number of iterations used for retrieval (0 = no iterations, N = number of iterations of the retrieval)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_NWPBAD">
+    <cd:Array>
+      <cd:Description>Validation flag of NWP forecast (0 = NWP data are normal and complete, 1 = NWP data are normal but incomplete, 2 = NWP data have out of bound values, adjacent values could be assigned, 3 = NWP data are corrupted or missing and could be partly used only, 4 = NWP data are corrupted or missing and could not be used, 5 = NWP data are not available)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_QUAL">
+    <cd:Array>
+      <cd:Description>Quality and completness of the retrieval (0 = No successful retrieval, 1 = Complete retrieval, errors within EURD objective, 2 = Incomplete retrieval, errors within EURD objective, 3 = Complete retrieval, errors within EURD threshold, 4 = Incomplete retrieval, errors within EURD threshold, 5 = Complete retrieval, errors outside EURD threshold, 6 = Incomplete retrieval, errors outside EURD threshold)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_RESID">
+    <cd:Array>
+      <cd:Description>Retrieval residual acceptance flag (0 = Residual check was not passed, sounding rejected, 1 = Residual check passed, sounding accepted)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_RETBOU">
+    <cd:Array>
+      <cd:Description>Identification of out-of-bounds state vector elements</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Array>
+        <cd:Description>State vector out of valid bounds flag array: each flag corresponds to one element of the state vector. NOTE: flags are in reverse order, i.e. flag 0 corresponds to state vector element 255.</cd:Description>
+        <cd:Dimension>256</cd:Dimension>
+        <cd:Integer>
+          <cd:Description>State vector element out of valid bounds flag</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_RETCHC">
+    <cd:Array>
+      <cd:Description>Choice of combined or IASI stand alone retrieval</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>2</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="MHS_L1_INCL_RETR">
+          <cd:Integer>
+            <cd:Description>MHS Level 1 included in retrieval</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A_L1_INCL_RETR">
+          <cd:Integer>
+            <cd:Description>AMSU-A Level 1 included in retrieval</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AMSU_A_L1_INCL_CLOUD_PROC">
+          <cd:Integer>
+            <cd:Description>AMSU-A Level 1 included in cloud processing</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ATOVS_L2_INCL_RETR_INIT">
+          <cd:Integer>
+            <cd:Description>ATOVS Level 2 included in retrieval initialisation</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ATOVS_L2_INCL_CLOUD_PROC">
+          <cd:Integer>
+            <cd:Description>ATOVS Level 2 included in cloud processing</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="AVHRR_INCL">
+          <cd:Integer>
+            <cd:Description>AVHRR included</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_SATMAN">
+    <cd:Array>
+      <cd:Description>Indication of satellite manouevre (0 = The platform is not undergoing a manoeuvre, 1 = The platform is undergoing a manoeuvre, nominal processing, 2 = The platform is undergoing a manoeuvre, no processing)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_SELBAC">
+    <cd:Array>
+      <cd:Description>Selection of background state (0 = No background state vector selected, 1 = ATOVS level 2 selected as background state vector, 2 = Climatology selected as background state vector, 3 = NWP forecast selected as background state vector, 4 = Previous retrieval selected as background state vector)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_SFCAVH">
+    <cd:Array>
+      <cd:Description>Indication of AVHRR derived surface temperature</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>6</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="LAND_SURF_TEMP_CALC">
+          <cd:Integer>
+            <cd:Description>Land surface temperature has been calculated</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="SEA_SURF_TEMP_CALC">
+          <cd:Integer>
+            <cd:Description>Sea surface temperature has been calculated</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_SFCTOP">
+    <cd:Array>
+      <cd:Description>Validation flag for surface type and topography</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Not used</cd:Description>
+            <cd:BitSize>4</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="TOPO_INCOMPL">
+          <cd:Integer>
+            <cd:Description>The topography is incomplete</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="TOPO_INVAL">
+          <cd:Integer>
+            <cd:Description>The topography is not valid</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="SURF_TYPE_INCOMPL">
+          <cd:Integer>
+            <cd:Description>The surface types are incomplete</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="SURF_TYPE_INVAL">
+          <cd:Integer>
+            <cd:Description>The surface types are not valid</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_SUNGLNT">
+    <cd:Array>
+      <cd:Description>Identification of sun glint (0 = No sun glint, 1 = IASI observes sun glint)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_SUPADI">
+    <cd:Array>
+      <cd:Description>Indication of super-adiabatic conditions in final retrieval (0 = No super adiabatic layering, N = Super-adiabatic conditions in N layers)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_SUPSAT">
+    <cd:Array>
+      <cd:Description>Indication of super-saturation in final retrieval (0 = No super saturation of water vapour, N = Super-saturation at N levels)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_THICIR">
+    <cd:Array>
+      <cd:Description>Thin cirrus cloud test (0 = No thin cirrus detected, 1 = Thin cirrus detected, 2 = Test failed or not executed)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_THICOR">
+    <cd:Array>
+      <cd:Description>Thin cirrus has been corrected for (0 = The IASI data have not been corrected, 1 = The IASI data have been corrected for thin cirrus)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_VARCLR">
+    <cd:Array>
+      <cd:Description>Cloud clearing by variational analysis (0 = The IASI IFOV has been initialised for variational cloud clearing, 1 = The IASI IFOV has not been initialised for variational cloud clearing)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FLG_STER">
+    <cd:Array>
+      <cd:Description>Representation of retrieval errors. Determines type of data in ERROR_DATA. (0 = No error variances or covariances given in the product, 1 = Constant error variances are assigned to the state vector as specified in the user-configurable auxiliary data set, 2 = Error variances are calculated in the iterative retrieval, 3 = Reserved for future use, 4 = Diagonal elements of the inverted covariance matrix and wavelet coefficients describing the correlation matrix as calculated from the inverse covariance matrix derived in the iterative retrieval)</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MATRIX_DATA_SIZES">
+    <cd:Array>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="M">
+          <cd:Integer>
+            <cd:Description>Size of array in MDR.COVARIANCE_MATRIX (120 x M x N)</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="N">
+          <cd:Integer>
+            <cd:Description>Size of array in MDR.COVARIANCE_MATRIX (120 x M x N)</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="COVARIANCE_MATRIX">
+    <cd:Array>
+      <cd:Description>Contents depends on FLG_STER field</cd:Description>
+      <cd:Dimension>120</cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[int(:/../MATRIX_DATA_SIZES[index(:)]/M)]]></cd:Dimension>
+        <cd:Dimension><![CDATA[int(:/../MATRIX_DATA_SIZES[index(:)]/N)]]></cd:Dimension>
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

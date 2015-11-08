@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_CLOUD_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Cloud fitting parameters (format version 1)</cd:Description>
+  <cd:Field name="FIT_MODE">
+    <cd:Array>
+      <cd:Description>Cloud fitting mode (0 = default fitting for c and zc, 1 = snow/ice mode for A and z</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FAIL_FLAG">
+    <cd:Array>
+      <cd:Description>Fail flag (0 = succesful fit, 1 = R out of range, 2 = theta0 out of range, 3 = theta out of range, 4 = fit did not converge, 5 = missing input data)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FIT_1">
+    <cd:Array>
+      <cd:Description>Cloud fitting parameter 1 - depending on FIT_MODE this is either cloud top pressure or lower reflecting surface pressure</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 hPa</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>hPa</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FIT_2">
+    <cd:Array>
+      <cd:Description>Cloud fitting parameter 2 - depending on FIT_MODE this is either effective cloud fraction or albedo for lower reflecting surface</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="E_FIT_1">
+    <cd:Array>
+      <cd:Description>Error in Cloud fitting parameter 1</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 hPa</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>hPa</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="E_FIT_2">
+    <cd:Array>
+      <cd:Description>Error in Cloud fitting parameter 2</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000000.000000"/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GOOD_FIT">
+    <cd:Array>
+      <cd:Description>Goodness of fit</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="FINAL_CHI_SQUARE">
+    <cd:Array>
+      <cd:Description>Final Chi-Square perturbation</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

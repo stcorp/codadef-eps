@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_GIADR_L1_Channels_v3" last-modified="2010-07-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 3)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="CHANNEL_NUMBER">
+    <cd:Array>
+      <cd:Description>Channel number (1 = main FPA channel 1, 2 = main FPA channel 2, 3 = main FPA channel 3, 4 = main FPA channel 4, 5 = PMD channel p, 6 = PMD channel s)</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="START_VALID_WAVELENGTHS">
+    <cd:Array>
+      <cd:Description>Start wavelength of the valid data in the specified channel</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="END_VALID_WAVELENGTHS">
+    <cd:Array>
+      <cd:Description>End wavelength of the valid data in the specified channel</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="START_VALID_PIXELS">
+    <cd:Array>
+      <cd:Description>Approximate start pixel of the valid data in the specified channel</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="END_VALID_PIXELS">
+    <cd:Array>
+      <cd:Description>Approximate end pixel of the valid data in the specified channel</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CHANNEL_READOUT_SEQ">
+    <cd:Array>
+      <cd:Description>Sequence of detector pixel read-out (0 = from short to long wavelength, 1 = from long toshortwavelength)</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

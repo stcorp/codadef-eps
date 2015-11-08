@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_POLV_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Measured polarisation parameters (format version 1)</cd:Description>
+  <cd:Field name="F_POL">
+    <cd:Array>
+      <cd:Description>Stokes fractions q (15 values from the PMD bands)</cd:Description>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_POL_ERR">
+    <cd:Array>
+      <cd:Description>Errors on the Stokes fractions q</cd:Description>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_POL_WL">
+    <cd:Array>
+      <cd:Description>Wavelengths assigned to the Stokes fractions q</cd:Description>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

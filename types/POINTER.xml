@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="POINTER" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Generic Record Pointer</cd:Description>
+  <cd:Field name="TARGET_RECORD_CLASS">
+    <cd:Integer>
+      <cd:Description>Class of target record as derived from the GRH of the target record</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="TARGET_INSTRUMENT_GROUP">
+    <cd:Integer>
+      <cd:Description>Defining group fro target record subclass as derived from the GRH of the target record</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="TARGET_RECORD_SUBCLASS">
+    <cd:Integer>
+      <cd:Description>Subclass of target record subclass as derived from the GRH of the target record</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="TARGET_RECORD_OFFSET">
+    <cd:Integer>
+      <cd:Description>Offset of target record from start of product</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

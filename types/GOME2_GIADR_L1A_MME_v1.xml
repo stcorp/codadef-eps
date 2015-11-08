@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_GIADR_L1A_MME_v1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 1)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="MME_N_PSI_F">
+    <cd:Integer>
+      <cd:Description>Number of viewing angles (fine grid)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MME_N_E_F">
+    <cd:Integer>
+      <cd:Description>Number of elevation angles (fine grid)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MME_N_PHI_F">
+    <cd:Integer>
+      <cd:Description>Number of azimuth angles (fine grid)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MME_PSI_F">
+    <cd:Array>
+      <cd:Description>Viewing angles (fine grid)</cd:Description>
+      <cd:Dimension><![CDATA[int(../MME_N_PSI_F)]]></cd:Dimension>
+      <cd:VSFInteger>
+        <cd:Description>Viewing angle</cd:Description>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MME_E_F">
+    <cd:Array>
+      <cd:Description>Elevation angles (fine grid)</cd:Description>
+      <cd:Dimension><![CDATA[int(../MME_N_E_F)]]></cd:Dimension>
+      <cd:VSFInteger>
+        <cd:Description>Elevation angle</cd:Description>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MME_PHI_F">
+    <cd:Array>
+      <cd:Description>Azimuth angles (fine grid)</cd:Description>
+      <cd:Dimension><![CDATA[int(../MME_N_PHI_F)]]></cd:Dimension>
+      <cd:VSFInteger>
+        <cd:Description>Azimuth angle</cd:Description>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MME_WL">
+    <cd:Array>
+      <cd:Description>Wavelength grid for Muller matrix elements</cd:Description>
+      <cd:Dimension>4608</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MME_RAD_RESP">
+    <cd:Array>
+      <cd:Description>Muller matrix element describing the radiance response of the instrument to unpolarised light</cd:Description>
+      <cd:Dimension><![CDATA[int(../MME_N_PSI_F)]]></cd:Dimension>
+      <cd:Dimension>4608</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:Unit>(BU/s)/(photons/(s.cm2.sr.nm))</cd:Unit>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MME_IRRAD_RESP">
+    <cd:Array>
+      <cd:Description>Muller matrix element describing the irradiance response of the instrument to unpolarised light</cd:Description>
+      <cd:Dimension><![CDATA[int(../MME_N_PHI_F)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(../MME_N_E_F)]]></cd:Dimension>
+      <cd:Dimension>4608</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:Unit>(BU/s)/(photons/(s.cm2.nm))</cd:Unit>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MME_POL_SENS">
+    <cd:Array>
+      <cd:Description>Ratio of MMEs M2 to M1 which describes the polarisation sensitivity of the instrument with respect to the q Stokes component</cd:Description>
+      <cd:Dimension><![CDATA[int(../MME_N_PSI_F)]]></cd:Dimension>
+      <cd:Dimension>4608</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MME_POL_SHIFT">
+    <cd:Array>
+      <cd:Description>Ratio of MMEs M3 to M1 which describes the polarisation sensitivity of the instrument with respect to the u Stokes component</cd:Description>
+      <cd:Dimension><![CDATA[int(../MME_N_PSI_F)]]></cd:Dimension>
+      <cd:Dimension>4608</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MME_INT_RAT">
+    <cd:Array>
+      <cd:Description>Intensity ratio of PMD-s/PMD-p as function of viewing angle</cd:Description>
+      <cd:Dimension><![CDATA[int(../MME_N_PSI_F)]]></cd:Dimension>
+      <cd:Dimension>256</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MME_ERR_RAD_RESP">
+    <cd:Array>
+      <cd:Description>Error on the Muller matrix element describing the radiance response of the instrument to unpolarised light</cd:Description>
+      <cd:Dimension>4608</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MME_ERR_IRRAD_RESP">
+    <cd:Array>
+      <cd:Description>Error on the Muller matrix element describing the irradiance response of the instrument to unpolarised light</cd:Description>
+      <cd:Dimension>4608</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MME_ERR_POL_SENS">
+    <cd:Array>
+      <cd:Description>Error on the ratio of MMEs M2 to M1 which describes the polarisation sensitivity of the instrument with respect to the q Stokes component</cd:Description>
+      <cd:Dimension>4608</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="MME_SNRR_ERR">
+    <cd:Array>
+      <cd:Description>Error on the sun normalised radiance response</cd:Description>
+      <cd:Dimension>4608</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

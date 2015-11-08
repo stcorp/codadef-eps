@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_GEO_EARTH_v1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Additional geolocation record for Earthshine measurements, given for fixed grid (format version 1)</cd:Description>
+  <cd:Field name="SCAN_CORNER">
+    <cd:Array>
+      <cd:Description>Geodetic latitude and geocentric longitude for the complete scan at ground, points ABCD (earth-fixed CS)</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="latitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="longitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SCAN_CENTRE">
+    <cd:Record>
+      <cd:Description>Geodetic latitude and geocentric longitude for the complete scan at ground, point F (earth-fixed CS)</cd:Description>
+      <cd:Field name="latitude">
+        <cd:Integer>
+          <cd:Unit>1e-6 degrees_north</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>degrees_north</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="longitude">
+        <cd:Integer>
+          <cd:Unit>1e-6 degrees_east</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>degrees_east</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="CORNER">
+    <cd:Array>
+      <cd:Description>Geodetic latitude and geocentric longitude at ground, points ABCD (earth-fixed CS)</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="latitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="longitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="CENTRE">
+    <cd:Array>
+      <cd:Description>Geodetic latitude and geocentric longitude at ground, point F (earth-fixed CS)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="latitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="longitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SOLAR_ZENITH">
+    <cd:Array>
+      <cd:Description>Solar zenith angle at TOA, points EFG (topocentric CS)</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SOLAR_AZIMUTH">
+    <cd:Array>
+      <cd:Description>Solar azimuth angle at TOA, points EFG (topocentric CS)</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SAT_ZENITH">
+    <cd:Array>
+      <cd:Description>Satellite zenith angle at TOA, points EFG (topocentric CS)</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SAT_AZIMUTH">
+    <cd:Array>
+      <cd:Description>Satellite azimuth angle at TOA, points EFG (topocentric CS)</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SCAT_ANGLE">
+    <cd:Array>
+      <cd:Description>Scattering angle at TOA, point F (topocentric CS)</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="EARTH_RADIUS">
+    <cd:Integer>
+      <cd:Description>Radius of the earth</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

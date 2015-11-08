@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_PCD_ETALON" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Product Confidence Data record for Etalon Correction</cd:Description>
+  <cd:Field name="ETALON_BACK">
+    <cd:Integer>
+      <cd:Description>Switch indicating whether back-up algorithm using Sun calibration mode measurements for calculation of Etalon has been used (0 = WLS, 1 = SMR backup)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ETALON_ALGO">
+    <cd:Integer>
+      <cd:Description>Switch indicating which Etalon correction algorithm has been used (0 = algorithm option 1, 1 = algorithm option 2)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="AV_ETALON">
+    <cd:Array>
+      <cd:Description>Etalon correction averaged per channel</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="STDDEV_ETALON">
+    <cd:Array>
+      <cd:Description>Standard deviation of Etalon per channel</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="AV_RESIDUAL">
+    <cd:Array>
+      <cd:Description>Mean residual structure at a pixel level</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="STDDEV_RESIDUAL">
+    <cd:Array>
+      <cd:Description>Standard deviation of the residual structure at a pixel level</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_AV_ETALON">
+    <cd:Array>
+      <cd:Description>Flag indicating that AV_ETALON exceeds a specified threshold</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_STDDEV_ETALON">
+    <cd:Array>
+      <cd:Description>Flag indicating that STDDEV_ETALON exceeds a specified threshold</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_AV_RESIDUAL">
+    <cd:Array>
+      <cd:Description>Flag indicating that AV_RESIDUAL exceeds a specified threshold</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_STDDEV_RESIDUAL">
+    <cd:Array>
+      <cd:Description>Flag indicating that STDDEV_RESIDUAL exceeds a specified threshold</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_ETALON_MISS">
+    <cd:Array>
+      <cd:Description>Flag indicating that missing mean WLS calibration mode measurements have been filled by interpolation or that complete channel is missing</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

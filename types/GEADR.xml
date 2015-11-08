@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GEADR" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Global External Auxilliary Data Record</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="AUX_DATA_POINTER">
+    <cd:Text format="ascii">
+      <cd:Description>Unique pointer to auxilliary dataset</cd:Description>
+      <cd:ByteSize>100</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+</cd:Record>

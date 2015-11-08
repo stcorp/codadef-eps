@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="IASI_GIADR_L1_SCALE_FACTORS_v2" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 2)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="IDefScaleSondNbScale">
+    <cd:Integer>
+      <cd:Description>Number of bands used for applying scale factors to spectra (up to a maximum of 10)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="IDefScaleSondNsfirst">
+    <cd:Array>
+      <cd:Description>Begin channel number for each of the bands to which the scale factors are applied</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefScaleSondNslast">
+    <cd:Array>
+      <cd:Description>End channel number for each of the bands to which the scale factors are applied</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefScaleSondScaleFactor">
+    <cd:Array>
+      <cd:Description>Scale factors (power of 10) to be applied within each band defined above.</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="IDefScaleIISScaleFactor">
+    <cd:Integer>
+      <cd:Description>Scale factor (power of 10) to be applied to the IIS imager.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

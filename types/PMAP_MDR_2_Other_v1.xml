@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="PMAP_MDR_2_Other_v1" last-modified="2014-05-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 2)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="DEGRADED_INST_MDR">
+    <cd:Integer>
+      <cd:Description>Quality of MDR has been degraded from nominal due to an instrument degradation (the flag is taken from the input level 1b
+product)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEGRADED_PROC_MDR">
+    <cd:Integer>
+      <cd:Description>Quality of MDR has been degraded from nominal due to a processing degradation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="GOME_OBS_MODE">
+    <cd:Integer>
+      <cd:Description>GOME-2 Observation mode</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

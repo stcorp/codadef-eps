@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GENERIC_RECORD" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Generic Record (place holder)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="data">
+    <cd:Raw>
+      <cd:BitSize><![CDATA[(int(../RECORD_HEADER/RECORD_SIZE) - 20) * 8]]></cd:BitSize>
+    </cd:Raw>
+  </cd:Field>
+</cd:Record>

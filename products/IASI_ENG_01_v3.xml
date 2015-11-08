@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="IASI_ENG_01_v3" format="binary" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="binary">
+    <cd:Field name="MPHR">
+      <cd:NamedType id="MPHR_v2"/>
+    </cd:Field>
+    <cd:Field name="IPR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_ipr]]></cd:Dimension>
+        <cd:NamedType id="IPR"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="GEADR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_geadr]]></cd:Dimension>
+        <cd:NamedType id="GEADR"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$num_geadr > 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="GIADR">
+      <cd:NamedType id="IASI_GIADR_ENGINEERING_v3"/>
+    </cd:Field>
+    <cd:Field name="VEADR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_veadr]]></cd:Dimension>
+        <cd:NamedType id="VEADR"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$num_veadr > 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="VIADR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_viadr]]></cd:Dimension>
+        <cd:NamedType id="IASI_VIADR_ENGINEERING_v3"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$num_viadr > 0]]></cd:Available>
+    </cd:Field>
+    <cd:Field name="MDR">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_mdr]]></cd:Dimension>
+        <cd:NamedType id="IASI_MDR_ENGINEERING_Union_v4"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_ipr">
+    <cd:Init><![CDATA[$num_ipr = int(/MPHR/TOTAL_IPR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_geadr">
+    <cd:Init><![CDATA[$num_geadr = int(/MPHR/TOTAL_GEADR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_veadr">
+    <cd:Init><![CDATA[$num_veadr = int(/MPHR/TOTAL_VEADR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_viadr">
+    <cd:Init><![CDATA[$num_viadr = int(/MPHR/TOTAL_VIADR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_mdr">
+    <cd:Init><![CDATA[$num_mdr = int(/MPHR/TOTAL_MDR)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="mdr_bit_size">
+    <cd:Dimension><![CDATA[$num_mdr]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_mdr - 1 do $mdr_bit_size[i] = bitsize(/mdr[i])]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

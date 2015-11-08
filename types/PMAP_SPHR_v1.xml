@@ -1,0 +1,2382 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="PMAP_SPHR_v1" last-modified="2014-05-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Polar Multi-Sensor Aerosol Product Specific Record Header (format version 1)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="N_SCANS_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SCANS                       = </cd:Description>
+      <cd:FixedValue>N_SCANS                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SCANS">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in the product</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_1">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_VALID_WITH_MISS_DP_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_VALID_WITH_MISS_DP          = </cd:Description>
+      <cd:FixedValue>N_VALID_WITH_MISS_DP          = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_VALID_WITH_MISS_DP">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of valid scans with missing data packets</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_2">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_DP_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_DP                     = </cd:Description>
+      <cd:FixedValue>N_MISS_DP                     = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_DP">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of missing data packets in valid scans</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_3">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISSING_SCANS_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISSING_SCANS               = </cd:Description>
+      <cd:FixedValue>N_MISSING_SCANS               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISSING_SCANS">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of missing scans</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_4">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NADIR_SCAN_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NADIR_SCAN                  = </cd:Description>
+      <cd:FixedValue>N_NADIR_SCAN                  = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NADIR_SCAN">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in Nadir scanning observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_5">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NTH_POLE_SCAN_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NTH_POLE_SCAN               = </cd:Description>
+      <cd:FixedValue>N_NTH_POLE_SCAN               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NTH_POLE_SCAN">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in North pole scanning observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_6">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_STH_POLE_SCAN_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_STH_POLE_SCAN               = </cd:Description>
+      <cd:FixedValue>N_STH_POLE_SCAN               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_STH_POLE_SCAN">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in South pole scanning observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_7">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NADIR_STATIC_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_NADIR_STATIC                = </cd:Description>
+      <cd:FixedValue>N_NADIR_STATIC                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_NADIR_STATIC">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in Nadir static observation mode</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_8">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_OTHER_SCANSTATIC_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_OTHER_SCANSTATIC            = </cd:Description>
+      <cd:FixedValue>N_OTHER_SCANSTATIC            = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_OTHER_SCANSTATIC">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in Other scanning or Other Static observation mode (i.e. sum of N_OTHER_SCAN and N_OTHER_STATIC from level 1b SPHR)</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_9">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_7_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MIN_INTENSITY_7             = </cd:Description>
+      <cd:FixedValue>N_MIN_INTENSITY_7             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_7">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans where the minimum mean uncalibrated radiance is below a specified threshold, band PMD p</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_10">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_8_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MIN_INTENSITY_8             = </cd:Description>
+      <cd:FixedValue>N_MIN_INTENSITY_8             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MIN_INTENSITY_8">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans where the minimum mean uncalibrated radiance is below a specified threshold, band PMD s</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_11">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_7_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SATURATED_7                 = </cd:Description>
+      <cd:FixedValue>N_SATURATED_7                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_7">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with saturated pixels, band PMD p</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_12">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_8_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SATURATED_8                 = </cd:Description>
+      <cd:FixedValue>N_SATURATED_8                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SATURATED_8">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with saturated pixels, band PMD s</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_13">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_7_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_HOT_7                       = </cd:Description>
+      <cd:FixedValue>N_HOT_7                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_7">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with hot pixels, band PMD p</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_14">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_8_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_HOT_8                       = </cd:Description>
+      <cd:FixedValue>N_HOT_8                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_HOT_8">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with hot pixels, band PMD s</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_15">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SAA_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SAA                         = </cd:Description>
+      <cd:FixedValue>N_SAA                         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SAA">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans in the SAA</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_16">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SUNGLINT_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_SUNGLINT                    = </cd:Description>
+      <cd:FixedValue>N_SUNGLINT                    = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_SUNGLINT">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with sunglint danger</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_17">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RAINBOW_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RAINBOW                     = </cd:Description>
+      <cd:FixedValue>N_RAINBOW                     = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RAINBOW">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with rainbow danger</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_18">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MODE_GEOLOCATION_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MODE_GEOLOCATION            = </cd:Description>
+      <cd:FixedValue>N_MODE_GEOLOCATION            = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MODE_GEOLOCATION">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with possible mismatch between observation mode and geolocation</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_19">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_1_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_1               = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_1               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_1">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 1</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_20">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_2_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_2               = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_2               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_2">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 2</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_21">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_3_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_3               = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_3               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_3">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 3</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_22">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_4_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_4               = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_4               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_4">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 4</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_23">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_5_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_5               = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_5               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_5">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 5</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_24">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_6_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_6               = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_6               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_6">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 6</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_25">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_7_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_7               = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_7               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_7">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 7</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_26">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_8_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_8               = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_8               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_8">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 8</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_27">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_9_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_9               = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_9               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_9">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 9</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_28">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_10_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_10              = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_10              = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_10">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 10</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_29">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_11_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_11              = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_11              = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_11">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 11</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_30">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_12_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_12              = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_12              = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_12">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 12</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_31">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_13_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_13              = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_13              = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_13">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 13</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_32">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_14_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_14              = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_14              = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_14">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 14</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_33">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_15_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_MISS_STOKES_15              = </cd:Description>
+      <cd:FixedValue>N_MISS_STOKES_15              = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_MISS_STOKES_15">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with missing Stokes fractions, PMD band 15</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_34">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_1_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_1                = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_1                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_1">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 1</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_35">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_2_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_2                = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_2                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_2">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 2</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_36">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_3_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_3                = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_3                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_3">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 3</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_37">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_4_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_4                = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_4                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_4">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 4</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_38">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_5_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_5                = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_5                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_5">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 5</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_39">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_6_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_6                = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_6                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_6">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 6</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_40">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_7_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_7                = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_7                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_7">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 7</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_41">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_8_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_8                = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_8                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_8">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 8</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_42">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_9_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_9                = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_9                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_9">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 9</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_43">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_10_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_10               = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_10               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_10">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 10</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_44">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_11_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_11               = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_11               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_11">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 11</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_45">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_12_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_12               = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_12               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_12">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 12</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_46">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_13_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_13               = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_13               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_13">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 13</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_47">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_14_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_14               = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_14               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_14">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 14</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_48">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_15_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_BAD_STOKES_15               = </cd:Description>
+      <cd:FixedValue>N_BAD_STOKES_15               = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_BAD_STOKES_15">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans with bad Stokes fractions, PMD band 15</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_49">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_1_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_1                 = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_1                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_1">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 1 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_50">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_2_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_2                 = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_2                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_2">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 2 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_51">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_3_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_3                 = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_3                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_3">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 3 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_52">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_4_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_4                 = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_4                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_4">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 4 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_53">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_5_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_5                 = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_5                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_5">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 5 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_54">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_6_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_6                 = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_6                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_6">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 6 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_55">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_7_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_7                 = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_7                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_7">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 7 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_56">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_8_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_8                 = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_8                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_8">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 8 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_57">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_9_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_9                 = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_9                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_9">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 9 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_58">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_10_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_10                = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_10                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_10">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 10 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_59">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_11_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_11                = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_11                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_11">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 11 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_60">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_12_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_12                = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_12                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_12">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 12 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_61">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_13_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_13                = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_13                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_13">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 13 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_62">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_14_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_14                = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_14                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_14">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 14 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_63">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_15_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_15                = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_15                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_15">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 15 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_64">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_16_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOP_QFLAG_16                = </cd:Description>
+      <cd:FixedValue>N_AOP_QFLAG_16                = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOP_QFLAG_16">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with AOP quality flag 16 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_65">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_1_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_COP_QFLAG_1                 = </cd:Description>
+      <cd:FixedValue>N_COP_QFLAG_1                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_1">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with COP quality flag 1 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_66">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_2_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_COP_QFLAG_2                 = </cd:Description>
+      <cd:FixedValue>N_COP_QFLAG_2                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_2">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with COP quality flag 2 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_67">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_3_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_COP_QFLAG_3                 = </cd:Description>
+      <cd:FixedValue>N_COP_QFLAG_3                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_3">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with COP quality flag 3 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_68">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_4_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_COP_QFLAG_4                 = </cd:Description>
+      <cd:FixedValue>N_COP_QFLAG_4                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_4">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with COP quality flag 4 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_69">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_5_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_COP_QFLAG_5                 = </cd:Description>
+      <cd:FixedValue>N_COP_QFLAG_5                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_5">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with COP quality flag 5 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_70">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_6_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_COP_QFLAG_6                 = </cd:Description>
+      <cd:FixedValue>N_COP_QFLAG_6                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_6">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with COP quality flag 6 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_71">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_7_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_COP_QFLAG_7                 = </cd:Description>
+      <cd:FixedValue>N_COP_QFLAG_7                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_7">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with COP quality flag 7 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_72">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_8_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_COP_QFLAG_8                 = </cd:Description>
+      <cd:FixedValue>N_COP_QFLAG_8                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COP_QFLAG_8">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel with COP quality flag 8 raised</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_73">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_1_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_1             = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_1             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_1">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 1</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_74">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_2_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_2             = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_2             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_2">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 2</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_75">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_3_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_3             = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_3             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_3">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 3</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_76">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_4_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_4             = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_4             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_4">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 4</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_77">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_5_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_5             = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_5             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_5">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 5</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_78">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_6_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_6             = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_6             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_6">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 6</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_79">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_7_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_7             = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_7             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_7">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 7</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_80">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_8_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_8             = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_8             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_8">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 8</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_81">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_9_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_9             = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_9             = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_9">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 9</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_82">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_10_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_10            = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_10            = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_10">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 10</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_83">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_11_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_11            = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_11            = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_11">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 11</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_84">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_12_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_12            = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_12            = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_12">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 12</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_85">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_13_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_13            = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_13            = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_13">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 13</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_86">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_14_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_14            = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_14            = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_14">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 14</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_87">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_15_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_15            = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_15            = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_15">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 15</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_88">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_16_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_RET_ALGORITHM_16            = </cd:Description>
+      <cd:FixedValue>N_RET_ALGORITHM_16            = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_RET_ALGORITHM_16">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with AOD retrieval algorithm 16</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_89">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_LAND_PIXELS_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_LAND_PIXELS                 = </cd:Description>
+      <cd:FixedValue>N_LAND_PIXELS                 = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_LAND_PIXELS">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel classified as land</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_90">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AVHRR_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AVHRR                       = </cd:Description>
+      <cd:FixedValue>N_AVHRR                       = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AVHRR">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with auxiliary AVHRR input data</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_91">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_IASI_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_IASI                        = </cd:Description>
+      <cd:FixedValue>N_IASI                        = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_IASI">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel processed with auxiliary IASI input data</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_92">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_ASH_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_ASH                         = </cd:Description>
+      <cd:FixedValue>N_ASH                         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_ASH">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel for which ash has been detected</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_93">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOD_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_AOD                         = </cd:Description>
+      <cd:FixedValue>N_AOD                         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_AOD">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel for which a successful AOD retrieval has been performed</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_94">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COD_label">
+    <cd:Text format="ascii">
+      <cd:Description>N_COD                         = </cd:Description>
+      <cd:FixedValue>N_COD                         = </cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="N_COD">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of scans containing at least one PMD pixel for which cloud optical depth is retrieved</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_95">
+    <cd:Text format="ascii">
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>
