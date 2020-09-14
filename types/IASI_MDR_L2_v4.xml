@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="IASI_MDR_L2_v4" last-modified="2015-02-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="binary" name="IASI_MDR_L2_v4" last-modified="2020-09-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="RECORD_HEADER">
     <cd:NamedType id="REC_HEAD"/>
   </cd:Field>
@@ -38,8 +38,8 @@
       <cd:Dimension>120</cd:Dimension>
       <cd:Dimension><![CDATA[$NLQ]]></cd:Dimension>
       <cd:Integer>
-        <cd:Unit>1e-6 kg/kg</cd:Unit>
-        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>1e-7 kg/kg</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1e7">
           <cd:Unit>kg/kg</cd:Unit>
         </cd:Conversion>
         <cd:BitSize>32</cd:BitSize>
@@ -53,8 +53,8 @@
       <cd:Dimension>120</cd:Dimension>
       <cd:Dimension><![CDATA[$NLO]]></cd:Dimension>
       <cd:Integer>
-        <cd:Unit>1e-6 kg/m2</cd:Unit>
-        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>1e-8 kg/m2</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1e8">
           <cd:Unit>kg/m2</cd:Unit>
         </cd:Conversion>
         <cd:BitSize>16</cd:BitSize>
@@ -137,8 +137,8 @@
       <cd:Dimension>120</cd:Dimension>
       <cd:Dimension><![CDATA[$NLQ]]></cd:Dimension>
       <cd:Integer>
-        <cd:Unit>1e-6 kg/kg</cd:Unit>
-        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>1e-7 kg/kg</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1e7">
           <cd:Unit>kg/kg</cd:Unit>
         </cd:Conversion>
         <cd:BitSize>32</cd:BitSize>
@@ -152,8 +152,8 @@
       <cd:Dimension>120</cd:Dimension>
       <cd:Dimension><![CDATA[$NLO]]></cd:Dimension>
       <cd:Integer>
-        <cd:Unit>1e-6 kg/m2</cd:Unit>
-        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>1e-8 kg/m2</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1e8">
           <cd:Unit>kg/m2</cd:Unit>
         </cd:Conversion>
         <cd:BitSize>16</cd:BitSize>
@@ -858,8 +858,8 @@
       <cd:Dimension>int(../HNO3_NBR)</cd:Dimension>
       <cd:Dimension>$NL_HNO3</cd:Dimension>
       <cd:Integer>
-        <cd:Unit>1e-13 molec/cm^2</cd:Unit>
-        <cd:Conversion numerator="1e13" denominator="1">
+        <cd:Unit>1e-11 molec/cm^2</cd:Unit>
+        <cd:Conversion numerator="1e11" denominator="1">
           <cd:Unit>molec/cm^2</cd:Unit>
         </cd:Conversion>
         <cd:BitSize>16</cd:BitSize>
@@ -995,8 +995,8 @@
       <cd:Dimension>int(../O3_NBR)</cd:Dimension>
       <cd:Dimension>$NL_O3</cd:Dimension>
       <cd:Integer>
-        <cd:Unit>1e-13 molec/cm^2</cd:Unit>
-        <cd:Conversion numerator="1e13" denominator="1">
+        <cd:Unit>1e-14 molec/cm^2</cd:Unit>
+        <cd:Conversion numerator="1e14" denominator="1">
           <cd:Unit>molec/cm^2</cd:Unit>
         </cd:Conversion>
         <cd:BitSize>16</cd:BitSize>
