@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="GOME2_GEO_BASIC" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="binary" name="GOME2_GEO_BASIC_v1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Basic geolocation record</cd:Description>
   <cd:Field name="UTC_TIME">
     <cd:Array>

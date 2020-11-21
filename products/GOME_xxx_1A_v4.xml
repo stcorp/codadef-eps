@@ -70,7 +70,7 @@
     <cd:Field name="VIADR_SMR">
       <cd:Array>
         <cd:Dimension><![CDATA[$num_viadr_smr]]></cd:Dimension>
-        <cd:NamedType id="GOME2_VIADR_L1_SMR"/>
+        <cd:NamedType id="GOME2_VIADR_L1_SMR_v1"/>
       </cd:Array>
       <cd:Available><![CDATA[$num_viadr_smr > 0]]></cd:Available>
     </cd:Field>

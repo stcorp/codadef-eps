@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="GOME2_VIADR_L1_SMR" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="binary" name="GOME2_VIADR_L1_SMR_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="RECORD_HEADER">
     <cd:NamedType id="REC_HEAD"/>
   </cd:Field>

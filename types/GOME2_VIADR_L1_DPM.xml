@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_VIADR_L1_DPM" last-modified="2020-11-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="START_UTC_DPM">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Start UTC date/time of the last measurements mode contributing to an update of the DPM (e.g. WLS or Dark mode)</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="END_UTC_DPM">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>End UTC date/time of the last measurements mode contributing to an update of the DPM (e.g. WLS or Dark mode)</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="DPM_SOURCE">
+    <cd:Integer>
+      <cd:Description>Source of Dead Pixel Mask (0: WLS measurements; 1: Dark measurements)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DPM">
+    <cd:Integer>
+      <cd:Description>Dead pixel mask (0: normal pixel, 1: dead pixel)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_DPM">
+    <cd:Array>
+      <cd:Description>Flag indicating that number of spikes exceeds the threshold</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="DIFF_WLS">
+    <cd:Array>
+      <cd:Description>Difference of neighbouring white light source pixel signal read-outs</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="DIFF_DARK">
+    <cd:Array>
+      <cd:Description>Difference of neighbouring average dark pixel signal read-outs</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

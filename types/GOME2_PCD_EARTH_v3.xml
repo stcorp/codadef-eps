@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_PCD_EARTH_v3" last-modified="2020-11-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Product Confidence Data record for Earthshine measurements (format version 2)</cd:Description>
+  <cd:Field name="APPLIED_SPECCAL">
+    <cd:Integer>
+      <cd:Description>Spectral calibration applied to the measurements (0: derived from SLS; 1: derived from Fraunhofer lines algorithm)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="F_MISS_STOKES">
+    <cd:Array>
+      <cd:Description>Flag indicating missing Stokes fractions, per PMD band</cd:Description>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="F_BAD_STOKES">
+    <cd:Array>
+      <cd:Description>Flag indicating bad Stokes fractions, per PMD band, and main channel readout</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SIGMA_SCENE">
+    <cd:Array>
+      <cd:Description>Scene variability within a 187.5 ms groundpixel</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

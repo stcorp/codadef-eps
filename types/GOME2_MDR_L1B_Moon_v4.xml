@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <cd:Record format="binary" name="GOME2_MDR_L1B_Moon_v4" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
-  <cd:Description>(format version 3)</cd:Description>
+  <cd:Description>(format version 4)</cd:Description>
   <cd:Field name="RECORD_HEADER">
     <cd:NamedType id="REC_HEAD"/>
   </cd:Field>
@@ -57,7 +57,7 @@
     </cd:Array>
   </cd:Field>
   <cd:Field name="GEO_BASIC">
-    <cd:NamedType id="GOME2_GEO_BASIC"/>
+    <cd:NamedType id="GOME2_GEO_BASIC_v1"/>
   </cd:Field>
   <cd:Field name="GEO_MOON">
     <cd:NamedType id="GOME2_GEO_MOON"/>

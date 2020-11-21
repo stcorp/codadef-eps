@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="GOME2_MDR_L1B_Earthshine_v4" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
-  <cd:Description>(format version 4)</cd:Description>
+<cd:Record format="binary" name="GOME2_MDR_L1B_Earthshine_v6" last-modified="2020-11-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 6)</cd:Description>
   <cd:Field name="RECORD_HEADER">
     <cd:NamedType id="REC_HEAD"/>
   </cd:Field>
@@ -26,16 +26,13 @@
     </cd:Integer>
   </cd:Field>
   <cd:Field name="PCD_BASIC">
-    <cd:NamedType id="GOME2_PCD_BASIC_v1"/>
+    <cd:NamedType id="GOME2_PCD_BASIC_v2"/>
   </cd:Field>
   <cd:Field name="PCD_EARTH">
-    <cd:NamedType id="GOME2_PCD_EARTH_v2"/>
-  </cd:Field>
-  <cd:Field name="PCD_EARTH_1B">
-    <cd:NamedType id="GOME2_PCD_EARTH_1B"/>
+    <cd:NamedType id="GOME2_PCD_EARTH_v3"/>
   </cd:Field>
   <cd:Field name="CLOUD">
-    <cd:NamedType id="GOME2_CLOUD_v3"/>
+    <cd:NamedType id="GOME2_CLOUD_v5"/>
   </cd:Field>
   <cd:Field name="OBSERVATION_MODE">
     <cd:Integer>
@@ -73,13 +70,111 @@
     </cd:Array>
   </cd:Field>
   <cd:Field name="GEO_BASIC">
-    <cd:NamedType id="GOME2_GEO_BASIC_v1"/>
+    <cd:NamedType id="GOME2_GEO_BASIC_v2"/>
   </cd:Field>
   <cd:Field name="GEO_EARTH">
     <cd:NamedType id="GOME2_GEO_EARTH_v2"/>
   </cd:Field>
-  <cd:Field name="GEO_EARTH_ACTUAL">
-    <cd:NamedType id="GOME2_GEO_EARTH_ACTUAL_v2"/>
+  <cd:Field name="N_UNIQUE_INT">
+    <cd:Integer>
+      <cd:Description>Number of unique integration times in scan</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="UNIQUE_INT">
+    <cd:Array>
+      <cd:Description>Unique integration times in scan</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 s</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>s</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEO_REC_LENGTH">
+    <cd:Array>
+      <cd:Description>Number of geo-record per unique integration time (gl1, gl2, ..., gl10)</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEO_EARTH_ACTUAL_1">
+    <cd:Array>
+      <cd:Description>Geolocation records given for actual integration time 1</cd:Description>
+      <cd:Dimension><![CDATA[int(../GEO_REC_LENGTH[0])]]></cd:Dimension>
+      <cd:NamedType id="GOME2_GEO_EARTH_ACTUAL_v3"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEO_EARTH_ACTUAL_2">
+    <cd:Array>
+      <cd:Description>Geolocation records given for actual integration time 2</cd:Description>
+      <cd:Dimension><![CDATA[int(../GEO_REC_LENGTH[1])]]></cd:Dimension>
+      <cd:NamedType id="GOME2_GEO_EARTH_ACTUAL_v3"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEO_EARTH_ACTUAL_3">
+    <cd:Array>
+      <cd:Description>Geolocation records given for actual integration time 3</cd:Description>
+      <cd:Dimension><![CDATA[int(../GEO_REC_LENGTH[2])]]></cd:Dimension>
+      <cd:NamedType id="GOME2_GEO_EARTH_ACTUAL_v3"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEO_EARTH_ACTUAL_4">
+    <cd:Array>
+      <cd:Description>Geolocation records given for actual integration time 4</cd:Description>
+      <cd:Dimension><![CDATA[int(../GEO_REC_LENGTH[3])]]></cd:Dimension>
+      <cd:NamedType id="GOME2_GEO_EARTH_ACTUAL_v3"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEO_EARTH_ACTUAL_5">
+    <cd:Array>
+      <cd:Description>Geolocation records given for actual integration time 5</cd:Description>
+      <cd:Dimension><![CDATA[int(../GEO_REC_LENGTH[4])]]></cd:Dimension>
+      <cd:NamedType id="GOME2_GEO_EARTH_ACTUAL_v3"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEO_EARTH_ACTUAL_6">
+    <cd:Array>
+      <cd:Description>Geolocation records given for actual integration time 6</cd:Description>
+      <cd:Dimension><![CDATA[int(../GEO_REC_LENGTH[5])]]></cd:Dimension>
+      <cd:NamedType id="GOME2_GEO_EARTH_ACTUAL_v3"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEO_EARTH_ACTUAL_7">
+    <cd:Array>
+      <cd:Description>Geolocation records given for actual integration time 7</cd:Description>
+      <cd:Dimension><![CDATA[int(../GEO_REC_LENGTH[6])]]></cd:Dimension>
+      <cd:NamedType id="GOME2_GEO_EARTH_ACTUAL_v3"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEO_EARTH_ACTUAL_8">
+    <cd:Array>
+      <cd:Description>Geolocation records given for actual integration time 8</cd:Description>
+      <cd:Dimension><![CDATA[int(../GEO_REC_LENGTH[7])]]></cd:Dimension>
+      <cd:NamedType id="GOME2_GEO_EARTH_ACTUAL_v3"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEO_EARTH_ACTUAL_9">
+    <cd:Array>
+      <cd:Description>Geolocation records given for actual integration time 9</cd:Description>
+      <cd:Dimension><![CDATA[int(../GEO_REC_LENGTH[8])]]></cd:Dimension>
+      <cd:NamedType id="GOME2_GEO_EARTH_ACTUAL_v3"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="GEO_EARTH_ACTUAL_10">
+    <cd:Array>
+      <cd:Description>Geolocation records given for actual integration time 10</cd:Description>
+      <cd:Dimension><![CDATA[int(../GEO_REC_LENGTH[9])]]></cd:Dimension>
+      <cd:NamedType id="GOME2_GEO_EARTH_ACTUAL_v3"/>
+    </cd:Array>
   </cd:Field>
   <cd:Field name="PDP_TEMP">
     <cd:Integer>
@@ -170,6 +265,7 @@
         <cd:NativeType>uint16</cd:NativeType>
       </cd:Integer>
     </cd:Array>
+    <cd:BitOffset><![CDATA[8 * (add(./GEO_REC_LENGTH, int(.)) * 99 + 66061)]]></cd:BitOffset>
   </cd:Field>
   <cd:Field name="NUM_RECS">
     <cd:Array>
@@ -374,7 +470,7 @@
       <cd:Description>Band data record for PMD p</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[6])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[6])]]></cd:Dimension>
-      <cd:NamedType id="GOME2_BAND_P_v2"/>
+      <cd:NamedType id="GOME2_BAND_P_v3"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="BAND_PS">
@@ -382,7 +478,7 @@
       <cd:Description>Band data record for PMD s</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[7])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[7])]]></cd:Dimension>
-      <cd:NamedType id="GOME2_BAND_P_v2"/>
+      <cd:NamedType id="GOME2_BAND_P_v3"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="BAND_SWPP">
@@ -390,7 +486,7 @@
       <cd:Description>Band data record for short wavelength range (block B) PMD p</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[8])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[8])]]></cd:Dimension>
-      <cd:NamedType id="GOME2_BAND_P_v2"/>
+      <cd:NamedType id="GOME2_BAND_P_v3"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="BAND_SWPS">
@@ -398,7 +494,7 @@
       <cd:Description>Band data record for short wavelength range (block B) PMD s</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[9])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[9])]]></cd:Dimension>
-      <cd:NamedType id="GOME2_BAND_P_v2"/>
+      <cd:NamedType id="GOME2_BAND_P_v3"/>
     </cd:Array>
   </cd:Field>
 </cd:Record>

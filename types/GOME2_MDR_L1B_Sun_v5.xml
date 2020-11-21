@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="GOME2_MDR_L1A_Moon_v2" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
-  <cd:Description>(format version 2)</cd:Description>
+<cd:Record format="binary" name="GOME2_MDR_L1B_Sun_v5" last-modified="2020-11-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 5)</cd:Description>
   <cd:Field name="RECORD_HEADER">
     <cd:NamedType id="REC_HEAD"/>
   </cd:Field>
@@ -19,7 +19,7 @@
     </cd:Integer>
   </cd:Field>
   <cd:Field name="PCD_BASIC">
-    <cd:NamedType id="GOME2_PCD_BASIC_v1"/>
+    <cd:NamedType id="GOME2_PCD_BASIC_v2"/>
   </cd:Field>
   <cd:Field name="OBSERVATION_MODE">
     <cd:Integer>
@@ -57,10 +57,10 @@
     </cd:Array>
   </cd:Field>
   <cd:Field name="GEO_BASIC">
-    <cd:NamedType id="GOME2_GEO_BASIC_v1"/>
+    <cd:NamedType id="GOME2_GEO_BASIC_v2"/>
   </cd:Field>
-  <cd:Field name="GEO_MOON">
-    <cd:NamedType id="GOME2_GEO_MOON"/>
+  <cd:Field name="GEO_SUN">
+    <cd:NamedType id="GOME2_GEO_SUN_v2"/>
   </cd:Field>
   <cd:Field name="PDP_TEMP">
     <cd:Integer>
@@ -100,7 +100,7 @@
   </cd:Field>
   <cd:Field name="INTEGRATION_TIMES">
     <cd:Array>
-      <cd:Description>Integration times of the channel bands (1a, 1b, 2a, 2b, 3, 4, 5, 6, shortwave PS and PP)</cd:Description>
+      <cd:Description>Integration times per band</cd:Description>
       <cd:Dimension>10</cd:Dimension>
       <cd:Integer>
         <cd:Unit>1e-6 s</cd:Unit>
@@ -112,16 +112,9 @@
       </cd:Integer>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="ISP_HEAD">
-    <cd:Array>
-      <cd:Description>Header of the Instrument Science Packet</cd:Description>
-      <cd:Dimension>16</cd:Dimension>
-      <cd:NamedType id="GOME2_ISP_HEAD_v1"/>
-    </cd:Array>
-  </cd:Field>
   <cd:Field name="REC_LENGTH">
     <cd:Array>
-      <cd:Description>Number of elements per band data record for the 10 bands that follow (l1, l2, ..., l10)</cd:Description>
+      <cd:Description>Number of elements per band data record for the 10 bands that follow (n1, n2, ..., n10)</cd:Description>
       <cd:Dimension>10</cd:Dimension>
       <cd:Integer>
         <cd:BitSize>16</cd:BitSize>
@@ -131,11 +124,151 @@
   </cd:Field>
   <cd:Field name="NUM_RECS">
     <cd:Array>
-      <cd:Description>Number of band data records for the 10 bands that follow (b1, b2, ..., b10)</cd:Description>
+      <cd:Description>Number of band data records for the 10 bands that follow (m1, m2, ..., m10)</cd:Description>
       <cd:Dimension>10</cd:Dimension>
       <cd:Integer>
         <cd:BitSize>16</cd:BitSize>
         <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="WAVELENGTH_1A">
+    <cd:Array>
+      <cd:Description>Wavelength for Band 1a</cd:Description>
+      <cd:Dimension><![CDATA[int(../REC_LENGTH[0])]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="WAVELENGTH_1B">
+    <cd:Array>
+      <cd:Description>Wavelength for Band 1b</cd:Description>
+      <cd:Dimension><![CDATA[int(../REC_LENGTH[1])]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="WAVELENGTH_2A">
+    <cd:Array>
+      <cd:Description>Wavelength for Band 2a</cd:Description>
+      <cd:Dimension><![CDATA[int(../REC_LENGTH[2])]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="WAVELENGTH_2B">
+    <cd:Array>
+      <cd:Description>Wavelength for Band 2b</cd:Description>
+      <cd:Dimension><![CDATA[int(../REC_LENGTH[3])]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="WAVELENGTH_3">
+    <cd:Array>
+      <cd:Description>Wavelength for Band 3</cd:Description>
+      <cd:Dimension><![CDATA[int(../REC_LENGTH[4])]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="WAVELENGTH_4">
+    <cd:Array>
+      <cd:Description>Wavelength for Band 4</cd:Description>
+      <cd:Dimension><![CDATA[int(../REC_LENGTH[5])]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="WAVELENGTH_PP">
+    <cd:Array>
+      <cd:Description>Wavelength for PMD p</cd:Description>
+      <cd:Dimension><![CDATA[int(../REC_LENGTH[6])]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="WAVELENGTH_PS">
+    <cd:Array>
+      <cd:Description>Wavelength for PMD s</cd:Description>
+      <cd:Dimension><![CDATA[int(../REC_LENGTH[7])]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="WAVELENGTH_SWPP">
+    <cd:Array>
+      <cd:Description>Wavelength for short wavelength range (block B) PMD p</cd:Description>
+      <cd:Dimension><![CDATA[int(../REC_LENGTH[8])]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="WAVELENGTH_SWPS">
+    <cd:Array>
+      <cd:Description>Wavelength for short wavelength range (block B) PMD s</cd:Description>
+      <cd:Dimension><![CDATA[int(../REC_LENGTH[9])]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
       </cd:Integer>
     </cd:Array>
   </cd:Field>
@@ -144,11 +277,7 @@
       <cd:Description>Band data record for Band 1a</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[0])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[0])]]></cd:Dimension>
-      <cd:Integer>
-        <cd:Unit>BU</cd:Unit>
-        <cd:BitSize>16</cd:BitSize>
-        <cd:NativeType>uint16</cd:NativeType>
-      </cd:Integer>
+      <cd:NamedType id="GOME2_BAND_M_v2"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="BAND_1B">
@@ -156,11 +285,7 @@
       <cd:Description>Band data record for Band 1b</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[1])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[1])]]></cd:Dimension>
-      <cd:Integer>
-        <cd:Unit>BU</cd:Unit>
-        <cd:BitSize>16</cd:BitSize>
-        <cd:NativeType>uint16</cd:NativeType>
-      </cd:Integer>
+      <cd:NamedType id="GOME2_BAND_M_v2"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="BAND_2A">
@@ -168,11 +293,7 @@
       <cd:Description>Band data record for Band 2a</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[2])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[2])]]></cd:Dimension>
-      <cd:Integer>
-        <cd:Unit>BU</cd:Unit>
-        <cd:BitSize>16</cd:BitSize>
-        <cd:NativeType>uint16</cd:NativeType>
-      </cd:Integer>
+      <cd:NamedType id="GOME2_BAND_M_v2"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="BAND_2B">
@@ -180,11 +301,7 @@
       <cd:Description>Band data record for Band 2b</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[3])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[3])]]></cd:Dimension>
-      <cd:Integer>
-        <cd:Unit>BU</cd:Unit>
-        <cd:BitSize>16</cd:BitSize>
-        <cd:NativeType>uint16</cd:NativeType>
-      </cd:Integer>
+      <cd:NamedType id="GOME2_BAND_M_v2"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="BAND_3">
@@ -192,11 +309,7 @@
       <cd:Description>Band data record for Band 3</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[4])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[4])]]></cd:Dimension>
-      <cd:Integer>
-        <cd:Unit>BU</cd:Unit>
-        <cd:BitSize>16</cd:BitSize>
-        <cd:NativeType>uint16</cd:NativeType>
-      </cd:Integer>
+      <cd:NamedType id="GOME2_BAND_M_v2"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="BAND_4">
@@ -204,11 +317,7 @@
       <cd:Description>Band data record for Band 4</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[5])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[5])]]></cd:Dimension>
-      <cd:Integer>
-        <cd:Unit>BU</cd:Unit>
-        <cd:BitSize>16</cd:BitSize>
-        <cd:NativeType>uint16</cd:NativeType>
-      </cd:Integer>
+      <cd:NamedType id="GOME2_BAND_M_v2"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="BAND_PP">
@@ -216,11 +325,7 @@
       <cd:Description>Band data record for PMD p</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[6])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[6])]]></cd:Dimension>
-      <cd:Integer>
-        <cd:Unit>BU</cd:Unit>
-        <cd:BitSize>16</cd:BitSize>
-        <cd:NativeType>uint16</cd:NativeType>
-      </cd:Integer>
+      <cd:NamedType id="GOME2_BAND_P_v3"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="BAND_PS">
@@ -228,11 +333,7 @@
       <cd:Description>Band data record for PMD s</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[7])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[7])]]></cd:Dimension>
-      <cd:Integer>
-        <cd:Unit>BU</cd:Unit>
-        <cd:BitSize>16</cd:BitSize>
-        <cd:NativeType>uint16</cd:NativeType>
-      </cd:Integer>
+      <cd:NamedType id="GOME2_BAND_P_v3"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="BAND_SWPP">
@@ -240,11 +341,7 @@
       <cd:Description>Band data record for short wavelength range (block B) PMD p</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[8])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[8])]]></cd:Dimension>
-      <cd:Integer>
-        <cd:Unit>BU</cd:Unit>
-        <cd:BitSize>16</cd:BitSize>
-        <cd:NativeType>uint16</cd:NativeType>
-      </cd:Integer>
+      <cd:NamedType id="GOME2_BAND_P_v3"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="BAND_SWPS">
@@ -252,11 +349,7 @@
       <cd:Description>Band data record for short wavelength range (block B) PMD s</cd:Description>
       <cd:Dimension><![CDATA[int(../NUM_RECS[9])]]></cd:Dimension>
       <cd:Dimension><![CDATA[int(../REC_LENGTH[9])]]></cd:Dimension>
-      <cd:Integer>
-        <cd:Unit>BU</cd:Unit>
-        <cd:BitSize>16</cd:BitSize>
-        <cd:NativeType>uint16</cd:NativeType>
-      </cd:Integer>
+      <cd:NamedType id="GOME2_BAND_P_v3"/>
     </cd:Array>
   </cd:Field>
 </cd:Record>

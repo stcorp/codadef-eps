@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="GOME2_MDR_L1A_Moon_v2" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
-  <cd:Description>(format version 2)</cd:Description>
+<cd:Record format="binary" name="GOME2_MDR_L1A_Earthshine_v4" last-modified="2020-11-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 4)</cd:Description>
   <cd:Field name="RECORD_HEADER">
     <cd:NamedType id="REC_HEAD"/>
   </cd:Field>
@@ -19,7 +19,10 @@
     </cd:Integer>
   </cd:Field>
   <cd:Field name="PCD_BASIC">
-    <cd:NamedType id="GOME2_PCD_BASIC_v1"/>
+    <cd:NamedType id="GOME2_PCD_BASIC_v2"/>
+  </cd:Field>
+  <cd:Field name="PCD_EARTH">
+    <cd:NamedType id="GOME2_PCD_EARTH_v2"/>
   </cd:Field>
   <cd:Field name="OBSERVATION_MODE">
     <cd:Integer>
@@ -57,10 +60,10 @@
     </cd:Array>
   </cd:Field>
   <cd:Field name="GEO_BASIC">
-    <cd:NamedType id="GOME2_GEO_BASIC_v1"/>
+    <cd:NamedType id="GOME2_GEO_BASIC_v2"/>
   </cd:Field>
-  <cd:Field name="GEO_MOON">
-    <cd:NamedType id="GOME2_GEO_MOON"/>
+  <cd:Field name="GEO_EARTH">
+    <cd:NamedType id="GOME2_GEO_EARTH_v2"/>
   </cd:Field>
   <cd:Field name="PDP_TEMP">
     <cd:Integer>
@@ -112,11 +115,41 @@
       </cd:Integer>
     </cd:Array>
   </cd:Field>
+  <cd:Field name="POL_SS">
+    <cd:Array>
+      <cd:Description>Single scattering polarisation values given every 187.5 ms</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:NamedType id="GOME2_POLSS_v2"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="POL_M">
+    <cd:Array>
+      <cd:Description>Measured polarisation values given every 187.5 ms</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:NamedType id="GOME2_POLV_v2"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="POL_M_P">
+    <cd:Array>
+      <cd:Description>Measured polarisation values given for each PMD readout</cd:Description>
+      <cd:Dimension>256</cd:Dimension>
+      <cd:NamedType id="GOME2_POLV_v2"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="POL_M_SW">
+    <cd:Integer>
+      <cd:Description>Fractional polarisation value for the short-wave PMD region (currently not used, set to zero)</cd:Description>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
   <cd:Field name="ISP_HEAD">
     <cd:Array>
       <cd:Description>Header of the Instrument Science Packet</cd:Description>
       <cd:Dimension>16</cd:Dimension>
-      <cd:NamedType id="GOME2_ISP_HEAD_v1"/>
+      <cd:NamedType id="GOME2_ISP_HEAD_v2"/>
     </cd:Array>
   </cd:Field>
   <cd:Field name="REC_LENGTH">

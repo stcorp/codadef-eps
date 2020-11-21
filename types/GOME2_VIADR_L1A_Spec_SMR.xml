@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_VIADR_L1A_Spec_SMR" last-modified="2020-11-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 1)</cd:Description>
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="START_UTC_SUN">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Start UTC date/time of Sun calibration mode measurement</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="END_UTC_SUN">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>End UTC date/time of Sun calibration mode measurement</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="PCD_SPEC_SMR">
+    <cd:NamedType id="GOME2_PCD_SPEC_SMR"/>
+  </cd:Field>
+  <cd:Field name="PDP_TEMP">
+    <cd:Integer>
+      <cd:Description>Pre-disperser prism temperature</cd:Description>
+      <cd:Unit>1e-3 K</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SPEC_GRID_FPA">
+    <cd:Array>
+      <cd:Description>FPA spectral grid (channel 1 first)</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SPEC_GRID_PMD">
+    <cd:Array>
+      <cd:Description>PMD spectral grid (PMD-p first)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SPEC_WIDTH_FPA">
+    <cd:Array>
+      <cd:Description>Full Width Half Maximum spectral resolution of FPA channels</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SPEC_K_FPA">
+    <cd:Array>
+      <cd:Description>Gaussian flat-top parameter for FPA channels</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000"/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

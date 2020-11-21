@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <cd:Record format="binary" name="GOME2_MDR_L1A_Other_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>(format version 1)</cd:Description>
   <cd:Field name="RECORD_HEADER">
     <cd:NamedType id="REC_HEAD"/>
   </cd:Field>
@@ -25,7 +26,7 @@
     </cd:Integer>
   </cd:Field>
   <cd:Field name="GEO_BASIC">
-    <cd:NamedType id="GOME2_GEO_BASIC"/>
+    <cd:NamedType id="GOME2_GEO_BASIC_v1"/>
   </cd:Field>
   <cd:Field name="ISP">
     <cd:Array>

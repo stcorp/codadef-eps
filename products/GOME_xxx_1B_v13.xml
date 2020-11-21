@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="GOME_xxx_1B_v11" format="binary" last-modified="2012-01-05" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="GOME_xxx_1B_v13" format="binary" last-modified="2020-11-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record format="binary">
     <cd:Field name="MPHR">
       <cd:NamedType id="MPHR_v2"/>
@@ -23,7 +23,7 @@
     <cd:Field name="GIADR_Channels">
       <cd:Array>
         <cd:Dimension><![CDATA[$num_giadr_channels]]></cd:Dimension>
-        <cd:NamedType id="GOME2_GIADR_L1_Channels_v2"/>
+        <cd:NamedType id="GOME2_GIADR_L1_Channels_v3"/>
       </cd:Array>
     </cd:Field>
     <cd:Field name="GIADR_Bands">
@@ -54,13 +54,13 @@
     <cd:Field name="VIADR_SMR">
       <cd:Array>
         <cd:Dimension><![CDATA[$num_viadr_smr]]></cd:Dimension>
-        <cd:NamedType id="GOME2_VIADR_L1_SMR_v1"/>
+        <cd:NamedType id="GOME2_VIADR_L1_SMR_v2"/>
       </cd:Array>
     </cd:Field>
     <cd:Field name="MDR">
       <cd:Array>
         <cd:Dimension><![CDATA[$num_mdr]]></cd:Dimension>
-        <cd:NamedType id="GOME2_MDR_L1B_v4"/>
+        <cd:NamedType id="GOME2_MDR_L1B_v6"/>
       </cd:Array>
     </cd:Field>
   </cd:Record>

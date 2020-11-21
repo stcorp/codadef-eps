@@ -60,7 +60,7 @@
     </cd:Array>
   </cd:Field>
   <cd:Field name="GEO_BASIC">
-    <cd:NamedType id="GOME2_GEO_BASIC"/>
+    <cd:NamedType id="GOME2_GEO_BASIC_v1"/>
   </cd:Field>
   <cd:Field name="GEO_EARTH">
     <cd:NamedType id="GOME2_GEO_EARTH_v1"/>

@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_VIADR_L1_SMR_v2" last-modified="2020-11-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="RECORD_HEADER">
+    <cd:NamedType id="REC_HEAD"/>
+  </cd:Field>
+  <cd:Field name="START_UTC_SUN">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>Start UTC date/time of Sun calibration mode measurement</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="END_UTC_SUN">
+    <cd:Time timeformat="binary_eps_datetime">
+      <cd:Description>End UTC date/time of Sun calibration mode measurement</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="SMR_SOURCE">
+    <cd:Integer>
+      <cd:Description>Source of solar spectrum in SMR (0: direct measurement; 1: empirical calculation)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PDP_TEMP">
+    <cd:Integer>
+      <cd:Description>Pre-disperser prism temperature</cd:Description>
+      <cd:Unit>1e-3 K</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PCD_SMR">
+    <cd:NamedType id="GOME2_PCD_SMR"/>
+  </cd:Field>
+  <cd:Field name="PMD_TRANSFER">
+    <cd:Integer>
+      <cd:Description>PMD transfer mode (1 = band + raw, 2 = band + mixed, 3 = raw transfer, 4 = various (PMD transfer mode changes within a scan))</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PMD_READOUT">
+    <cd:Integer>
+      <cd:Description>PMD readout mode (0 = nominal, 1 = solar, 2 = calibration, 3 = various (PMD readout mode changes within a scan))</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="LAMBDA_SMR">
+    <cd:Array>
+      <cd:Description>Wavelength grid for SMR spectrum (after doppler correction)</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SMR">
+    <cd:Array>
+      <cd:Description>Solar Mean Reference spectrum</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:Unit>photons/(s.cm2.nm)</cd:Unit>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="E_SMR">
+    <cd:Array>
+      <cd:Description>Absolute error on Solar Mean Reference spectrum</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:Unit>photons/(s.cm2.nm)</cd:Unit>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="E_REL_SUN">
+    <cd:Array>
+      <cd:Description>Relative error in the mean of the Nsun spectra having passed the intensity check before correction for the irradiance response of the instrument</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="SMR_BACKUP">
+    <cd:Array>
+      <cd:Description>Solar Mean Reference spectrum as effectively measured by the instrument</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:Unit>photons/(s.cm2.nm)</cd:Unit>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="E_SMR_BACKUP">
+    <cd:Array>
+      <cd:Description>Absolute error on Solar Mean Reference spectrum associated to the effective measurement of the instrument</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>1024</cd:Dimension>
+      <cd:VSFInteger>
+        <cd:Unit>photons/(s.cm2.nm)</cd:Unit>
+        <cd:ScaleFactor>
+          <cd:Integer>
+            <cd:Description>scale factor</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:ScaleFactor>
+        <cd:Integer>
+          <cd:Description>32-bit integer</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:VSFInteger>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

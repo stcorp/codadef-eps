@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOME2_PCD_SPEC_SMR" last-modified="2020-11-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Product Confidence Data record for Spectral Calibration with Fraunhofer algorithm</cd:Description>
+  <cd:Field name="F_PREVCAL_AVAIL">
+    <cd:Integer>
+      <cd:Description>Availability of previous SLS spectral calibration</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="N_FITWIN">
+    <cd:Array>
+      <cd:Description>Number of fitting windows for FPA and PMD channels</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="WIDTH_FITWIN">
+    <cd:Integer>
+      <cd:Description>Width (in pixel) of fitting windows for FPA channels</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="N_WINCONV">
+    <cd:Array>
+      <cd:Description>Number of windows with a converging fit for FPA channels (Levenberg-Marquardt) and PMD channels (cross-correlation)</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="N_FILTERWIN">
+    <cd:Integer>
+      <cd:Description>Number of windows filterd out for final wavelength differences fit</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>
