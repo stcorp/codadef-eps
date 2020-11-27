@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="GOME2_PCD_SPEC_SMR" last-modified="2020-11-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="binary" name="GOME2_PCD_SPEC_SMR" last-modified="2020-11-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Product Confidence Data record for Spectral Calibration with Fraunhofer algorithm</cd:Description>
   <cd:Field name="F_PREVCAL_AVAIL">
     <cd:Integer>
@@ -36,10 +36,13 @@
     </cd:Array>
   </cd:Field>
   <cd:Field name="N_FILTERWIN">
-    <cd:Integer>
+    <cd:Array>
       <cd:Description>Number of windows filterd out for final wavelength differences fit</cd:Description>
-      <cd:BitSize>16</cd:BitSize>
-      <cd:NativeType>uint16</cd:NativeType>
-    </cd:Integer>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
   </cd:Field>
 </cd:Record>
