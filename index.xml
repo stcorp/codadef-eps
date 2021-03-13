@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="EPS" last-modified="2020-11-20" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="EPS" last-modified="2021-03-13" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>EUMETSAT Polar System atmospheric products (GOME-2 and IASI)</cd:Description>
   <cd:ProductType name="GOME_xxx_1A">
     <cd:Description>GOME2 Level 1a.</cd:Description>
@@ -73,7 +73,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="GOME_xxx_1A_v13" format="binary" version="13">
-      <cd:Description>This definition is based on version 10 of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:Description>This definition is based on version 10B of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
         <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
@@ -157,7 +157,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="GOME_xxx_1B_v13" format="binary" version="13">
-      <cd:Description>This definition is based on version 10 of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
+      <cd:Description>This definition is based on version 10B of the GOME-2 Level 1 Product Format Specification (PFS) document (EPS-MIS-SPE-97232) and version 7D of the EPS Generic Product Format Specification (GPFS) document (EPS-GGS-SPE-096167).</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">\001\000\000\002\000\000\f\353</cd:MatchData>
         <cd:MatchData offset="20">PRODUCT_NAME                  = </cd:MatchData>
